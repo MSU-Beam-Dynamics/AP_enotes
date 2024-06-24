@@ -1,0 +1,83 @@
+Traceback (most recent call last):
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from map2D import map2D
+import numpy as np
+import matplotlib.pyplot as plt
+#from matplotlib import animation
+#from IPython.display import HTML
+%matplotlib notebook
+
+dipole_error=map2D(npart=10000, twiss=[2,1], twiss_beam=[2,1],tune=0.228, chrom=10, espr=1e-4)
+avex,avep,sizex,sizep,emit=dipole_error.statistics()
+emitlist=[]
+sizelist=[]
+avelist=[]
+N_turn=10000
+
+print(dipole_error.linmap)
+
+def evolve_func(turns, kick_turn_start=2000, kick_angle=5e-4,
+               ):
+    for i in range(turns):
+        if i>=kick_turn_start:
+            dipole_error.coor2D[1,:]+=kick_angle
+            
+        
+        dipole_error.propagate()
+        
+        avex,avep,sizex,sizep,emit=dipole_error.statistics()
+        avelist.append(avex)
+        sizelist.append(sizex)
+        emitlist.append(emit)
+        yield dipole_error.coor2D
+        
+evolve=evolve_func(N_turn+2)
+    
+#fig,ax=plt.subplots()
+for i in range(N_turn):
+    arr=next(evolve)
+    
+    
+    
+fig1,(ax1,ax2,ax3)=plt.subplots(3,1, sharex= True)
+ax3.set_xlabel("Turns")
+ax1.set_ylabel("Centroid [mm]")
+ax2.set_ylabel("Beam size [mm]")
+ax3.set_ylabel("Emit. [mm mrad]")
+ax1.plot(np.array(avelist)*1e3)  
+ax1.set_ylim([-10,10])
+ax2.plot(np.array(sizelist)*1e3) 
+ax2.set_ylim([0,2])
+ax3.set_ylim([0,2])
+ax3.plot(np.array(emitlist)*1e6) 
+fig1.tight_layout()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmap2D[39;00m [38;5;28;01mimport[39;00m map2D
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'map2D'
+

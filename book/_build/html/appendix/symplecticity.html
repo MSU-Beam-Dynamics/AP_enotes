@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Primer on symplecticity &#8212; Accelerator Physics eNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/symplecticity';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Dynamics in Electron Storage Ring" href="../ESR/ESR_Dynamics/ESR_dynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Accelerator Physics eNotes - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Accelerator Physics eNotes - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to the Accelerator Physics eNotes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I: Transverse Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/magnet/magnets.html">Overview of Accelerator Magnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/basic/Hamiltonian_Hills.html">Linear Transverse Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/basic/twiss_param.html">Twiss Parametrization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/perturbation/perturbed_motion.html">Perturbation of transverse motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/coupling/linear_transverse_coupling.html">Linear Coupling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/dispersion/dispersion.html">Off Momentum Orbit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transverse_BD/chrom/chromaticity.html">Chromatic Effect</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II: Longitudinal Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../longitudinal_BD/longitudinal_dynamics.html">Longitudinal Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III: Electron Storage Ring</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ESR/SR/synchrotron_radiation.html">Synchrotron Radiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ESR/ESR_Dynamics/ESR_dynamics.html">Dynamics in Electron Storage Ring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Primer on symplecticity</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes/issues/new?title=Issue%20on%20page%20%2Fappendix/symplecticity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/appendix/symplecticity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Primer on symplecticity</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symplectic-condition">Symplectic condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonian-equation-in-matrix-form">Hamiltonian equation in matrix form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-s-matrix">Properties of S matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Symplectic condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-symplectic-map">Properties of symplectic map</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-symplectic-matrix">Properties of symplectic matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-matrix-for-2-d-system">Block matrix for 2-D system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-matrix-for-3-d-system">Block matrix for 3-D system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="primer-on-symplecticity">
+<h1>Primer on symplecticity<a class="headerlink" href="#primer-on-symplecticity" title="Link to this heading">#</a></h1>
+<section id="symplectic-condition">
+<h2>Symplectic condition<a class="headerlink" href="#symplectic-condition" title="Link to this heading">#</a></h2>
+<section id="hamiltonian-equation-in-matrix-form">
+<h3>Hamiltonian equation in matrix form<a class="headerlink" href="#hamiltonian-equation-in-matrix-form" title="Link to this heading">#</a></h3>
+<p>For a N-dimensional Hamiltonian system (<span class="math notranslate nohighlight">\(\mathbf{x}^N, \mathbf{p}^N\)</span>), the N sets of Hamiltonian equation reads:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c939c31f-ac9a-4ae9-b84d-b407948d1966">
+<span class="eqno">(480)<a class="headerlink" href="#equation-c939c31f-ac9a-4ae9-b84d-b407948d1966" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{dx_i}{dt}&amp;=\frac{\partial H}{\partial p_i}\\
+\frac{dp_i}{dt}&amp;=-\frac{\partial H}{\partial x_i}
+\end{align}\]</div>
+<p>Let’s write a column vector <span class="math notranslate nohighlight">\(X=(x_1, p_1, x_2,p_2,\cdots,x_N,p_n)\)</span>, the Hamiltonian can be written as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9696fd9a-7080-40d6-acce-3ebedd54c96c">
+<span class="eqno">(481)<a class="headerlink" href="#equation-9696fd9a-7080-40d6-acce-3ebedd54c96c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{d}{dt}X &amp; \equiv S_N \frac{\partial H}{\partial X}
+= \left(\begin{array}{cccc}
+S_{2} &amp; 0 &amp; \cdots &amp; 0\\
+0 &amp; S_{2} &amp; \cdots &amp; 0\\
+\vdots &amp; \vdots &amp; \ddots &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; S_{2}
+\end{array}\right)
+\frac{\partial H}{\partial X}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_1\)</span> is the matrix for one dimension space:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-460c03b4-0c0a-4159-bff9-817cbe32db7f">
+<span class="eqno">(482)<a class="headerlink" href="#equation-460c03b4-0c0a-4159-bff9-817cbe32db7f" title="Permalink to this equation">#</a></span>\[\begin{align}
+ S_2
+= \left(\begin{array}{cc}
+0 &amp; 1\\
+-1 &amp; 0
+\end{array}\right)
+\end{align}\]</div>
+</section>
+<section id="properties-of-s-matrix">
+<h3>Properties of S matrix<a class="headerlink" href="#properties-of-s-matrix" title="Link to this heading">#</a></h3>
+<p>We found that the following facts about <span class="math notranslate nohighlight">\(S\)</span> matrix</p>
+<ul class="simple">
+<li><p>Determinant:  <span class="math notranslate nohighlight">\(\left|S\right|=1\)</span></p></li>
+<li><p>Inverse: <span class="math notranslate nohighlight">\(S^{-1}=-S \text{ or } S^2 = -I\)</span></p></li>
+<li><p>The transpose: <span class="math notranslate nohighlight">\(S^T=-S\)</span></p></li>
+</ul>
+<p>For arbitrary 2 by 2 matrix <span class="math notranslate nohighlight">\(A\)</span> we may prove that:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d134c1ce-217e-48b4-95f7-d184a3ac281d">
+<span class="eqno">(483)<a class="headerlink" href="#equation-d134c1ce-217e-48b4-95f7-d184a3ac281d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+A^TS_2A=AS_2A^T=
+\left(\begin{array}{cc}
+0 &amp; \det A\\
+-\det A &amp; 0
+\end{array}\right)=S_2\det A
+\end{equation}\]</div>
+<p>Or we may define a new matrix <span class="math notranslate nohighlight">\(\bar{A}=-S_2A^{T}S_2\)</span> and yield:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9cfb4690-8347-475e-8d13-3401b095a440">
+<span class="eqno">(484)<a class="headerlink" href="#equation-9cfb4690-8347-475e-8d13-3401b095a440" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\bar{A}A=A\bar{A} = I\det{A} 
+\end{equation}\]</div>
+</section>
+<section id="id1">
+<h3>Symplectic condition<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>For a map from location <span class="math notranslate nohighlight">\(s_0\)</span> to <span class="math notranslate nohighlight">\(s_1=s_0+s\)</span>, we have:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b7571626-ffdc-40a7-94e2-abaa07711320">
+<span class="eqno">(485)<a class="headerlink" href="#equation-b7571626-ffdc-40a7-94e2-abaa07711320" title="Permalink to this equation">#</a></span>\[\begin{align}
+X\left(s_1\right)=M X\left(s_0\right)
+\end{align}\]</div>
+<p>M is a matrix and the components is defined as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e2d99a45-7b68-4811-8912-7f1dad9f8c1a">
+<span class="eqno">(486)<a class="headerlink" href="#equation-e2d99a45-7b68-4811-8912-7f1dad9f8c1a" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_{ij}=\frac{\partial X_i\left(s_1\right)}{ \partial X_j\left(s_0\right)}
+\end{align}\]</div>
+<p>If <span class="math notranslate nohighlight">\(M_{ij}\)</span> are not functions of <span class="math notranslate nohighlight">\(X\)</span>, the map represents a linear map.  Otherwise <span class="math notranslate nohighlight">\(M\)</span> is a non-linear map.  Regardless of the linearity, the condition that map <span class="math notranslate nohighlight">\(M\)</span> need to follow due to the system is a Hamiltonian system is called <strong>symplectic condition</strong>.  We just explored the condition in 1-D case.  In N-D system, from the Map definition:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-57584e94-af59-404d-b3aa-164743feb48f">
+<span class="eqno">(487)<a class="headerlink" href="#equation-57584e94-af59-404d-b3aa-164743feb48f" title="Permalink to this equation">#</a></span>\[\begin{align}
+X\left(s_1\right)=M X\left(s_0\right)
+\end{align}\]</div>
+<p>We take the derivative of the <span class="math notranslate nohighlight">\(i^{th}\)</span> row of <span class="math notranslate nohighlight">\(X(s_1)\)</span> with respect to <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7185dd5a-b8e3-4781-bcee-001512ba2dff">
+<span class="eqno">(488)<a class="headerlink" href="#equation-7185dd5a-b8e3-4781-bcee-001512ba2dff" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{dX_i\left(s_1\right)}{ds}
+&amp;=\frac{\partial X_i\left(s_1\right)}{\partial X_j\left(s_0\right)}\frac{dX_j\left(s_0\right)}{ds}\nonumber\\
+&amp;=M_{ij}S_{jk}\frac{\partial H}{\partial X_k\left(s_0\right)}\nonumber\\
+&amp;=M_{ij}S_{jk}\frac{\partial H}{\partial X_l\left(s_1\right)}\frac{\partial X_l\left(s_1\right)}{\partial X_k\left(s_0\right)}\nonumber\\
+&amp;=M_{ij}S_{jk}M_{kl}^T\frac{\partial H}{\partial X_l\left(s_1\right)}
+\end{align}\]</div>
+<p>We know that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b0669361-920c-475e-b0e0-d5eb7cf69019">
+<span class="eqno">(489)<a class="headerlink" href="#equation-b0669361-920c-475e-b0e0-d5eb7cf69019" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{dX_i\left(s_1\right)}{ds}=S_{il}\frac{\partial H}{\partial X_l\left(s_1\right)}
+\end{equation}\]</div>
+<p>Therefore we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e48cdd44-79ac-4cfe-9d43-8ab1f8377fb4">
+<span class="eqno">(490)<a class="headerlink" href="#equation-e48cdd44-79ac-4cfe-9d43-8ab1f8377fb4" title="Permalink to this equation">#</a></span>\[\begin{align}
+MSM^T=S
+\end{align}\]</div>
+<p>Using the property of <span class="math notranslate nohighlight">\(S\)</span>, we have the usual form:</p>
+<div class="math notranslate nohighlight" id="equation-eq-symplecticity-symplectic-form">
+<span class="eqno">(491)<a class="headerlink" href="#equation-eq-symplecticity-symplectic-form" title="Link to this equation">#</a></span>\[\begin{align}
+M^TSM=S %%\label{eq:symplectic_form}
+\end{align}\]</div>
+<p>The equation <a class="reference internal" href="#equation-eq-symplecticity-symplectic-form">(491)</a> is referred as <em><strong>symplectic condition of a transfer map</strong></em> (not limited to matrix).</p>
+<section id="properties-of-symplectic-map">
+<h4>Properties of symplectic map<a class="headerlink" href="#properties-of-symplectic-map" title="Link to this heading">#</a></h4>
+<p>The properties of the symplectic map:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(M\)</span> is symplectic, so does <span class="math notranslate nohighlight">\(M^T\)</span> and <span class="math notranslate nohighlight">\(M^{-1}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span> are symplectic, so does <span class="math notranslate nohighlight">\(MN\)</span>.</p></li>
+<li><p>The determinant of symplectic map is 1.</p></li>
+</ul>
+</section>
+</section>
+<section id="properties-of-symplectic-matrix">
+<h3>Properties of symplectic matrix<a class="headerlink" href="#properties-of-symplectic-matrix" title="Link to this heading">#</a></h3>
+<p>The symplectic matrix has the following properties from the symplectic condition:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\lambda\)</span> is an eigenvalue of a symplectic matrix <span class="math notranslate nohighlight">\(M\)</span>, so does <span class="math notranslate nohighlight">\(1/\lambda\)</span>.</p></li>
+<li><p>Every sympletic matrix has the inverse matrix: <span class="math notranslate nohighlight">\(M^{-1}=-SM^{T}S\)</span></p></li>
+</ul>
+<section id="block-matrix-for-2-d-system">
+<h4>Block matrix for 2-D system<a class="headerlink" href="#block-matrix-for-2-d-system" title="Link to this heading">#</a></h4>
+<p>Consider a 4-D phase space transfer map:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-405649d6-152f-4ae1-8abc-13f079cf4163">
+<span class="eqno">(492)<a class="headerlink" href="#equation-405649d6-152f-4ae1-8abc-13f079cf4163" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{cc}
+A &amp; B\\
+C &amp; D
+\end{array}\right)
+\end{equation}\]</div>
+<p>The transfer map has to satisfy the symplectic condition, both <span class="math notranslate nohighlight">\(M^TSM=S\)</span> and <span class="math notranslate nohighlight">\(MSM^T=S\)</span>.  For the first condition:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7523e895-2a5c-4481-aed2-bafc8af760de">
+<span class="eqno">(493)<a class="headerlink" href="#equation-7523e895-2a5c-4481-aed2-bafc8af760de" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{cc}
+A^T &amp; C^T\\
+B^T &amp; D^T
+\end{array}\right)
+\left(\begin{array}{cc}
+S_2 &amp; 0\\
+0 &amp; S_2
+\end{array}\right)
+\left(\begin{array}{cc}
+A &amp; B\\
+C &amp; D
+\end{array}\right)&amp;=
+\left(\begin{array}{cc}
+S_2 &amp; 0\\
+0 &amp; S_2
+\end{array}\right) 
+\end{align}\]</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> 
+<span class="n">sympy</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">d</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">s_2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;S_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">zero</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">ZeroMatrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">M</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">BlockMatrix</span><span class="p">([[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">]])</span>
+<span class="n">ss</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">BlockMatrix</span><span class="p">([[</span><span class="n">s_2</span><span class="p">,</span><span class="n">zero</span><span class="p">],[</span><span class="n">zero</span><span class="p">,</span><span class="n">s_2</span><span class="p">]])</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">block_collapse</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">T</span><span class="o">*</span><span class="n">ss</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e42767328f226f702a10e516d675bd8fd6cfb21615d973429328a5c0562efa69.png" src="../_images/e42767328f226f702a10e516d675bd8fd6cfb21615d973429328a5c0562efa69.png" />
+</div>
+</details>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6fece469-ae46-435e-9f68-972d2458ef46">
+<span class="eqno">(494)<a class="headerlink" href="#equation-6fece469-ae46-435e-9f68-972d2458ef46" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{matrix}A^{T} S_{2} A + C^{T} S_{2} C &amp; A^{T} S_{2} B + C^{T} S_{2} D\\
+B^{T} S_{2} A + D^{T} S_{2} C &amp; B^{T} S_{2} B + D^{T} S_{2} D\end{matrix}\right)&amp;=
+\left(\begin{array}{cc}
+S_2 &amp; 0\\
+0 &amp; S_2
+\end{array}\right)
+\end{align}\]</div>
+<p>Therefore the following relation satisfy:</p>
+<div class="math notranslate nohighlight" id="equation-eq-symplecticity-mmat">
+<span class="eqno">(495)<a class="headerlink" href="#equation-eq-symplecticity-mmat" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+A^{T} S_{2} A + C^{T} S_{2} C&amp;=B^{T} S_{2} B + D^{T} S_{2} D=S_2 \\
+A^{T} S_{2} B + C^{T} S_{2} D&amp;=B^{T} S_{2} A + D^{T} S_{2} C=0 %%\label{Mmatzero}
+\end{align}\end{split}\]</div>
+<p>Change <span class="math notranslate nohighlight">\(M\)</span> to <span class="math notranslate nohighlight">\(M^T\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-symplecticity-mtmat">
+<span class="eqno">(496)<a class="headerlink" href="#equation-eq-symplecticity-mtmat" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+A S_{2} A^{T} + B S_{2} B^{T}&amp;=C S_{2} C^{T} + D S_{2} D^{T}=S_2 \\
+A S_{2} C^{T} + B S_{2} D^{T}&amp;=C S_{2} A^{T} + D S_{2} B^{T}=0  %%\label{Mtmatzero}
+\end{align}\end{split}\]</div>
+<p>From the general property of 2-by-2 matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dfbe944a-462a-42dc-b19c-e741cfa3cfce">
+<span class="eqno">(497)<a class="headerlink" href="#equation-dfbe944a-462a-42dc-b19c-e741cfa3cfce" title="Permalink to this equation">#</a></span>\[\begin{align}
+A^TS_2A=AS_2A^T=
+\left(\begin{array}{cc}
+0 &amp; \det A\\
+-\det A &amp; 0
+\end{array}\right)
+\end{align}\]</div>
+<p>From the first set equations in <a class="reference internal" href="#equation-eq-symplecticity-mmat">(495)</a> and <a class="reference internal" href="#equation-eq-symplecticity-mtmat">(496)</a>, we know that:</p>
+<div class="math notranslate nohighlight" id="equation-eq-symplecticity-mat4d-cond1">
+<span class="eqno">(498)<a class="headerlink" href="#equation-eq-symplecticity-mat4d-cond1" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+\det A + \det C=\det D + \det B &amp;=1\\
+\det D + \det C=\det A + \det B &amp;=1
+\end{align}\end{split}\]</div>
+<p>Or it can be re-written as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dfcfcd04-c045-4aa8-8d6b-52f43eb5374b">
+<span class="eqno">(499)<a class="headerlink" href="#equation-dfcfcd04-c045-4aa8-8d6b-52f43eb5374b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\det A  = \det D &amp;\equiv a\\
+\det B = \det C &amp;\equiv b\\
+a+b&amp;=1
+\end{align}\]</div>
+<p>And from second set equations in <a class="reference internal" href="#equation-eq-symplecticity-mmat">(495)</a> and <a class="reference internal" href="#equation-eq-symplecticity-mtmat">(496)</a>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-symplecticity-mat4d-cond2">
+<span class="eqno">(500)<a class="headerlink" href="#equation-eq-symplecticity-mat4d-cond2" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+\bar{A}B+\bar{C}D=\bar{B}A+\bar{D}C=0\\
+A\bar{C}+B\bar{D}=C\bar{A} + D\bar{B}=0 
+\end{align}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is worthwhile to note that, the symplectic condition for 4-D matrix (Eq. <a class="reference internal" href="#equation-eq-symplecticity-mat4d-cond1">(498)</a> and <a class="reference internal" href="#equation-eq-symplecticity-mat4d-cond2">(500)</a>) seems to have 9 equations on the coordinates.  However, the actual constrains for 4-D are only 6.</p>
+</div>
+<p>The inverse of a blocked 4-by-4 matrix is simply:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3fe7d203-5fe2-40d2-9ffe-2bb66c7f133a">
+<span class="eqno">(501)<a class="headerlink" href="#equation-3fe7d203-5fe2-40d2-9ffe-2bb66c7f133a" title="Permalink to this equation">#</a></span>\[\begin{align}
+M^{-1}&amp;=
+\left(\begin{array}{cc}
+A &amp; B\\
+C &amp; D
+\end{array}\right)^{-1}=-SM^TS \\
+&amp;=-\left(\begin{array}{cc}
+S_{1} &amp; 0\\
+0 &amp; S_{1}
+\end{array}\right)
+\left(\begin{array}{cc}
+A^T &amp; C^T\\
+B^T &amp; D^T
+\end{array}\right)
+\left(\begin{array}{cc}
+S_{1} &amp; 0\\
+0 &amp; S_{1}
+\end{array}\right)\\
+&amp;=\left(\begin{array}{cc}
+\bar{A} &amp; \bar{C}\\
+\bar{B} &amp; \bar{D}
+\end{array}\right)
+\end{align}\]</div>
+<p>Here is a useful example.  If we are exploring <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(z\)</span> or <span class="math notranslate nohighlight">\(y\)</span>-<span class="math notranslate nohighlight">\(z\)</span> phase space, the matrix <span class="math notranslate nohighlight">\(U\)</span> usually has the form below for DC magnets:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e87772b3-6bfa-495a-8ba7-cd4bd95a695f">
+<span class="eqno">(502)<a class="headerlink" href="#equation-e87772b3-6bfa-495a-8ba7-cd4bd95a695f" title="Permalink to this equation">#</a></span>\[\begin{align}
+B=
+\left(\begin{array}{cc}
+\begin{array}{c}
+0\\
+0
+\end{array} &amp; d=\left(\begin{array}{c}
+d_{1}\\
+d_{2}
+\end{array}\right)\end{array}\right)
+\end{align}\]</div>
+<p>Then</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e36f9bd3-be19-4cea-bea5-4bfb007d681e">
+<span class="eqno">(503)<a class="headerlink" href="#equation-e36f9bd3-be19-4cea-bea5-4bfb007d681e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\det A  = \det D &amp;=1\\
+\det B = \det C &amp;=0
+\end{align}\]</div>
+<p>And from</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ada161e2-1deb-461a-bb1e-ecf72181bf50">
+<span class="eqno">(504)<a class="headerlink" href="#equation-ada161e2-1deb-461a-bb1e-ecf72181bf50" title="Permalink to this equation">#</a></span>\[\begin{align}
+\bar{B}A+\bar{D}C=0
+\end{align}\]</div>
+<p>We have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-94d46d28-c7e3-4c88-9661-d0f367ce5b14">
+<span class="eqno">(505)<a class="headerlink" href="#equation-94d46d28-c7e3-4c88-9661-d0f367ce5b14" title="Permalink to this equation">#</a></span>\[\begin{align}
+C=-D\bar{B}A
+\end{align}\]</div>
+</section>
+<section id="block-matrix-for-3-d-system">
+<h4>Block matrix for 3-D system<a class="headerlink" href="#block-matrix-for-3-d-system" title="Link to this heading">#</a></h4>
+<p>Consider a 6-D phase space transfer map:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-860210ee-0878-4174-8612-68305bd3dc1f">
+<span class="eqno">(506)<a class="headerlink" href="#equation-860210ee-0878-4174-8612-68305bd3dc1f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+x\\
+p_{x}\\
+y\\
+p_{y}\\
+z\\
+\delta
+\end{array}\right)_{2}=\left(\begin{array}{cc}
+M_{1} &amp; C_1 &amp; U_1\\
+C_2 &amp; M_{2} &amp; U_2 \\
+V_1 &amp; V_{2} &amp; M_3 \\
+\end{array}\right)\left(\begin{array}{c}
+x\\
+p_{x}\\
+y\\
+p_{y}\\
+z\\
+\delta
+\end{array}\right)_{1}
+\end{equation}\]</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> 
+<span class="n">sympy</span><span class="o">.</span><span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">m1</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;M_1&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">m2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;M_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">m3</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;M_3&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">u1</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;U_1&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">u2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;U_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c1</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;C_1&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">v1</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;V_1&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">v2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;V_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">c2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;C_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">s_2</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">MatrixSymbol</span><span class="p">(</span><span class="s1">&#39;S_2&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#s_2=sympy.Matrix([[0,1],[-1,0]])</span>
+<span class="n">zero</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">ZeroMatrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">M</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">BlockMatrix</span><span class="p">([[</span><span class="n">m1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">u1</span><span class="p">],[</span><span class="n">c2</span><span class="p">,</span><span class="n">m2</span><span class="p">,</span><span class="n">u2</span><span class="p">],[</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">,</span><span class="n">m3</span><span class="p">]])</span>
+<span class="n">ss</span><span class="o">=</span><span class="n">sympy</span><span class="o">.</span><span class="n">BlockMatrix</span><span class="p">([[</span><span class="n">s_2</span><span class="p">,</span><span class="n">zero</span><span class="p">,</span><span class="n">zero</span><span class="p">],[</span><span class="n">zero</span><span class="p">,</span><span class="n">s_2</span><span class="p">,</span><span class="n">zero</span><span class="p">],[</span><span class="n">zero</span><span class="p">,</span><span class="n">zero</span><span class="p">,</span><span class="n">s_2</span><span class="p">]])</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">block_collapse</span><span class="p">(</span><span class="n">M</span><span class="o">*</span><span class="n">ss</span><span class="o">*</span><span class="n">M</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a4dc568adfe1101e09362cd3c00db02b6e60379c502d14db9d6eaeee52736ff9.png" src="../_images/a4dc568adfe1101e09362cd3c00db02b6e60379c502d14db9d6eaeee52736ff9.png" />
+</div>
+</details>
+</div>
+<p>Therefore, we can get the relation of the determinant of each block:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1d3b3273-4701-4221-bc60-9ea2c695bc6e">
+<span class="eqno">(507)<a class="headerlink" href="#equation-1d3b3273-4701-4221-bc60-9ea2c695bc6e" title="Permalink to this equation">#</a></span>\[\begin{align} 
+\det M_1 + \det C_1 + \det U_1 =1 \\
+\det C_2 + \det M_2 + \det U_2 =1 \\
+\det M_3 + \det V_1 + \det V_2 =1 \\
+\end{align}\]</div>
+<p>and</p>
+<div class="amsmath math notranslate nohighlight" id="equation-34b01443-e494-4b48-b45f-8aa3ba23abe8">
+<span class="eqno">(508)<a class="headerlink" href="#equation-34b01443-e494-4b48-b45f-8aa3ba23abe8" title="Permalink to this equation">#</a></span>\[\begin{align} 
+\det M_1 + \det C_2 + \det V_1 =1 \\
+\det C_1 + \det M_2 + \det V_2 =1 \\
+\det U_1 + \det U_2 + \det M_3 =1 \\
+\end{align}\]</div>
+<p>From the off diagonal blocks we have:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cce925fa-6d43-4077-b4d1-b3419b67b4cc">
+<span class="eqno">(509)<a class="headerlink" href="#equation-cce925fa-6d43-4077-b4d1-b3419b67b4cc" title="Permalink to this equation">#</a></span>\[\begin{align} 
+\bar{C}_2 M_2 + \bar{M}_1 C_1 + \bar{V}_1 V_2 &amp;= 0 \\
+\bar{C}_2 U_2 + \bar{M}_1 U_1 + \bar{V}_1 M_3 &amp;= 0 \\
+\bar{C}_1 U_1 + \bar{M}_2 U_2 + \bar{V}_2 M_3 &amp;= 0 \\
+C_1 \bar{M}_2 + M_1 \bar{C}_2 + U_1 \bar{U}_2 &amp;= 0 \\
+C_1 \bar{V}_2 + M_1 \bar{V}_1 + U_1 \bar{M}_3 &amp;= 0 \\
+C_2 \bar{V}_1 + M_2 \bar{V}_2 + U_2 \bar{M}_3 &amp;= 0 
+\end{align}\]</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./appendix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../ESR/ESR_Dynamics/ESR_dynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dynamics in Electron Storage Ring</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symplectic-condition">Symplectic condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamiltonian-equation-in-matrix-form">Hamiltonian equation in matrix form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-s-matrix">Properties of S matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Symplectic condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-symplectic-map">Properties of symplectic map</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-symplectic-matrix">Properties of symplectic matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-matrix-for-2-d-system">Block matrix for 2-D system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-matrix-for-3-d-system">Block matrix for 3-D system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yue Hao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

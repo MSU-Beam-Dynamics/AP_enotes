@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Twiss Parametrization &#8212; Accelerator Physics eNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'transverse_BD/basic/twiss_param';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Perturbation of transverse motion" href="../perturbation/perturbed_motion.html" />
+    <link rel="prev" title="Linear Transverse Motion" href="Hamiltonian_Hills.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Accelerator Physics eNotes - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Accelerator Physics eNotes - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to the Accelerator Physics eNotes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I: Transverse Dynamics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../magnet/magnets.html">Overview of Accelerator Magnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hamiltonian_Hills.html">Linear Transverse Motion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Twiss Parametrization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../perturbation/perturbed_motion.html">Perturbation of transverse motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coupling/linear_transverse_coupling.html">Linear Coupling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dispersion/dispersion.html">Off Momentum Orbit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chrom/chromaticity.html">Chromatic Effect</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II: Longitudinal Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../longitudinal_BD/longitudinal_dynamics.html">Longitudinal Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III: Electron Storage Ring</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ESR/SR/synchrotron_radiation.html">Synchrotron Radiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ESR/ESR_Dynamics/ESR_dynamics.html">Dynamics in Electron Storage Ring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/symplecticity.html">Primer on symplecticity</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes/issues/new?title=Issue%20on%20page%20%2Ftransverse_BD/basic/twiss_param.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/transverse_BD/basic/twiss_param.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Twiss Parametrization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hills-equation">Hill’s Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twiss-parameter">Twiss Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-angle-variable">Action-Angle Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-coordinates">Normalized Coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniqueness-of-the-parametrization">Uniqueness of the Parametrization</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="twiss-parametrization">
+<h1>Twiss Parametrization<a class="headerlink" href="#twiss-parametrization" title="Link to this heading">#</a></h1>
+<section id="hills-equation">
+<h2>Hill’s Equation<a class="headerlink" href="#hills-equation" title="Link to this heading">#</a></h2>
+<p>We start with the Hill’s equation of both transverse plane.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8e1920c7-2c47-4ba4-8d3c-a486ec19745b">
+<span class="eqno">(127)<a class="headerlink" href="#equation-8e1920c7-2c47-4ba4-8d3c-a486ec19745b" title="Permalink to this equation">#</a></span>\[\begin{align}
+&amp;x''\left(s\right) +\left(\frac{1}{\rho^2} + k_x\left(s\right) \right) x\left(s\right)=0\\
+&amp;y''\left(s\right) + k_y\left(s\right)y\left(s\right)=0
+\end{align}\]</div>
+<p>In general, we need solve:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-hillseq">
+<span class="eqno">(128)<a class="headerlink" href="#equation-eq-twiss-hillseq" title="Link to this equation">#</a></span>\[\begin{align}
+&amp;x''\left(s\right) + K\left(s\right)x\left(s\right)=0 
+\end{align}\]</div>
+<p>For a ring accelerator or a linac with periodical structure, we have <span class="math notranslate nohighlight">\(K(s)=K(s+C)\)</span>. To have a stable motion, we try to express the solution of the Hill’s equation as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-731c3ee0-e75f-472e-9cbd-569f6297cd30">
+<span class="eqno">(129)<a class="headerlink" href="#equation-731c3ee0-e75f-472e-9cbd-569f6297cd30" title="Permalink to this equation">#</a></span>\[\begin{align}
+x\left(s\right)=aw\left(s\right)e^{i\psi\left(s\right)}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant, <span class="math notranslate nohighlight">\(w(s)\)</span> is the envelope function and <span class="math notranslate nohighlight">\(\psi(s)\)</span> is the phase function. Then the derivatives are:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-x2prime">
+<span class="eqno">(130)<a class="headerlink" href="#equation-eq-twiss-x2prime" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+x'\left(s\right)&amp;=aw'e^{i\psi}+iawe^{i\psi}\psi'\\
+x''\left(s\right)&amp;=aw''e^{i\psi}+2iaw'e^{i\psi}\psi'-awe^{i\psi}\psi'^2+iawe^{i\psi}\psi'' \label{eq:x2prime}
+\end{align}\end{split}\]</div>
+<p>Combine Equation <a class="reference internal" href="#equation-eq-twiss-x2prime">(130)</a> and <a class="reference internal" href="#equation-eq-twiss-hillseq">(128)</a>, then the real and imaginary part gives:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-wpsi1">
+<span class="eqno">(131)<a class="headerlink" href="#equation-eq-twiss-wpsi1" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+&amp;2aw'\psi'+aw\psi''=a\frac{\left(w^2\psi'\right)'}{w}=0\\
+&amp;aw''+Kw-w\psi'^2=0
+\end{align}\end{split}\]</div>
+<p>Obviously, we are seeking for non-trivial solution (<span class="math notranslate nohighlight">\(w\ne 0\)</span>). The equation <a class="reference internal" href="#equation-eq-twiss-wpsi1">(131)</a> gives:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b1c0ff6b-8b60-4a06-8174-aa21a30c63c7">
+<span class="eqno">(132)<a class="headerlink" href="#equation-b1c0ff6b-8b60-4a06-8174-aa21a30c63c7" title="Permalink to this equation">#</a></span>\[\begin{align}
+w^2\psi'=1
+\end{align}\]</div>
+<p>Then by choose the constant a as 1, the equations for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> become</p>
+<div class="amsmath math notranslate nohighlight" id="equation-93582815-463c-4d53-a00d-4f3204129f76">
+<span class="eqno">(133)<a class="headerlink" href="#equation-93582815-463c-4d53-a00d-4f3204129f76" title="Permalink to this equation">#</a></span>\[\begin{align}
+&amp;w''+Kw-1/w^3=0\\
+&amp;\psi'-1/w^2=0
+\end{align}\]</div>
+<p>This shows that the phase function <span class="math notranslate nohighlight">\(\psi(s)\)</span> is linked with the envelope function <span class="math notranslate nohighlight">\(w(s)\)</span>.</p>
+</section>
+<section id="twiss-parameter">
+<h2>Twiss Parameter<a class="headerlink" href="#twiss-parameter" title="Link to this heading">#</a></h2>
+<p>We define the beta function (represent the envelope of the oscillation) <span class="math notranslate nohighlight">\(\beta(s)=w^2(s)\)</span> and alpha function (the slope of the envelope) <span class="math notranslate nohighlight">\(\alpha(s)=-\beta'(s)/2=-w(s)w'(s)\)</span>.  The phase advance from location <span class="math notranslate nohighlight">\(s_0\)</span> to <span class="math notranslate nohighlight">\(s\)</span> becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3fa28fef-e8f3-480a-9c29-ba34a72a99df">
+<span class="eqno">(134)<a class="headerlink" href="#equation-3fa28fef-e8f3-480a-9c29-ba34a72a99df" title="Permalink to this equation">#</a></span>\[\begin{align}
+\psi(s,s_0)=\int_{s_0}^s\frac{1}{\beta(s')}ds'
+\end{align}\]</div>
+<p>The derivatives of beta function are:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9148a87a-fa6b-4f8c-800b-71fe0a619858">
+<span class="eqno">(135)<a class="headerlink" href="#equation-9148a87a-fa6b-4f8c-800b-71fe0a619858" title="Permalink to this equation">#</a></span>\[\begin{align}
+\beta'&amp;=2ww'\\
+\beta''&amp;=2w'^2+2ww''
+\end{align}\]</div>
+<p>which satisfy:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c6d2be08-169d-40da-b4b2-6fb8dbced112">
+<span class="eqno">(136)<a class="headerlink" href="#equation-c6d2be08-169d-40da-b4b2-6fb8dbced112" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}\beta''+K\beta-\frac{1}{\beta}\left[1+\frac{\beta'^2}{4}\right]=0
+\end{align}\]</div>
+<p>Using the beta function, we can write the transverse motion as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-x-s-with-cos">
+<span class="eqno">(137)<a class="headerlink" href="#equation-eq-twiss-x-s-with-cos" title="Link to this equation">#</a></span>\[\begin{align}
+x(s)=a\sqrt{\beta(s)}\cos\left(\psi\left(s\right)\right)
+\end{align}\]</div>
+<p>Its derivative becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-58f4a8d5-60fb-4edb-958a-765f3bd3d8ac">
+<span class="eqno">(138)<a class="headerlink" href="#equation-58f4a8d5-60fb-4edb-958a-765f3bd3d8ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+x'(s)&amp;=-a\sqrt{\beta}\psi'\sin\psi+a\frac{\beta'}{2\sqrt{\beta}}\cos\psi\\
+&amp;=-\frac{x}{\beta}\left(\tan\psi-\frac{\beta'}{2}\right)\\
+&amp;=-\frac{x}{\beta}\left(\tan\psi+\alpha\right)
+\end{align}\]</div>
+<p>An interesting relation can be revealed as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-x-xp-with-tan">
+<span class="eqno">(139)<a class="headerlink" href="#equation-eq-twiss-x-xp-with-tan" title="Link to this equation">#</a></span>\[\begin{align}
+\tan\psi(s)=-\frac{\beta(s)x'(s)+\alpha(s)x(s)}{x(s)}
+\end{align}\]</div>
+<p>Using the triganular relations <span class="math notranslate nohighlight">\(\cos^{-2}\alpha=1+\tan^2\alpha\)</span> for any angle <span class="math notranslate nohighlight">\(\alpha\)</span>, we can combine equation <a class="reference internal" href="#equation-eq-twiss-x-s-with-cos">(137)</a> and <a class="reference internal" href="#equation-eq-twiss-x-xp-with-tan">(139)</a> and get:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0e823a42-c8d2-45cb-aa4d-e5aaabfe9c4d">
+<span class="eqno">(140)<a class="headerlink" href="#equation-0e823a42-c8d2-45cb-aa4d-e5aaabfe9c4d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\frac{\beta(s)x'(s)+\alpha(s)x(s)}{x(s)}\right)^2+1&amp;=\left(\frac{a\sqrt{\beta(s)}}{x(s)}\right)^2\\
+\frac{\left(\beta(s)x'(s)+\alpha(s)x(s)\right)^2+x^2(s)}{\beta (s)}&amp;=a^2
+\end{align}\]</div>
+</section>
+<section id="action-angle-variable">
+<h2>Action-Angle Variable<a class="headerlink" href="#action-angle-variable" title="Link to this heading">#</a></h2>
+<p>Since the transverse Hamiltonian</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ffa4722b-0577-4b58-beeb-5567bcc36916">
+<span class="eqno">(141)<a class="headerlink" href="#equation-ffa4722b-0577-4b58-beeb-5567bcc36916" title="Permalink to this equation">#</a></span>\[\begin{align}
+H(x,p_x,y,p_y,s)=\frac{p_x^2}{2}+\frac{p_y^2}{2}+\frac{x^2}{2\rho(s)^2}+k(s)\left(x^2-y^2\right)/2
+\end{align}\]</div>
+<p>is not a constant of motion,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-64e891f1-fb9d-4373-90a5-33d43dfb4ca2">
+<span class="eqno">(142)<a class="headerlink" href="#equation-64e891f1-fb9d-4373-90a5-33d43dfb4ca2" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{dH}{ds}&amp;=\frac{\partial H}{\partial x}\frac{\partial x}{\partial s}+
+\frac{\partial H}{\partial p_x}\frac{\partial p_x}{\partial s} + \frac{\partial H}{\partial s}\\
+&amp;=\frac{\partial H}{\partial s}\ne 0
+\end{align}\]</div>
+<p>We will follow the action-angle variable treatment in classical mechanics to simplify the transverse motion formula of one transverse direction using the Hamiltonian:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-79adc85c-2649-448d-9ee8-48ff9cc52829">
+<span class="eqno">(143)<a class="headerlink" href="#equation-79adc85c-2649-448d-9ee8-48ff9cc52829" title="Permalink to this equation">#</a></span>\[\begin{align}
+H(x,x',s)=\frac{x'^2}{2}+\frac{K(s)}{2}{x^2}
+\end{align}\]</div>
+<p>the transverse motion formula, by changing the coordinate from <span class="math notranslate nohighlight">\((x,p_x)\)</span> to <span class="math notranslate nohighlight">\((J,\psi)\)</span>.  We will use the generating function of the first kind</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5d5b5c67-9e3c-4310-b23a-2c63e0b8fca4">
+<span class="eqno">(144)<a class="headerlink" href="#equation-5d5b5c67-9e3c-4310-b23a-2c63e0b8fca4" title="Permalink to this equation">#</a></span>\[\begin{align}
+F_1(x,\psi)&amp;=\int_0^x x'(\tilde x,\psi)d\tilde x \\
+&amp;= -\frac{x^2}{2\beta}\left(\tan\psi-\frac{\beta'}{2}\right)
+\end{align}\]</div>
+<p>The action is calculated by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-98f59d86-b244-4947-9dc4-8bbcc1445667">
+<span class="eqno">(145)<a class="headerlink" href="#equation-98f59d86-b244-4947-9dc4-8bbcc1445667" title="Permalink to this equation">#</a></span>\[\begin{align}
+J&amp;=-\frac{\partial F_1}{\partial\psi}=\frac{x^2}{2\beta}\sec^2\psi\\
+&amp;=\frac{x^2}{2\beta}\left(1+\left(\frac{\beta x'}{x}+\alpha\right)^2\right)\\
+&amp;=\frac{1}{2\beta}\left(x^2+\left(\beta x'+\alpha x\right)^2\right)
+\end{align}\]</div>
+<p>The new Hamiltonian is:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-40cf63b8-70c8-4a36-bbbb-9121538d96f8">
+<span class="eqno">(146)<a class="headerlink" href="#equation-40cf63b8-70c8-4a36-bbbb-9121538d96f8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tilde{H}&amp;=H+\frac{\partial F_1}{\partial s}  \\
+&amp;=\frac{1}{2}\frac{x^2}{\beta^2}\left(\tan\psi+\alpha\right)^2+\frac{1}{2}Kx^2 +\\
+&amp;\quad\frac{x^2}{2\beta^2}\beta'\left(\tan\psi-\frac{\beta'}{2}\right)-\frac{x^2}{2\beta}\left(\psi'\sec^2\psi-\frac{\beta''}{2}\right) \nonumber\\
+&amp;=\frac{J}{\beta}
+\end{align}\]</div>
+<p>Obviously, <span class="math notranslate nohighlight">\(J\)</span> is constant since:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4874edab-ac83-46c0-b54f-ce8ced6d9f3f">
+<span class="eqno">(147)<a class="headerlink" href="#equation-4874edab-ac83-46c0-b54f-ce8ced6d9f3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{dJ}{ds}=-\frac{\partial \tilde{H}}{\partial \psi}=0
+\end{align}\]</div>
+<p>Now, we can revisit the coordinate transformation <span class="math notranslate nohighlight">\((x,x')\)</span> to <span class="math notranslate nohighlight">\((\psi, J)\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-action">
+<span class="eqno">(148)<a class="headerlink" href="#equation-eq-twiss-action" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+J&amp;=\frac{1}{2}\left(\left(\frac{x}{\sqrt{\beta}}\right)^2+\left(\sqrt\beta x'+\frac{\alpha}{\sqrt{\beta}} x\right)^2\right) = \text{constant} \\
+\psi&amp;=-\arctan\frac{\sqrt\beta x'+\alpha x/\sqrt{\beta}}{x/\sqrt{\beta}}
+\end{align}\end{split}\]</div>
+</section>
+<section id="normalized-coordinates">
+<h2>Normalized Coordinates<a class="headerlink" href="#normalized-coordinates" title="Link to this heading">#</a></h2>
+<p>Therefore we can define the normalized coordinate:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a28347eb-55ac-4715-8e3a-52cb21ddaf04">
+<span class="eqno">(149)<a class="headerlink" href="#equation-a28347eb-55ac-4715-8e3a-52cb21ddaf04" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal{X}&amp;=\frac{x}{\sqrt{\beta}} \\
+\mathcal{P_x}&amp;=\sqrt\beta x'+\frac{\alpha}{\sqrt{\beta}}x
+\end{align}\]</div>
+<p>In matrix form, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2321fe46-13ee-404f-8ca0-e06dcfc7805b">
+<span class="eqno">(150)<a class="headerlink" href="#equation-2321fe46-13ee-404f-8ca0-e06dcfc7805b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\mathcal{X}\\
+\mathcal{P}_{x}
+\end{array}\right)=\left(\begin{array}{cc}
+1/\sqrt{\beta} &amp; 0\\
+\alpha/\sqrt{\beta} &amp; \sqrt{\beta}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)
+\end{align}\]</div>
+<p>or reversely:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b467bf74-b1a4-41d8-b252-835b12326f3f">
+<span class="eqno">(151)<a class="headerlink" href="#equation-b467bf74-b1a4-41d8-b252-835b12326f3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)
+=\left(\begin{array}{cc}
+\sqrt{\beta} &amp; 0\\
+-\alpha/\sqrt{\beta} &amp; 1/\sqrt{\beta}
+\end{array}\right)\left(\begin{array}{c}
+\mathcal{X}\\
+\mathcal{P}_{x}
+\end{array}\right)
+\end{align}\]</div>
+<p>For location 1 to location 2, the normalized coordinate follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e5ebe8da-57e9-4657-9d07-ef62aa2eb3d7">
+<span class="eqno">(152)<a class="headerlink" href="#equation-e5ebe8da-57e9-4657-9d07-ef62aa2eb3d7" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\mathcal{X}\\
+\mathcal{P}_{x}
+\end{array}\right)_2=\left(\begin{array}{cc}
+\cos\psi_{12} &amp; \sin\psi_{12}\\
+-\sin\psi_{12}  &amp; \cos\psi_{12}
+\end{array}\right)\left(\begin{array}{c}
+\mathcal{X}\\
+\mathcal{P}_{x}
+\end{array}\right)_1
+\end{align}\]</div>
+<p>The original coordintate has the map:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-892b047c-50ac-4559-86f9-a29fea89def6">
+<span class="eqno">(153)<a class="headerlink" href="#equation-892b047c-50ac-4559-86f9-a29fea89def6" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\mathcal{x}\\
+x'
+\end{array}\right)_2=
+\left(\begin{array}{cc}
+\sqrt{\beta_2} &amp; 0\\
+-\alpha_2/\sqrt{\beta_2} &amp; 1/\sqrt{\beta_2}
+\end{array}\right)
+\left(\begin{array}{cc}
+\cos\psi_{12} &amp; \sin\psi_{12}\\
+-\sin\psi_{12}  &amp; \cos\psi_{12}
+\end{array}\right)\left(\begin{array}{cc}
+1/\sqrt{\beta_1} &amp; 0\\
+\alpha_1/\sqrt{\beta_1} &amp; \sqrt{\beta_1}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)_1
+\end{align}\]</div>
+<p>Therefore we rederived the transfer map of two arbitrary location in usual form:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-tmatrix-s1s2">
+<span class="eqno">(154)<a class="headerlink" href="#equation-eq-twiss-tmatrix-s1s2" title="Link to this equation">#</a></span>\[\begin{split}\begin{equation}
+M\left(s_{2}\mid s_{1}\right)
+=\left(\begin{array}{cc}
+\sqrt{{\frac{\beta_{2}}{\beta_{1}}}}\left(\cos\psi+\alpha_{1}\sin\psi\right) &amp; \sqrt{\beta_{1}\beta_{2}}\sin\psi\\
+-\frac{1+\alpha_{1}\alpha_{2}}{\sqrt{\beta_{1}\beta_{2}}}\sin\psi+\frac{\alpha_{1}-\alpha_{2}}{\sqrt{\beta_{1}\beta_{2}}}\cos\psi &amp; \sqrt{{\frac{\beta_{1}}{\beta_{2}}}}\left(\cos\psi-\alpha_{2}\sin\psi\right)
+\end{array}\right) 
+\end{equation}\end{split}\]</div>
+<p>When the two locations have same optical functions, the one turn map is rederived:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-67c0d04e-7b02-4fa8-b60a-9d2edbf62f4d">
+<span class="eqno">(155)<a class="headerlink" href="#equation-67c0d04e-7b02-4fa8-b60a-9d2edbf62f4d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\mathcal{x}\\
+x'
+\end{array}\right)_2&amp;=
+\left(\begin{array}{cc}
+\sqrt{\beta} &amp; 0\\
+-\alpha/\sqrt{\beta} &amp; 1/\sqrt{\beta}
+\end{array}\right)
+\left(\begin{array}{cc}
+\cos\psi &amp; \sin\psi\\
+-\sin\psi  &amp; \cos\psi
+\end{array}\right)\left(\begin{array}{cc}
+1/\sqrt{\beta} &amp; 0\\
+\alpha/\sqrt{\beta} &amp; \sqrt{\beta}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)_1\\
+&amp;=
+\left(\begin{array}{cc}
+\cos\psi+\alpha\sin\psi  &amp; \beta \sin\psi\\
+-\frac{1+\alpha^2}{\beta}\sin\psi  &amp; \cos\psi-\alpha\sin\psi 
+\end{array}\right)
+\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)_1
+\end{align}\]</div>
+</section>
+<section id="uniqueness-of-the-parametrization">
+<h2>Uniqueness of the Parametrization<a class="headerlink" href="#uniqueness-of-the-parametrization" title="Link to this heading">#</a></h2>
+<p>Apparently, the solution of the Hills equation is unique except two initial conditions, one scales the envelope function <span class="math notranslate nohighlight">\(w(s)\)</span> and the other one defines the initial phase of <span class="math notranslate nohighlight">\(\psi(s)\)</span> when <span class="math notranslate nohighlight">\(s=0\)</span>.</p>
+<p>However, is the parametrization a unique answer?</p>
+<p>From the action’s formula <a class="reference internal" href="#equation-eq-twiss-action">(148)</a>, it is easy to see that the definition of the Parametrization can have infinite sets. In general, we can define the the normalized coordinate as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d70e3a48-2f80-4cde-b70f-4f03ea9edf88">
+<span class="eqno">(156)<a class="headerlink" href="#equation-d70e3a48-2f80-4cde-b70f-4f03ea9edf88" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\mathcal{X}\\
+\mathcal{P}_{x}
+\end{array}\right)=\left(\begin{array}{cc}
+a &amp; b\\
+c &amp; d
+\end{array}\right)\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)
+\end{align}\]</div>
+<p>The four independent parameter only need to satisfy three conditions:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-18737c0b-48f0-4c35-8b4a-f5e3e9363ec0">
+<span class="eqno">(157)<a class="headerlink" href="#equation-18737c0b-48f0-4c35-8b4a-f5e3e9363ec0" title="Permalink to this equation">#</a></span>\[\begin{align}
+a^2+c^2&amp;=\gamma=\frac{1+\alpha}{\beta}\\
+b^2+d^2&amp;=\beta\\
+ab+cd&amp;=\alpha
+\end{align}\]</div>
+<p>The widely used parametrization version, takes the special case <span class="math notranslate nohighlight">\(b=0\)</span>.  An ‘equally good’ choice can be found by forcing <span class="math notranslate nohighlight">\(c=0\)</span>. Then the normalized coordinate becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-05b30a18-9c4b-472f-aff9-a9013fac5d6a">
+<span class="eqno">(158)<a class="headerlink" href="#equation-05b30a18-9c4b-472f-aff9-a9013fac5d6a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+\tilde{\mathcal{X}}\\
+\tilde{\mathcal{P}_{x}}
+\end{array}\right)=\left(\begin{array}{cc}
+\sqrt{\gamma} &amp; \alpha/\sqrt{\gamma}\\
+0 &amp; 1/\sqrt{\gamma}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+x'
+\end{array}\right)
+\end{align}\]</div>
+<p>The corresponding phase advance becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d6eb9539-4ed6-4768-93db-0dc20706f27d">
+<span class="eqno">(159)<a class="headerlink" href="#equation-d6eb9539-4ed6-4768-93db-0dc20706f27d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\psi&amp;=-\arctan\frac{x'/\sqrt\gamma }{\sqrt{\gamma}x+\alpha x'/\sqrt{\gamma}}
+\end{align}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./transverse_BD/basic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Hamiltonian_Hills.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear Transverse Motion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../perturbation/perturbed_motion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Perturbation of transverse motion</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hills-equation">Hill’s Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twiss-parameter">Twiss Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-angle-variable">Action-Angle Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-coordinates">Normalized Coordinates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniqueness-of-the-parametrization">Uniqueness of the Parametrization</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yue Hao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

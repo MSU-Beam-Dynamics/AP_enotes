@@ -1,0 +1,110 @@
+Traceback (most recent call last):
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from map2D import map2D
+import numpy as np
+import matplotlib.pyplot as plt
+#from matplotlib import animation
+#from IPython.display import HTML
+%matplotlib notebook
+
+tunex=0.223
+dtune=0.005
+tuney= 1-tunex+dtune # Sum resonance
+#tuney= tunex+dtune  # Diff resonance
+
+pxs=0.0005*np.arange(10)
+pxps=np.zeros_like(pxs)
+#pxs=0.005*np.cos(np.linspace(0,np.pi, 10))
+#pxps=0.005*np.sin(np.linspace(0,np.pi, 10))
+
+particles=np.vstack([pxs,pxps])
+xpx=map2D(npart=10, twiss=[1,0], twiss_beam=[1,0], tune=tunex, chrom=0.0, espr=0.0,
+                  particles=particles)
+
+pys=0.004*np.ones(10)
+pyps=np.zeros_like(pys)
+particles=np.vstack([pys,pyps])
+ypy=map2D(npart=len(pxs), twiss=[1,0], twiss_beam=[1,0],tune=tuney, chrom=0.0, espr=0.0,
+          particles=particles, 
+          emit=0.1e-6)
+
+avex,avep,sizex,sizep,emit=xpx.statistics()
+emitlist=[]
+sizelist=[]
+avelist=[]
+N_turn=5000
+
+
+def evolve_func(turns, kick_turn_start=0, ks=-0.005,
+               ):
+    for i in range(turns):
+        if i>=kick_turn_start:
+            xpx.coor2D[1,:]+=ks*ypy.coor2D[0,:]
+            ypy.coor2D[1,:]+=ks*xpx.coor2D[0,:]
+        
+        xpx.propagate()
+        ypy.propagate()
+        
+        #avex,avep,sizex,sizep,emit=xpx.statistics()
+        #avelist.append(avex)
+        #sizelist.append(sizex)
+        #emitlist.append(emit)
+        yield xpx.coor2D, ypy.coor2D
+        
+evolve=evolve_func(N_turn+2)
+    
+fig,ax=plt.subplots()
+ax.set_xlim([-0.01,0.01])
+ax.set_ylim([-0.01,0.01])
+xlist=[]
+xplist=[]
+ylist=[]
+yplist=[]
+
+
+for i in range(N_turn):
+    arrx, arry=next(evolve)
+    #if np.max(arr)>1: break
+    xlist.append(arrx[0])
+    xplist.append(arrx[1])
+    ylist.append(arry[0])
+    yplist.append(arry[1])
+xarr=np.vstack(xlist)
+xparr=np.vstack(xplist)
+yarr=np.vstack(ylist)
+yparr=np.vstack(yplist)
+ax.plot(xarr,xparr,linestyle='None', marker='.', c='b', markersize=1)
+ax.set_xlabel('x')
+Jx=xarr*xarr+xparr*xparr
+Jy=yarr*yarr+yparr*yparr
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[2], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmap2D[39;00m [38;5;28;01mimport[39;00m map2D
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'map2D'
+
