@@ -1,0 +1,1219 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Off Momentum Orbit &#8212; Accelerator Physics eNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'transverse_BD/dispersion/dispersion';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chromatic Effect" href="../chrom/chromaticity.html" />
+    <link rel="prev" title="Linear Coupling" href="../coupling/linear_transverse_coupling.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Accelerator Physics eNotes - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Accelerator Physics eNotes - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to the Accelerator Physics eNotes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I: Transverse Dynamics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../magnet/magnets.html">Overview of Accelerator Magnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/Hamiltonian_Hills.html">Linear Transverse Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/twiss_param.html">Twiss Parametrization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../perturbation/perturbed_motion.html">Perturbation of transverse motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coupling/linear_transverse_coupling.html">Linear Coupling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Off Momentum Orbit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chrom/chromaticity.html">Chromatic Effect</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II: Longitudinal Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../longitudinal_BD/longitudinal_dynamics.html">Longitudinal Dynamics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part III: Electron Storage Ring</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ESR/SR/synchrotron_radiation.html">Synchrotron Radiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ESR/ESR_Dynamics/ESR_dynamics.html">Dynamics in Electron Storage Ring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/symplecticity.html">Primer on symplecticity</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MSU-Beam-Dynamics/AP_enotes/issues/new?title=Issue%20on%20page%20%2Ftransverse_BD/dispersion/dispersion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/transverse_BD/dispersion/dispersion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Off Momentum Orbit</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersive-orbit">Dispersive Orbit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#revisit-the-hamiltonian">Revisit the Hamiltonian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispertion-function">Dispertion Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disperion-with-periodic-condition">Disperion with Periodic Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathcal-h-function"><span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-measurement">Dispersion measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-representation">Integration Representation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-matching-and-suppression">Dispersion Matching and Suppression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achromatic-condition">Achromatic Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-matching">Dispersion Matching</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeating-cells">Repeating cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-suppression">Dispersion suppression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-bending-field-suppressor">‘Reduced-bending-field’ suppressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-compaction-factor">Momentum Compaction Factor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-measurement-in-ring">Dispersion Measurement in Ring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-energy-crossing">Transition Energy Crossing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gamma-t-jump"><span class="math notranslate nohighlight">\(\gamma_T\)</span> jump</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-momentum-compaction-fmc-lattice">Flexible momentum compaction (FMC) lattice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-phase-space">6-D phase space</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="off-momentum-orbit">
+<h1>Off Momentum Orbit<a class="headerlink" href="#off-momentum-orbit" title="Link to this heading">#</a></h1>
+<p>So far, we discussed the transverse dynamics for the particles with reference energy, or
+$<span class="math notranslate nohighlight">\(\delta = \frac{\Delta p}{p_0}=0\)</span>$</p>
+<p>In this section, we will explore the transverse orbit properties for those particles with small momentum deviation <span class="math notranslate nohighlight">\(\delta\)</span></p>
+<section id="dispersive-orbit">
+<h2>Dispersive Orbit<a class="headerlink" href="#dispersive-orbit" title="Link to this heading">#</a></h2>
+<section id="revisit-the-hamiltonian">
+<h3>Revisit the Hamiltonian<a class="headerlink" href="#revisit-the-hamiltonian" title="Link to this heading">#</a></h3>
+<p>Let us recall the exact Hamiltonian has the form:
+$<span class="math notranslate nohighlight">\(K\left(x, p_x, y, p_y, z, \delta,s\right)=-\left(1+\frac{x}{\rho}\right)\sqrt{(1+\delta)^2-p_x^2-p_y^2} 
+-e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)
+\)</span>$</p>
+<p>With the paraxial approximation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4ddc59f0-22e5-40f4-8172-b09122afe078">
+<span class="eqno">(235)<a class="headerlink" href="#equation-4ddc59f0-22e5-40f4-8172-b09122afe078" title="Permalink to this equation">#</a></span>\[\begin{equation}
+K\left(x, p_x, y, p_y, z, \delta,s\right)=
+-\left(1+\frac{x}{\rho}\right)\left(1+\delta-\frac{p_x^2}{2(1+\delta)}-\frac{p_y^2}{2(1+\delta)}\right)
+-e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)
+\end{equation}\]</div>
+<p>Keeping only up to the linear term of <span class="math notranslate nohighlight">\(delta\)</span> and <span class="math notranslate nohighlight">\(x/\rho\)</span>, and using $<span class="math notranslate nohighlight">\(A_{s,d}\approx-B_0\left(x - \frac{x^2}{2\rho}\right)\)</span><span class="math notranslate nohighlight">\(, \)</span><span class="math notranslate nohighlight">\(A_{s,q}=-B_0 b_1(s) \left(x^2-y^2\right)/2=-G(s)\left(x^2-y^2\right)/2\)</span>$, we get:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-59809e24-9e8a-4bc0-9fd2-205220d22b09">
+<span class="eqno">(236)<a class="headerlink" href="#equation-59809e24-9e8a-4bc0-9fd2-205220d22b09" title="Permalink to this equation">#</a></span>\[\begin{align}
+K\left(x, p_x, y, p_y, z, \delta,s\right)&amp;=
+-\left(1+\frac{x}{\rho}\right)\left(1+\delta-\frac{p_x^2}{2(1+\delta)}-\frac{p_y^2}{2(1+\delta)}\right)
+-e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)\\
+&amp;\approx -1-\delta-\delta\frac{x}{\rho}+\frac{p_x^2}{2}+\frac{p_y^2}{2}+\frac{x^2}{2\rho^2}+k(s)\left(x^2-y^2\right)/2
+\end{align}\]</div>
+<p>Here we assume <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span> are parameter, therefore constants.  The motion of <span class="math notranslate nohighlight">\(x\)</span> any <span class="math notranslate nohighlight">\(y\)</span> directions are still decoupled, and the Hamiltonian for the x direction is :
+$<span class="math notranslate nohighlight">\(
+K\left(x, p_x\right)=\frac{p_x^2}{2}+\frac{x^2}{2\rho^2}+\frac{k(s)x^2}{2}-\delta\frac{x}{\rho}
+\)</span>$</p>
+</section>
+<section id="dispertion-function">
+<h3>Dispertion Function<a class="headerlink" href="#dispertion-function" title="Link to this heading">#</a></h3>
+<figure class="align-left" id="id1">
+<a class="reference internal image-reference" href="../../_images/dispersive_orbit_in_dipole.png"><img alt="../../_images/dispersive_orbit_in_dipole.png" src="../../_images/dispersive_orbit_in_dipole.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Dispersive orbit in dipole</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The equation of motion then becomes a non-homogeneous one :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a30690be-b62b-4c87-b73e-7e53cf9c3290">
+<span class="eqno">(237)<a class="headerlink" href="#equation-a30690be-b62b-4c87-b73e-7e53cf9c3290" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x''+\left(\frac{1}{\rho^2}+k(s)\right)x=\frac{\delta}{\rho} 
+\end{equation}\]</div>
+<!--img src="dispersive_orbit_in_dipole.png" alt="Drawing" style="width: 200px;"/-->
+<p>Clearly, the off-momentum orbit raises from the momentum deviation in the bending elements.
+If we write the solution as:
+$<span class="math notranslate nohighlight">\(
+x(s)=x_\beta(s)+D(s)\delta + \mathcal{O}\left(\delta^2\right)
+\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(x_\beta(s)\)</span> satisfies the homogeneous Hill’s equation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-73ef5b9d-689e-4113-9be5-dd56f7e9711c">
+<span class="eqno">(238)<a class="headerlink" href="#equation-73ef5b9d-689e-4113-9be5-dd56f7e9711c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x''+\left(\frac{1}{\rho^2}+k(s)\right)x=0
+\end{equation}\]</div>
+<p>The coefficient <span class="math notranslate nohighlight">\(D(s)=\frac{\partial x(s)}{\partial \delta}|_{\delta=0}\)</span> is the linear dispersion function, which is also depend on the design lattice.  It is the solution of the inhomogeneous ODE:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6dc03070-fc1d-4b9b-bf4d-c6624421fbbf">
+<span class="eqno">(239)<a class="headerlink" href="#equation-6dc03070-fc1d-4b9b-bf4d-c6624421fbbf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D''+\left(\frac{1}{\rho^2}+k(s)\right)D=\frac{1}{\rho}
+\end{equation}\]</div>
+<p>The solution of the dispersion function is the sum of the general solution of the homoneneous ODE and the special solution:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0c107cd2-c927-48aa-a045-a4135997c0bc">
+<span class="eqno">(240)<a class="headerlink" href="#equation-0c107cd2-c927-48aa-a045-a4135997c0bc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right)_{s=s_{0}+s}=M\left(s_{0}+s,s_{0}\right)\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right)_{s=s_{0}}+\left(\begin{array}{c}
+d\\
+d'
+\end{array}\right)
+\end{equation}\]</div>
+<p>For constant dipole with fixed gradient, let’s write <span class="math notranslate nohighlight">\(K=k+1/\rho^2\)</span>, the transver matrix <span class="math notranslate nohighlight">\(M\)</span> has been calculated before:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-73383687-f28f-4b68-9511-1fba6a01cdf2">
+<span class="eqno">(241)<a class="headerlink" href="#equation-73383687-f28f-4b68-9511-1fba6a01cdf2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+M\left(s_0+s,s_0\right)=
+\begin{cases}
+\left(\begin{array}{cc}
+\cos\left(\sqrt{K}s\right) &amp; \sin\left(\sqrt{K}s\right)/\sqrt{K}\\
+-\sqrt{K}\sin\left(\sqrt{K}s\right) &amp; \cos\left(\sqrt{K}s\right)
+\end{array}\right)&amp;K&gt;0,\\
+\\
+\left(\begin{array}{cc}
+\cosh\left(\sqrt{K}s\right) &amp; \sinh\left(\sqrt{K}s\right)/\sqrt{K}\\
+\sqrt{K}\sinh\left(\sqrt{K}s\right) &amp; \cosh\left(\sqrt{K}s\right)
+\end{array}\right)&amp;K&lt;0\\
+\end{cases}
+\end{equation}\]</div>
+<p>The spectial solution in this case, should satisfy <span class="math notranslate nohighlight">\(d(s=s_0)=d'(s=s_0)=0\)</span>, one can easily prove that the following expression satisfy the inhomogeous equation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cef5d856-8b60-428c-850f-5f555d4a66db">
+<span class="eqno">(242)<a class="headerlink" href="#equation-cef5d856-8b60-428c-850f-5f555d4a66db" title="Permalink to this equation">#</a></span>\[\begin{equation}
+d(s)=
+\begin{cases}
+\frac{1}{\rho K}\left(
+1-\cos \left(\sqrt{K}s\right)
+\right)&amp;K&gt;0,\\
+\frac{1}{\rho K}\left(
+1-\cosh \left(\sqrt{-K}s\right)
+\right)&amp;K&lt;0
+\end{cases}
+\end{equation}\]</div>
+<p>and</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cda0e595-58c9-47a4-9ddb-1adf3a50c43b">
+<span class="eqno">(243)<a class="headerlink" href="#equation-cda0e595-58c9-47a4-9ddb-1adf3a50c43b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+d'(s)=
+\begin{cases}
+\frac{1}{\rho \sqrt{K}}
+\sin \left(\sqrt{K} s \right) &amp;K&gt;0,\\
+\frac{1}{\rho \sqrt{-K}}
+\sinh \left(\sqrt{-K}s \right)&amp;K&lt;0
+\end{cases}
+\end{equation}\]</div>
+<p>For pure dipole <span class="math notranslate nohighlight">\(K=1/\rho^2\)</span>, the special solution simply becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-72bbe7ef-0ed1-4344-ae4c-99aff7829f8e">
+<span class="eqno">(244)<a class="headerlink" href="#equation-72bbe7ef-0ed1-4344-ae4c-99aff7829f8e" title="Permalink to this equation">#</a></span>\[\begin{align}
+d(s)&amp;= \rho \left(1-\cos\theta\right) \approx\rho\theta^2\\
+d'(s)&amp;= \sin\theta \approx\theta
+\end{align}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\theta=s/\rho\)</span> is the bending angle.  The approximation is taken when the bending angle for the dipole is small.</p>
+<p>We can rewrite the matrix form in to a 3 by 3 matrix <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> and 3- vector form:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-40dae94b-5a91-46b2-8934-b0cc648608f6">
+<span class="eqno">(245)<a class="headerlink" href="#equation-40dae94b-5a91-46b2-8934-b0cc648608f6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)_{s=s_{0}+s}=\left(\begin{array}{cc}
+{M}\left(s_{0}+s,s_{0}\right) &amp; \bar{d}=\left(\begin{array}{c}
+d\\
+d'
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)_{s=s_{0}}
+\end{equation}\]</div>
+<p>For pure dipole, we have the form:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0b81f1fe-50be-49f1-a2e2-643571036858">
+<span class="eqno">(246)<a class="headerlink" href="#equation-0b81f1fe-50be-49f1-a2e2-643571036858" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal{M}_{dipole}&amp;=
+\left(\begin{array}{ccc}
+\cos(\theta) &amp; \rho\sin(\theta) &amp; \rho\left(1-\cos\theta\right)\\
+-\sin(\theta)/\rho &amp; \cos(\theta) &amp; \sin\theta\\
+0 &amp; 0 &amp; 1
+\end{array}\right)\\
+&amp;\approx
+\left(\begin{array}{ccc}
+1 &amp; l &amp; l\theta/2\\
+0 &amp; 1 &amp; \theta\\
+0 &amp; 0 &amp; 1
+\end{array}\right)\\
+\end{align}\]</div>
+<p>Here, the approximation is again assuming short dipole and <span class="math notranslate nohighlight">\(l=\rho\theta\)</span> is the length of the dipole.</p>
+</section>
+<section id="disperion-with-periodic-condition">
+<h3>Disperion with Periodic Condition<a class="headerlink" href="#disperion-with-periodic-condition" title="Link to this heading">#</a></h3>
+<p>For a periodic lattice with length L, we must have the dispersion function satisfy
+$<span class="math notranslate nohighlight">\(
+D\left(s_0\right)=D\left(s_0+L\right)
+\;;\;
+D'\left(s_0\right)=D'\left(s_0+L\right)
+\)</span>$</p>
+<p>And the expanded <span class="math notranslate nohighlight">\(3\times3\)</span> oneturn matrix has:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-05153d18-e250-4791-bf3d-1703e9b5c26b">
+<span class="eqno">(247)<a class="headerlink" href="#equation-05153d18-e250-4791-bf3d-1703e9b5c26b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)_{s=s_0}=\left(\begin{array}{cc}
+M\left(s_{0}\right) &amp; \left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)_{s=s_{0}}
+\end{equation}\]</div>
+<p>Here the matrix <span class="math notranslate nohighlight">\(M\left(s_0\right)\)</span> is the oneturn betatron matrix:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b2755bfd-8a79-451e-9b97-eeecfe8f84cc">
+<span class="eqno">(248)<a class="headerlink" href="#equation-b2755bfd-8a79-451e-9b97-eeecfe8f84cc" title="Permalink to this equation">#</a></span>\[\begin{align}
+M\left(s_0\right)&amp;=
+\left(\begin{array}{cc}
+M_{11} &amp; M_{12}\\
+M_{21} &amp; M_{22}
+\end{array}\right)\\
+&amp;=\left(\begin{array}{cc}
+\cos\Phi+\alpha\sin\Phi &amp; \beta\sin\Phi\\
+-\gamma\sin\Phi &amp; \cos\Phi-\alpha\sin\Phi
+\end{array}\right)
+\end{align}\]</div>
+<p>The elements <span class="math notranslate nohighlight">\(M_{13}\)</span> and <span class="math notranslate nohighlight">\(M_{23}\)</span> are related to the dispersion function by:</p>
+<div class="math notranslate nohighlight" id="equation-eq-dispersion-matrix-from-dispersion">
+<span class="eqno">(249)<a class="headerlink" href="#equation-eq-dispersion-matrix-from-dispersion" title="Link to this equation">#</a></span>\[\begin{split}\begin{equation}
+\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)=\left(I-\left(\begin{array}{cc}
+M_{11} &amp; M_{12}\\
+M_{21} &amp; M_{22}
+\end{array}\right)\right)\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right) %%\label{eq:matrix_from_dispersion}
+\end{equation}\end{split}\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(I-M\left(s_0\right)\)</span> has determinant <span class="math notranslate nohighlight">\(2-M_{11}-M_{22}\)</span> Recall that the stable condition of the periodic transfer matrix: <span class="math notranslate nohighlight">\(\left|Tr(M\left(s_0\right))\right|&lt;2\)</span>, the determinant of <span class="math notranslate nohighlight">\(I-M\left(s_0\right)\)</span> is always positive.  Therefore we can reverse the Eq. <a class="reference internal" href="#equation-eq-dispersion-matrix-from-dispersion">(249)</a> and calculate the dispersion function from the expanded one-turn matrix:</p>
+<div class="math notranslate nohighlight" id="equation-eq-dispersion-dispersion-from-matrix">
+<span class="eqno">(250)<a class="headerlink" href="#equation-eq-dispersion-dispersion-from-matrix" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right)
+&amp;=\left(I-M\right)^{-1}\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+&amp;=\frac{1}{2-M_{11}-M_{22}}\left(\begin{array}{cc}
+1-M_{22} &amp; M_{12}\\
+M_{21} &amp; 1-M_{11}
+\end{array}\right)\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right) %%\label{eq:dispersion_from_matrix}
+\end{align}\end{split}\]</div>
+</section>
+<section id="mathcal-h-function">
+<h3><span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function<a class="headerlink" href="#mathcal-h-function" title="Link to this heading">#</a></h3>
+<p>Since the dispersion function follows the inhomogeneous Hill’s function, we can follow the action-angle treatment of the particle motion and define the normalized dispersion as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2e1d9531-58dc-43cb-b2b1-4009e47cefea">
+<span class="eqno">(251)<a class="headerlink" href="#equation-2e1d9531-58dc-43cb-b2b1-4009e47cefea" title="Permalink to this equation">#</a></span>\[\begin{align}
+X_d&amp;=\frac{D}{\sqrt{\beta}}\\
+P_d&amp;=\frac{\beta D'+\alpha D }{\sqrt{\beta}}
+\end{align}\]</div>
+<p>We define <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-feac1de2-cd94-4153-b5d3-b3a8d7d7a757">
+<span class="eqno">(252)<a class="headerlink" href="#equation-feac1de2-cd94-4153-b5d3-b3a8d7d7a757" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal{H}&amp;\equiv X_d^2+P_d^2\\
+&amp;=\beta D'^2+2\alpha D D' + \gamma D^2
+\end{align}\]</div>
+<p>At the region outside dipole, <span class="math notranslate nohighlight">\(1/\rho=0\)</span>, the <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function is constant.  However, the bending field will change the value of the <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function.</p>
+</section>
+<section id="dispersion-measurement">
+<h3>Dispersion measurement<a class="headerlink" href="#dispersion-measurement" title="Link to this heading">#</a></h3>
+<p>The measurement of the dispersion in accelerator follows it definition:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-459bc12a-3c97-47d8-928b-695d3aeb92e3">
+<span class="eqno">(253)<a class="headerlink" href="#equation-459bc12a-3c97-47d8-928b-695d3aeb92e3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D=\frac{\partial x}{\partial \delta}
+\end{equation}\]</div>
+<p>In a linac, this is straight forward to realize in real machine.  One can easily change the energy of the beam by tweaking the accelerating cavity, then the dispersion is calculated from the beam centroid change at each Beam position monitor:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4a0c60ed-cd0f-4138-9b94-5108990de261">
+<span class="eqno">(254)<a class="headerlink" href="#equation-4a0c60ed-cd0f-4138-9b94-5108990de261" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D=\frac{\Delta x}{\Delta p/p_0}
+\end{equation}\]</div>
+<p>The measurement in a ring will be not as trivial, since the change of the accelerating voltage will not affect the energy of the particle linearly.  The dispersion measurement in a ring will be  introduce in the later part of this note.</p>
+</section>
+<section id="integration-representation">
+<h3>Integration Representation<a class="headerlink" href="#integration-representation" title="Link to this heading">#</a></h3>
+<p>From the similarity of the Hill’s equation with dipole error and the dispersion equation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ee33b6d2-0bf3-4358-a962-3d3ecf7e3f3f">
+<span class="eqno">(255)<a class="headerlink" href="#equation-ee33b6d2-0bf3-4358-a962-3d3ecf7e3f3f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D''+\left(\frac{1}{\rho^2}+k(s)\right)D=\frac{1}{\rho}
+\end{equation}\]</div>
+<p>and</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f080bcf3-292a-4e55-8d6c-8c6614d58521">
+<span class="eqno">(256)<a class="headerlink" href="#equation-f080bcf3-292a-4e55-8d6c-8c6614d58521" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x''\left(s\right)+\left(\frac{1}{\rho^2}+k(s)\right)x\left(s\right)=\frac{\Delta B(s)}{B_0\rho} 
+\end{equation}\]</div>
+<p>The integrated form of dispersion function can be achieved from the closed orbit integrals by substituting <span class="math notranslate nohighlight">\(\frac{\Delta B(s)}{B_0\rho} \)</span> with <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-89a03e05-d6cd-4838-ac4c-153c1b427529">
+<span class="eqno">(257)<a class="headerlink" href="#equation-89a03e05-d6cd-4838-ac4c-153c1b427529" title="Permalink to this equation">#</a></span>\[\begin{align}
+D(s)&amp;=\int_{s}^{s+C}\frac{1}{\rho(s_0)}G\left(s,s_{0}\right) ds_0 \nonumber\\
+&amp;=\frac{\sqrt{\beta\left(s\right)}}{{2\sin\pi\nu}}
+\int_{s}^{s+C}\frac{\sqrt{\beta\left(s_{0}\right)}}{\rho(s_0)}\cos\left(\psi\left(s\right)-\psi\left(s_{0}\right)-\pi\nu\right)ds_0
+\end{align}\]</div>
+</section>
+</section>
+<section id="dispersion-matching-and-suppression">
+<h2>Dispersion Matching and Suppression<a class="headerlink" href="#dispersion-matching-and-suppression" title="Link to this heading">#</a></h2>
+<section id="achromatic-condition">
+<h3>Achromatic Condition<a class="headerlink" href="#achromatic-condition" title="Link to this heading">#</a></h3>
+<p>For a lattice cell represented by <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, the acromatic condition guarantees that the if the zero dispersion is given at the entrance, zero dispersion is achieved at the exit.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-328c2844-ba48-4445-a098-d7ab8094edae">
+<span class="eqno">(258)<a class="headerlink" href="#equation-328c2844-ba48-4445-a098-d7ab8094edae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right)=\left(\begin{array}{cc}
+{M}\left(s_{0}+s,s_{0}\right) &amp; \bar{d}=\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right)
+\end{equation}\]</div>
+<p>Therefore the acromatic condition requires:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7e20945f-cc10-4b0d-ba9c-68408fa11a48">
+<span class="eqno">(259)<a class="headerlink" href="#equation-7e20945f-cc10-4b0d-ba9c-68408fa11a48" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\bar{d}=\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)
+=\left(\begin{array}{c}
+0\\
+0
+\end{array}\right)
+\end{equation}\]</div>
+</section>
+<section id="dispersion-matching">
+<h3>Dispersion Matching<a class="headerlink" href="#dispersion-matching" title="Link to this heading">#</a></h3>
+</section>
+<section id="repeating-cells">
+<h3>Repeating cells<a class="headerlink" href="#repeating-cells" title="Link to this heading">#</a></h3>
+<p>If we repeat a non-achromatic cell for N times, the <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-99b432b4-4b2e-4f9b-8656-adf633fe549c">
+<span class="eqno">(260)<a class="headerlink" href="#equation-99b432b4-4b2e-4f9b-8656-adf633fe549c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal{M}^N&amp;=\left(\begin{array}{cc}
+{M} &amp; \bar{d}\\
+0 &amp; 1
+\end{array}\right)^N\\
+&amp;=\left(\begin{array}{cc}
+{M}^N &amp; \left(M^{N-1}+M^{N-2}+\cdots+1\right)\bar{d}\\
+0 &amp; 1
+\end{array}\right)\\
+&amp;=\left(\begin{array}{cc}
+{M}^N &amp; \left(I-M^{N} \right)\left(I-M \right)^{-1}\bar{d}\\
+0 &amp; 1
+\end{array}\right)\\
+&amp;=\left(\begin{array}{cc}
+{M}^N &amp; \left(I-M^{N} \right)\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)
+\end{align}\]</div>
+<p>Therefore, to achieve a achromatic condition by repeating a non-achromatic cell <span class="math notranslate nohighlight">\(N\)</span> times, it is required to have $<span class="math notranslate nohighlight">\(M^N=I\)</span>$</p>
+<p>The betatron transfer matrix <span class="math notranslate nohighlight">\(M\)</span> can be expressed by the twiss parameter:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4e3022e8-0b51-464f-8c84-0c8b35664553">
+<span class="eqno">(261)<a class="headerlink" href="#equation-4e3022e8-0b51-464f-8c84-0c8b35664553" title="Permalink to this equation">#</a></span>\[\begin{equation}
+M=\left(\begin{array}{cc}
+\cos\Phi+\alpha\sin\Phi &amp; \beta\sin\Phi\\
+-\gamma\sin\Phi &amp; \cos\Phi-\alpha\sin\Phi
+\end{array}\right)
+\end{equation}\]</div>
+<p>Therefore the requirement becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e781ca1d-7cf3-4efe-817f-0e7d43cb24ab">
+<span class="eqno">(262)<a class="headerlink" href="#equation-e781ca1d-7cf3-4efe-817f-0e7d43cb24ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
+N\Phi=2n\pi \;,\; n\in \text{Integer}
+\end{equation}\]</div>
+</section>
+<section id="dispersion-suppression">
+<h3>Dispersion suppression<a class="headerlink" href="#dispersion-suppression" title="Link to this heading">#</a></h3>
+<p>For a non-achromatic lattice in a periodical structure, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-edb030af-bcbd-469b-9ded-b8a30b8d903a">
+<span class="eqno">(263)<a class="headerlink" href="#equation-edb030af-bcbd-469b-9ded-b8a30b8d903a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)=\mathcal{M}\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)=
+\left(\begin{array}{cc}
+M &amp; \left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)
+\end{equation}\]</div>
+<p>A dispersion suppression section, represented by matrix <span class="math notranslate nohighlight">\(\tilde{\mathcal{M}}^{-1}\)</span> can match a non-zero dispersion <span class="math notranslate nohighlight">\((D,D')\)</span> at the end of a curved lattice to zero dispersion, which reads</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2dde25f8-9a82-47fa-a47a-d4554ecadc7c">
+<span class="eqno">(264)<a class="headerlink" href="#equation-2dde25f8-9a82-47fa-a47a-d4554ecadc7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right) = 
+\tilde{\mathcal{M}}
+\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right) =
+\left(\begin{array}{cc}
+\tilde{M} &amp; \left(\begin{array}{c}
+\tilde{M}_{13}\\
+\tilde{M}_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right)
+\end{equation}\]</div>
+<p>Then the required terms in the suppressor is simply:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2d0fce38-9c1d-49ef-b6cb-8cef42978b46">
+<span class="eqno">(265)<a class="headerlink" href="#equation-2d0fce38-9c1d-49ef-b6cb-8cef42978b46" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+\tilde{M}_{13}\\
+\tilde{M}_{23}
+\end{array}\right) = 
+\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right) =
+\left(I-M\right)^{-1}\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)
+\end{equation}\]</div>
+<p>We can use optimization methods to achieve such condition using any accelerator design software.</p>
+</section>
+<section id="reduced-bending-field-suppressor">
+<h3>‘Reduced-bending-field’ suppressor<a class="headerlink" href="#reduced-bending-field-suppressor" title="Link to this heading">#</a></h3>
+<p>Generally, dispersion matching will change the optical functions as well.  However, there are some special elegant case, which suppresses the dispersion while maintaining the optics. Suppose we have a lattice cell described by the transfer matrix <span class="math notranslate nohighlight">\(M\)</span>. It is non-achromatic and have:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f004d9fa-58bf-4e39-b5eb-bbf638d866ec">
+<span class="eqno">(266)<a class="headerlink" href="#equation-f004d9fa-58bf-4e39-b5eb-bbf638d866ec" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)=\mathcal{M}\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)=
+\left(\begin{array}{cc}
+M &amp; \left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\left(\begin{array}{c}
+D\\
+D'\\
+1
+\end{array}\right)
+\end{equation}\]</div>
+<p>and it satisfy <span class="math notranslate nohighlight">\(M^{2N}=I\)</span>.  Therefore half of the <span class="math notranslate nohighlight">\(2N\)</span> cell satisfy <span class="math notranslate nohighlight">\(M^N=-I\)</span>.</p>
+<p>The <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix of the <span class="math notranslate nohighlight">\(N\)</span> repeating cells is:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5c5d5ca5-2e1f-45db-9f46-47bc82750df8">
+<span class="eqno">(267)<a class="headerlink" href="#equation-5c5d5ca5-2e1f-45db-9f46-47bc82750df8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal{M}^N
+&amp;=\left(\begin{array}{cc}
+M^N &amp; \left(I-M^{N} \right)\left(I-M \right)^{-1}\left(\begin{array}{c}
+M_{13}\\
+M_{23}
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)\\
+&amp;=\left(\begin{array}{cc}
+-I&amp; 2\left(\begin{array}{c}
+D\\
+D'
+\end{array}\right)\\
+0 &amp; 1
+\end{array}\right)
+\end{align}\]</div>
+<p>We know that the dispersion term is proportional to its bending angle, however, in small angle approximation, the betatron transverse matrix does not depend on the bending angle.</p>
+<p>Therefore it is now easy to come up a scheme to suppress the dispersion from a non-achromatic cell to zero dispersion.</p>
+<ul class="simple">
+<li><p>Make the cell N times so that the transfer matrix for the N cells is <span class="math notranslate nohighlight">\(-I\)</span></p></li>
+<li><p>Reduce all dipole bending angle to its half value.</p></li>
+</ul>
+<p>Then after some small modification, we can get a lattice that suppress the dispersion yet keep the original optics function.</p>
+</section>
+</section>
+<section id="momentum-compaction-factor">
+<h2>Momentum Compaction Factor<a class="headerlink" href="#momentum-compaction-factor" title="Link to this heading">#</a></h2>
+<p>In a ring or an arc, it is important to knew the pass length of the particle.  The ideal particle must have the desire trajectory length to synchronize with the RF cavity for acceleration. We also need to calculate the pass length difference for an off-momentum particle.</p>
+<p>Generally, we can calculate the circumference as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e13b95d8-b06c-4c3d-a242-6227b7ec9184">
+<span class="eqno">(268)<a class="headerlink" href="#equation-e13b95d8-b06c-4c3d-a242-6227b7ec9184" title="Permalink to this equation">#</a></span>\[\begin{align}
+C&amp;=\oint\left|\frac{d\mathbf{r}(s)}{ds}\right|ds\nonumber\\
+&amp;=\oint\left|\frac{d\left(\mathbf{r_{0}}(s)+x\hat{x}+y\hat{y}\right)}{ds}\right|ds\nonumber\\
+&amp;=\oint\left|(1+x/\rho)\hat{s}+x'\hat{x}+y'\hat{y}\right|ds\nonumber\\
+&amp;=\oint\sqrt{\left(1+x/\rho\right)^{2}+x'^{2}+y'^{2}}ds
+\end{align}\]</div>
+<p>If we keep only the linear term, then plug in the off-momentum term, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-21229cc5-bd0e-48fc-bb06-08ce667f0b1a">
+<span class="eqno">(269)<a class="headerlink" href="#equation-21229cc5-bd0e-48fc-bb06-08ce667f0b1a" title="Permalink to this equation">#</a></span>\[\begin{align}
+C&amp;=\oint\left(1+\frac{x}{\rho}\right) ds \nonumber\\
+&amp;=C_0+\oint\left(\frac{x_\beta+D\delta}{\rho}\right) ds \nonumber\\
+&amp;=C_\beta+\left(\oint\frac{D}{\rho} ds \right)\delta
+\end{align}\]</div>
+<p>This indicates that the extra circumference of the off-momentum is proportional to the momentum deviation. We define the <strong>Momentum Compaction Factor</strong> as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c1a5445c-c700-44f8-a804-49da40e5ff9b">
+<span class="eqno">(270)<a class="headerlink" href="#equation-c1a5445c-c700-44f8-a804-49da40e5ff9b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\alpha_c=\frac{1}{C_0}\frac{dC}{d\delta}=\frac{1}{C_0}\oint\frac{D}{\rho}ds
+\end{equation}\]</div>
+<p>Since the dispersion function is usually positive, the momentum compaction factor is also positive.  This means the higher energy particles usually travels longer.  However there are special lattice which is designed to have zero or even negative compaction factor.</p>
+<p>We can also calculate the travel time <span class="math notranslate nohighlight">\(t=C/v\)</span> difference of the off-momentum particles:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-35a882b6-d645-426d-bfca-5089408dc90b">
+<span class="eqno">(271)<a class="headerlink" href="#equation-35a882b6-d645-426d-bfca-5089408dc90b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\Delta T}{T}&amp;=\frac{\Delta C}{C}-\frac{\Delta v}{v}\\
+&amp;=\alpha_c \delta-\frac{1}{\gamma^2}\delta\\
+&amp;\equiv\eta \delta
+\end{align}\]</div>
+<p>The new quantity <span class="math notranslate nohighlight">\(\eta=dT/d\delta\)</span> is named <strong>phase-slip factor</strong>, which is very useful in the latter longitudinal dynamics.  In suggests that, for a positive momentum compaction factor <span class="math notranslate nohighlight">\(\alpha_c\)</span>, viz. that higher energy particles travels longer, may spend less time if the reference energy is low enough.  At specific energy, a small momentum deviation does not change the time-of-flight, which is called <strong>isochronous</strong>.  This energy is called <strong>transition energy</strong> <span class="math notranslate nohighlight">\(\gamma_T\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fd524901-f59a-4127-8155-d58184ac2337">
+<span class="eqno">(272)<a class="headerlink" href="#equation-fd524901-f59a-4127-8155-d58184ac2337" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\gamma_T\equiv\frac{1}{\sqrt{\alpha_c}}
+\end{equation}\]</div>
+<section id="dispersion-measurement-in-ring">
+<h3>Dispersion Measurement in Ring<a class="headerlink" href="#dispersion-measurement-in-ring" title="Link to this heading">#</a></h3>
+<p>In a ring, changing the RF cavity produce more complicate behavior than in a linac.  We will introduce that in the longitudinal dynamics section.  However, the change of the beam energy is linked with the time-of-flight and the revolution frequency by phase-slip factor.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c09b8d5f-cbd6-4ee7-a7f0-c9055912cb94">
+<span class="eqno">(273)<a class="headerlink" href="#equation-c09b8d5f-cbd6-4ee7-a7f0-c9055912cb94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\Delta f}{f_0}=-\frac{\Delta T}{T_0}=-\eta \delta
+\end{equation}\]</div>
+<p>Therefore, the dispersion can be found from the slope of the closed orbit as function of the revolution frequency:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-22dcab84-b905-47dd-ad68-08871ef18a98">
+<span class="eqno">(274)<a class="headerlink" href="#equation-22dcab84-b905-47dd-ad68-08871ef18a98" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D=\frac{\Delta x_{co}}{\delta}=-\eta f_0\frac{\Delta x_{co}}{\Delta f} 
+\end{equation}\]</div>
+<p>The following example (from “Accelerator Physics” by Prof. S.Y.Lee) shows the measurement data of IUCF cooler ring.  The top figure is the closed orbit as function of the revolution frequency at one BPM.  The bottom figure is the dispersion function at BPMs using the slope of the top figure of each BPM.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/dispersion_measurement.png"><img alt="../../_images/dispersion_measurement.png" src="../../_images/dispersion_measurement.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Dispersive measurement in a ring</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="transition-energy-crossing">
+<h3>Transition Energy Crossing<a class="headerlink" href="#transition-energy-crossing" title="Link to this heading">#</a></h3>
+<p>In a medium energy synchrotron, there are many harmful beam dynamics problems when crossing the transition energy (<span class="math notranslate nohighlight">\(\gamma=\gamma_T\)</span>),viz the machine becomes isochronous.  In this section, we briefly introduce the scheme to avoid the harmful effect.</p>
+</section>
+<section id="gamma-t-jump">
+<h3><span class="math notranslate nohighlight">\(\gamma_T\)</span> jump<a class="headerlink" href="#gamma-t-jump" title="Link to this heading">#</a></h3>
+<p>One idea of avoiding the harmful effect of crossing transition energy is to cross the transition energy fast, using a set of pulsed power quadrupoles (named <span class="math notranslate nohighlight">\(\gamma_T\)</span> quad). These quads, after turned on, can change the momentum compaction factor quick enough the decrease the <span class="math notranslate nohighlight">\(\gamma_T\)</span> almost ‘suddenly’.</p>
+<p>These quads has to be placed in dispersive area, where the kick to the off-momentum particle by the ith quad is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8218ccd6-45d2-4c2b-afbf-4026cbb75ef6">
+<span class="eqno">(275)<a class="headerlink" href="#equation-8218ccd6-45d2-4c2b-afbf-4026cbb75ef6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\Delta \theta_i= K_i \tilde{D}_i\delta
+\end{equation}\]</div>
+<p>The quad will change the dispersion function over the ring and disturb the dispersion at the location from <span class="math notranslate nohighlight">\(D_i\)</span> to <span class="math notranslate nohighlight">\(\tilde{D}_i\)</span></p>
+<p>Then the momentum compaction change will be:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4fdb9c5f-0d0e-4099-b5e7-5e263fd8be8f">
+<span class="eqno">(276)<a class="headerlink" href="#equation-4fdb9c5f-0d0e-4099-b5e7-5e263fd8be8f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\Delta \alpha_c= \frac{\sum_i D_i \Delta \theta_i }{C_0\delta}
+=\frac{1}{C_0}\sum_i K_i \tilde{D}_i D_i
+\end{equation}\]</div>
+</section>
+<section id="flexible-momentum-compaction-fmc-lattice">
+<h3>Flexible momentum compaction (FMC) lattice<a class="headerlink" href="#flexible-momentum-compaction-fmc-lattice" title="Link to this heading">#</a></h3>
+<figure class="align-left" id="id3">
+<a class="reference internal image-reference" href="../../_images/fmc_lattice.png"><img alt="../../_images/fmc_lattice.png" src="../../_images/fmc_lattice.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Example of FMC lattice</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Another choice is to have zero or even negative momentum compaction factor <span class="math notranslate nohighlight">\(\alpha_c\)</span>. From the definition of <span class="math notranslate nohighlight">\(\alpha_c\)</span>, we have to design a lattice with negative dispersion at dipoles.  That is turned out to be possible.  One example is shown below, which is a cell for an ERL recently. The dispersion is design to have positive and negative numbers and the integrals in the</p>
+</section>
+</section>
+<section id="d-phase-space">
+<h2>6-D phase space<a class="headerlink" href="#d-phase-space" title="Link to this heading">#</a></h2>
+<p>The 3-by-3 matrix <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> describes the horizontal phase space as function of the energy.  That is not a full description.  The symplectic condition requires that if the horizontal phase space is affected by the longitudinal coordinate (<span class="math notranslate nohighlight">\(\delta\)</span>), the longitudinal phase space coordinate must be affected by the horizontal coordinates.</p>
+<p>Therefore, the full dynamics has to be described by 6-by-6 matrix.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5f612001-bfe7-4b36-8c62-9734435be4fe">
+<span class="eqno">(277)<a class="headerlink" href="#equation-5f612001-bfe7-4b36-8c62-9734435be4fe" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{c}
+x\\
+p_{x}\\
+y\\
+p_{y}\\
+z\\
+\delta
+\end{array}\right)_{2}=\left(\begin{array}{cccccc}
+R_{11} &amp; R_{12} &amp; R_{13} &amp; R_{14} &amp; R_{15} &amp; R_{16}\\
+R_{21} &amp; R_{22} &amp; R_{23} &amp; R_{24} &amp; R_{25} &amp; R_{26}\\
+R_{31} &amp; R_{32} &amp; R_{33} &amp; R_{34} &amp; R_{35} &amp; R_{36}\\
+R_{41} &amp; R_{42} &amp; R_{43} &amp; R_{44} &amp; R_{45} &amp; R_{46}\\
+R_{51} &amp; R_{52} &amp; R_{53} &amp; R_{54} &amp; R_{55} &amp; R_{56}\\
+R_{61} &amp; R_{62} &amp; R_{63} &amp; R_{64} &amp; R_{65} &amp; R_{66}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+p_{x}\\
+y\\
+p_{y}\\
+z\\
+\delta
+\end{array}\right)_{1}
+\end{align}\]</div>
+<p>The <span class="math notranslate nohighlight">\(R\)</span> matrix represents the linear map for the 6-D phase space.<br />
+For lattice that only contains DC magnets and pure accelerating cavities, the arriving time does not affect the transverse phase space.  As a consequence of symplecticity, the energy will not affected by the initial transverse phase phase space.   Therefore:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ab1fa3ed-91f2-475e-b751-53ae687c10bc">
+<span class="eqno">(278)<a class="headerlink" href="#equation-ab1fa3ed-91f2-475e-b751-53ae687c10bc" title="Permalink to this equation">#</a></span>\[\begin{align}
+R_{15}=R_{25}=R_{35}=R_{45}&amp;=0\\
+R_{61}=R_{62}=R_{63}=R_{64}&amp;=0
+\end{align}\]</div>
+<p>When there is no accelerating components, <span class="math notranslate nohighlight">\(R_{65}\)</span> is also zero. Also in the special case when there is no transverse coupling, the <span class="math notranslate nohighlight">\(R_{51}\)</span> and <span class="math notranslate nohighlight">\(R_{52}\)</span> is only related to <span class="math notranslate nohighlight">\(R_{16}\)</span> and <span class="math notranslate nohighlight">\(R_{26}\)</span> by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4cb5a3f6-b370-415a-adbb-80cc2e13aa76">
+<span class="eqno">(279)<a class="headerlink" href="#equation-4cb5a3f6-b370-415a-adbb-80cc2e13aa76" title="Permalink to this equation">#</a></span>\[\begin{align}
+R_{51}=(-R_{26})R_{11}+(R_{16})R_{21}\\
+R_{52}=(-R_{26})R_{12}+(R_{16})R_{22}\\
+\end{align}\]</div>
+<p>or vector form:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8aa3964e-12df-422e-bb96-4d5a9c35274b">
+<span class="eqno">(280)<a class="headerlink" href="#equation-8aa3964e-12df-422e-bb96-4d5a9c35274b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{cc}
+R_{51} &amp; R_{52}\end{array}\right)=\left(\begin{array}{cc}
+-R_{26} &amp; R_{16}\end{array}\right)\left(\begin{array}{cc}
+R_{11} &amp; R_{12}\\
+R_{21} &amp; R_{22}
+\end{array}\right)
+\end{align}\]</div>
+<p>Similarly we have for vertical direction:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e587aac4-75ff-4b15-ae3e-62efee5193bd">
+<span class="eqno">(281)<a class="headerlink" href="#equation-e587aac4-75ff-4b15-ae3e-62efee5193bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(\begin{array}{cc}
+R_{53} &amp; R_{54}\end{array}\right)=\left(\begin{array}{cc}
+-R_{36} &amp; R_{46}\end{array}\right)\left(\begin{array}{cc}
+R_{33} &amp; R_{34}\\
+R_{43} &amp; R_{44}
+\end{array}\right)
+\end{align}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./transverse_BD/dispersion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../coupling/linear_transverse_coupling.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear Coupling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chrom/chromaticity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chromatic Effect</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersive-orbit">Dispersive Orbit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#revisit-the-hamiltonian">Revisit the Hamiltonian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispertion-function">Dispertion Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disperion-with-periodic-condition">Disperion with Periodic Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathcal-h-function"><span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-measurement">Dispersion measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-representation">Integration Representation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-matching-and-suppression">Dispersion Matching and Suppression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achromatic-condition">Achromatic Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-matching">Dispersion Matching</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeating-cells">Repeating cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-suppression">Dispersion suppression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-bending-field-suppressor">‘Reduced-bending-field’ suppressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-compaction-factor">Momentum Compaction Factor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-measurement-in-ring">Dispersion Measurement in Ring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-energy-crossing">Transition Energy Crossing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gamma-t-jump"><span class="math notranslate nohighlight">\(\gamma_T\)</span> jump</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-momentum-compaction-fmc-lattice">Flexible momentum compaction (FMC) lattice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-phase-space">6-D phase space</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yue Hao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
