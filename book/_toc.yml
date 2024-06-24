@@ -1,0 +1,25 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: "Part I: Transverse Dynamics"
+    chapters:
+      - file: transverse_BD/magnet/magnets
+      - file: transverse_BD/basic/Hamiltonian_Hills
+      - file: transverse_BD/basic/twiss_param
+      - file: transverse_BD/perturbation/perturbed_motion
+      - file: transverse_BD/coupling/linear_transverse_coupling
+      - file: transverse_BD/dispersion/dispersion
+      - file: transverse_BD/chrom/chromaticity
+  - caption: "Part II: Longitudinal Dynamics"
+    chapters:
+      - file: longitudinal_BD/longitudinal_dynamics
+  - caption: "Part III: Electron Storage Ring"
+    chapters:
+      - file: ESR/SR/synchrotron_radiation
+      - file: ESR/ESR_Dynamics/ESR_dynamics
+  - caption: "Appendix"
+    chapters:
+      - file: appendix/symplecticity
