@@ -476,14 +476,14 @@ document.write(`
 <section id="hamiltonian-equation-in-matrix-form">
 <h3>Hamiltonian equation in matrix form<a class="headerlink" href="#hamiltonian-equation-in-matrix-form" title="Link to this heading">#</a></h3>
 <p>For a N-dimensional Hamiltonian system (<span class="math notranslate nohighlight">\(\mathbf{x}^N, \mathbf{p}^N\)</span>), the N sets of Hamiltonian equation reads:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d344d8ed-a0e7-4a4b-85d1-b9267cd85b6e">
-<span class="eqno">(483)<a class="headerlink" href="#equation-d344d8ed-a0e7-4a4b-85d1-b9267cd85b6e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-100e490c-b2cd-432f-9e38-f0b5f79bb85b">
+<span class="eqno">(483)<a class="headerlink" href="#equation-100e490c-b2cd-432f-9e38-f0b5f79bb85b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dx_i}{dt}&amp;=\frac{\partial H}{\partial p_i}\\
 \frac{dp_i}{dt}&amp;=-\frac{\partial H}{\partial x_i}
 \end{align}\]</div>
 <p>Let’s write a column vector <span class="math notranslate nohighlight">\(X=(x_1, p_1, x_2,p_2,\cdots,x_N,p_n)\)</span>, the Hamiltonian can be written as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dbaacdf-703f-47a8-862d-8fc712a354cd">
-<span class="eqno">(484)<a class="headerlink" href="#equation-4dbaacdf-703f-47a8-862d-8fc712a354cd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-51af88a2-9955-4de8-b80c-08eee731287d">
+<span class="eqno">(484)<a class="headerlink" href="#equation-51af88a2-9955-4de8-b80c-08eee731287d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d}{dt}X &amp; \equiv S_N \frac{\partial H}{\partial X}
 = \left(\begin{array}{cccc}
 S_{2} &amp; 0 &amp; \cdots &amp; 0\\
@@ -494,8 +494,8 @@ S_{2} &amp; 0 &amp; \cdots &amp; 0\\
 \frac{\partial H}{\partial X}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(S_1\)</span> is the matrix for one dimension space:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90a3f193-5be4-49a9-a843-26143a3a9fbe">
-<span class="eqno">(485)<a class="headerlink" href="#equation-90a3f193-5be4-49a9-a843-26143a3a9fbe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-41bd5abb-3e61-46d5-aef2-d6f59791277f">
+<span class="eqno">(485)<a class="headerlink" href="#equation-41bd5abb-3e61-46d5-aef2-d6f59791277f" title="Permalink to this equation">#</a></span>\[\begin{align}
  S_2
 = \left(\begin{array}{cc}
 0 &amp; 1\\
@@ -512,8 +512,8 @@ S_{2} &amp; 0 &amp; \cdots &amp; 0\\
 <li><p>The transpose: <span class="math notranslate nohighlight">\(S^T=-S\)</span></p></li>
 </ul>
 <p>For arbitrary 2 by 2 matrix <span class="math notranslate nohighlight">\(A\)</span> we may prove that:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e81c6e07-74fb-48d8-9673-bde572a24d4f">
-<span class="eqno">(486)<a class="headerlink" href="#equation-e81c6e07-74fb-48d8-9673-bde572a24d4f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1d8e34e5-5e36-4854-a5c6-07ddf0060cdb">
+<span class="eqno">(486)<a class="headerlink" href="#equation-1d8e34e5-5e36-4854-a5c6-07ddf0060cdb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 A^TS_2A=AS_2A^T=
 \left(\begin{array}{cc}
 0 &amp; \det A\\
@@ -521,31 +521,31 @@ A^TS_2A=AS_2A^T=
 \end{array}\right)=S_2\det A
 \end{equation}\]</div>
 <p>Or we may define a new matrix <span class="math notranslate nohighlight">\(\bar{A}=-S_2A^{T}S_2\)</span> and yield:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c1c1747-696d-47de-b8a7-be787a7d5ba7">
-<span class="eqno">(487)<a class="headerlink" href="#equation-8c1c1747-696d-47de-b8a7-be787a7d5ba7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-024b75c8-a8c7-4d52-b550-9b3ba111ca27">
+<span class="eqno">(487)<a class="headerlink" href="#equation-024b75c8-a8c7-4d52-b550-9b3ba111ca27" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{A}A=A\bar{A} = I\det{A} 
 \end{equation}\]</div>
 </section>
 <section id="id1">
 <h3>Symplectic condition<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>For a map from location <span class="math notranslate nohighlight">\(s_0\)</span> to <span class="math notranslate nohighlight">\(s_1=s_0+s\)</span>, we have:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9c0c5f0-6230-42f6-a9ba-1843e8a4765e">
-<span class="eqno">(488)<a class="headerlink" href="#equation-e9c0c5f0-6230-42f6-a9ba-1843e8a4765e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2fb5ef9d-3570-4a47-adf7-1c929ace79ef">
+<span class="eqno">(488)<a class="headerlink" href="#equation-2fb5ef9d-3570-4a47-adf7-1c929ace79ef" title="Permalink to this equation">#</a></span>\[\begin{align}
 X\left(s_1\right)=M X\left(s_0\right)
 \end{align}\]</div>
 <p>M is a matrix and the components is defined as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a189bdb7-516b-4ecd-8cce-29d6ecb389ac">
-<span class="eqno">(489)<a class="headerlink" href="#equation-a189bdb7-516b-4ecd-8cce-29d6ecb389ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3bb5ec67-d9c5-4de4-9228-363c05afbf67">
+<span class="eqno">(489)<a class="headerlink" href="#equation-3bb5ec67-d9c5-4de4-9228-363c05afbf67" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_{ij}=\frac{\partial X_i\left(s_1\right)}{ \partial X_j\left(s_0\right)}
 \end{align}\]</div>
 <p>If <span class="math notranslate nohighlight">\(M_{ij}\)</span> are not functions of <span class="math notranslate nohighlight">\(X\)</span>, the map represents a linear map.  Otherwise <span class="math notranslate nohighlight">\(M\)</span> is a non-linear map.  Regardless of the linearity, the condition that map <span class="math notranslate nohighlight">\(M\)</span> need to follow due to the system is a Hamiltonian system is called <strong>symplectic condition</strong>.  We just explored the condition in 1-D case.  In N-D system, from the Map definition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78ae7050-eb85-4afd-885b-b7ffda8fb53d">
-<span class="eqno">(490)<a class="headerlink" href="#equation-78ae7050-eb85-4afd-885b-b7ffda8fb53d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-92c35cd9-8b62-4116-b179-8a13a2627bb6">
+<span class="eqno">(490)<a class="headerlink" href="#equation-92c35cd9-8b62-4116-b179-8a13a2627bb6" title="Permalink to this equation">#</a></span>\[\begin{align}
 X\left(s_1\right)=M X\left(s_0\right)
 \end{align}\]</div>
 <p>We take the derivative of the <span class="math notranslate nohighlight">\(i^{th}\)</span> row of <span class="math notranslate nohighlight">\(X(s_1)\)</span> with respect to <span class="math notranslate nohighlight">\(s\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5bc05cc7-8da2-49c7-b0b8-aaeed6047bee">
-<span class="eqno">(491)<a class="headerlink" href="#equation-5bc05cc7-8da2-49c7-b0b8-aaeed6047bee" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9f44689a-4292-4ae0-8375-5032c49ac2e1">
+<span class="eqno">(491)<a class="headerlink" href="#equation-9f44689a-4292-4ae0-8375-5032c49ac2e1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dX_i\left(s_1\right)}{ds}
 &amp;=\frac{\partial X_i\left(s_1\right)}{\partial X_j\left(s_0\right)}\frac{dX_j\left(s_0\right)}{ds}\nonumber\\
 &amp;=M_{ij}S_{jk}\frac{\partial H}{\partial X_k\left(s_0\right)}\nonumber\\
@@ -553,13 +553,13 @@ X\left(s_1\right)=M X\left(s_0\right)
 &amp;=M_{ij}S_{jk}M_{kl}^T\frac{\partial H}{\partial X_l\left(s_1\right)}
 \end{align}\]</div>
 <p>We know that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-182c0ef1-99e6-42f8-870f-4aeefcb14fc0">
-<span class="eqno">(492)<a class="headerlink" href="#equation-182c0ef1-99e6-42f8-870f-4aeefcb14fc0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a439bc75-9eae-458d-9483-3cbe8db3be11">
+<span class="eqno">(492)<a class="headerlink" href="#equation-a439bc75-9eae-458d-9483-3cbe8db3be11" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dX_i\left(s_1\right)}{ds}=S_{il}\frac{\partial H}{\partial X_l\left(s_1\right)}
 \end{equation}\]</div>
 <p>Therefore we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b347c7b3-00b4-4dba-9d75-67aca62440d6">
-<span class="eqno">(493)<a class="headerlink" href="#equation-b347c7b3-00b4-4dba-9d75-67aca62440d6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2b489031-1865-4571-8d91-894e6e250b84">
+<span class="eqno">(493)<a class="headerlink" href="#equation-2b489031-1865-4571-8d91-894e6e250b84" title="Permalink to this equation">#</a></span>\[\begin{align}
 MSM^T=S
 \end{align}\]</div>
 <p>Using the property of <span class="math notranslate nohighlight">\(S\)</span>, we have the usual form:</p>
@@ -588,16 +588,16 @@ M^TSM=S %%\label{eq:symplectic_form}
 <section id="block-matrix-for-2-d-system">
 <h4>Block matrix for 2-D system<a class="headerlink" href="#block-matrix-for-2-d-system" title="Link to this heading">#</a></h4>
 <p>Consider a 4-D phase space transfer map:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-574f0934-cf3c-4665-96e5-2845f1178e5e">
-<span class="eqno">(495)<a class="headerlink" href="#equation-574f0934-cf3c-4665-96e5-2845f1178e5e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2e692934-bdb6-4a21-97df-c51a66ff5700">
+<span class="eqno">(495)<a class="headerlink" href="#equation-2e692934-bdb6-4a21-97df-c51a66ff5700" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{cc}
 A &amp; B\\
 C &amp; D
 \end{array}\right)
 \end{equation}\]</div>
 <p>The transfer map has to satisfy the symplectic condition, both <span class="math notranslate nohighlight">\(M^TSM=S\)</span> and <span class="math notranslate nohighlight">\(MSM^T=S\)</span>.  For the first condition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87a5b2f1-821c-4b2f-b5e6-3283f284cb14">
-<span class="eqno">(496)<a class="headerlink" href="#equation-87a5b2f1-821c-4b2f-b5e6-3283f284cb14" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8472e955-efe0-4d4e-826d-f4c013409bc1">
+<span class="eqno">(496)<a class="headerlink" href="#equation-8472e955-efe0-4d4e-826d-f4c013409bc1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{cc}
 A^T &amp; C^T\\
 B^T &amp; D^T
@@ -641,8 +641,8 @@ S_2 &amp; 0\\
 </div>
 </details>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-9c353e2d-a44c-4b1f-90e8-d3bb0c8f3fc3">
-<span class="eqno">(497)<a class="headerlink" href="#equation-9c353e2d-a44c-4b1f-90e8-d3bb0c8f3fc3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-74b89fd0-64c9-487f-a6a2-f9dc22b144c3">
+<span class="eqno">(497)<a class="headerlink" href="#equation-74b89fd0-64c9-487f-a6a2-f9dc22b144c3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{matrix}A^{T} S_{2} A + C^{T} S_{2} C &amp; A^{T} S_{2} B + C^{T} S_{2} D\\
 B^{T} S_{2} A + D^{T} S_{2} C &amp; B^{T} S_{2} B + D^{T} S_{2} D\end{matrix}\right)&amp;=
 \left(\begin{array}{cc}
@@ -663,8 +663,8 @@ A S_{2} A^{T} + B S_{2} B^{T}&amp;=C S_{2} C^{T} + D S_{2} D^{T}=S_2 \\
 A S_{2} C^{T} + B S_{2} D^{T}&amp;=C S_{2} A^{T} + D S_{2} B^{T}=0  %%\label{Mtmatzero}
 \end{align}\end{split}\]</div>
 <p>From the general property of 2-by-2 matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-55f1e43d-6734-4e36-b69d-1b9663dcbe87">
-<span class="eqno">(500)<a class="headerlink" href="#equation-55f1e43d-6734-4e36-b69d-1b9663dcbe87" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f031a31-324b-414a-911c-d23a135886ec">
+<span class="eqno">(500)<a class="headerlink" href="#equation-6f031a31-324b-414a-911c-d23a135886ec" title="Permalink to this equation">#</a></span>\[\begin{align}
 A^TS_2A=AS_2A^T=
 \left(\begin{array}{cc}
 0 &amp; \det A\\
@@ -678,8 +678,8 @@ A^TS_2A=AS_2A^T=
 \det D + \det C=\det A + \det B &amp;=1
 \end{align}\end{split}\]</div>
 <p>Or it can be re-written as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9dec410e-c149-4ffc-a1fe-bd715d6ed812">
-<span class="eqno">(502)<a class="headerlink" href="#equation-9dec410e-c149-4ffc-a1fe-bd715d6ed812" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-35768383-a4c8-4829-8370-ad9eee283bb6">
+<span class="eqno">(502)<a class="headerlink" href="#equation-35768383-a4c8-4829-8370-ad9eee283bb6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \det A  = \det D &amp;\equiv a\\
 \det B = \det C &amp;\equiv b\\
 a+b&amp;=1
@@ -695,8 +695,8 @@ A\bar{C}+B\bar{D}=C\bar{A} + D\bar{B}=0
 <p>It is worthwhile to note that, the symplectic condition for 4-D matrix (Eq. <a class="reference internal" href="#equation-eq-symplecticity-mat4d-cond1">(501)</a> and <a class="reference internal" href="#equation-eq-symplecticity-mat4d-cond2">(503)</a>) seems to have 9 equations on the coordinates.  However, the actual constrains for 4-D are only 6.</p>
 </div>
 <p>The inverse of a blocked 4-by-4 matrix is simply:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44c32a14-dff0-4c5f-b5d8-fdffcff27443">
-<span class="eqno">(504)<a class="headerlink" href="#equation-44c32a14-dff0-4c5f-b5d8-fdffcff27443" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-05ed4c82-527a-4885-9985-cb700a20e184">
+<span class="eqno">(504)<a class="headerlink" href="#equation-05ed4c82-527a-4885-9985-cb700a20e184" title="Permalink to this equation">#</a></span>\[\begin{align}
 M^{-1}&amp;=
 \left(\begin{array}{cc}
 A &amp; B\\
@@ -720,8 +720,8 @@ S_{1} &amp; 0\\
 \end{array}\right)
 \end{align}\]</div>
 <p>Here is a useful example.  If we are exploring <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(z\)</span> or <span class="math notranslate nohighlight">\(y\)</span>-<span class="math notranslate nohighlight">\(z\)</span> phase space, the matrix <span class="math notranslate nohighlight">\(U\)</span> usually has the form below for DC magnets:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48c40509-b0ac-4770-b1c7-ffcfea2d3dcd">
-<span class="eqno">(505)<a class="headerlink" href="#equation-48c40509-b0ac-4770-b1c7-ffcfea2d3dcd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e94826b0-9eb4-4d24-8fe1-e3079c922245">
+<span class="eqno">(505)<a class="headerlink" href="#equation-e94826b0-9eb4-4d24-8fe1-e3079c922245" title="Permalink to this equation">#</a></span>\[\begin{align}
 B=
 \left(\begin{array}{cc}
 \begin{array}{c}
@@ -733,27 +733,27 @@ d_{2}
 \end{array}\right)\end{array}\right)
 \end{align}\]</div>
 <p>Then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35d3b6e2-d65b-411e-b840-6f0589a4631e">
-<span class="eqno">(506)<a class="headerlink" href="#equation-35d3b6e2-d65b-411e-b840-6f0589a4631e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8a1723dd-ae3d-4519-981a-e5ec7cbdbfa5">
+<span class="eqno">(506)<a class="headerlink" href="#equation-8a1723dd-ae3d-4519-981a-e5ec7cbdbfa5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \det A  = \det D &amp;=1\\
 \det B = \det C &amp;=0
 \end{align}\]</div>
 <p>And from</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7296775e-7d9b-4f86-bad5-f1b9168fe818">
-<span class="eqno">(507)<a class="headerlink" href="#equation-7296775e-7d9b-4f86-bad5-f1b9168fe818" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-353a4b7a-6946-4892-9650-29a2eac027a3">
+<span class="eqno">(507)<a class="headerlink" href="#equation-353a4b7a-6946-4892-9650-29a2eac027a3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \bar{B}A+\bar{D}C=0
 \end{align}\]</div>
 <p>We have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2e9eb856-0045-462a-b549-146f5881cfb9">
-<span class="eqno">(508)<a class="headerlink" href="#equation-2e9eb856-0045-462a-b549-146f5881cfb9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-de4940e2-0de0-407d-9552-178753b0c370">
+<span class="eqno">(508)<a class="headerlink" href="#equation-de4940e2-0de0-407d-9552-178753b0c370" title="Permalink to this equation">#</a></span>\[\begin{align}
 C=-D\bar{B}A
 \end{align}\]</div>
 </section>
 <section id="block-matrix-for-3-d-system">
 <h4>Block matrix for 3-D system<a class="headerlink" href="#block-matrix-for-3-d-system" title="Link to this heading">#</a></h4>
 <p>Consider a 6-D phase space transfer map:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-30dc5bdd-a55a-41a2-931e-c0ce1b2b551a">
-<span class="eqno">(509)<a class="headerlink" href="#equation-30dc5bdd-a55a-41a2-931e-c0ce1b2b551a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-766cdb2e-aff5-46f2-aa00-0facb3366a21">
+<span class="eqno">(509)<a class="headerlink" href="#equation-766cdb2e-aff5-46f2-aa00-0facb3366a21" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 x\\
 p_{x}\\
@@ -808,22 +808,22 @@ z\\
 </details>
 </div>
 <p>Therefore, we can get the relation of the determinant of each block:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1dbdc43c-5494-40c5-8df3-1a8a546b9d16">
-<span class="eqno">(510)<a class="headerlink" href="#equation-1dbdc43c-5494-40c5-8df3-1a8a546b9d16" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-9ec40834-8f29-44ae-b014-88556ccd14c1">
+<span class="eqno">(510)<a class="headerlink" href="#equation-9ec40834-8f29-44ae-b014-88556ccd14c1" title="Permalink to this equation">#</a></span>\[\begin{align} 
 \det M_1 + \det C_1 + \det U_1 =1 \\
 \det C_2 + \det M_2 + \det U_2 =1 \\
 \det M_3 + \det V_1 + \det V_2 =1 \\
 \end{align}\]</div>
 <p>and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3526f867-f1d1-4f26-be5e-5a3d6c15ed14">
-<span class="eqno">(511)<a class="headerlink" href="#equation-3526f867-f1d1-4f26-be5e-5a3d6c15ed14" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-09458d9e-9829-499a-9f06-745a643fdcdd">
+<span class="eqno">(511)<a class="headerlink" href="#equation-09458d9e-9829-499a-9f06-745a643fdcdd" title="Permalink to this equation">#</a></span>\[\begin{align} 
 \det M_1 + \det C_2 + \det V_1 =1 \\
 \det C_1 + \det M_2 + \det V_2 =1 \\
 \det U_1 + \det U_2 + \det M_3 =1 \\
 \end{align}\]</div>
 <p>From the off diagonal blocks we have:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd5aaf4a-4279-40e3-975b-4dd2bf5f609d">
-<span class="eqno">(512)<a class="headerlink" href="#equation-dd5aaf4a-4279-40e3-975b-4dd2bf5f609d" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-e93cafcd-beb0-45e3-90b9-173095639d89">
+<span class="eqno">(512)<a class="headerlink" href="#equation-e93cafcd-beb0-45e3-90b9-173095639d89" title="Permalink to this equation">#</a></span>\[\begin{align} 
 \bar{C}_2 M_2 + \bar{M}_1 C_1 + \bar{V}_1 V_2 &amp;= 0 \\
 \bar{C}_2 U_2 + \bar{M}_1 U_1 + \bar{V}_1 M_3 &amp;= 0 \\
 \bar{C}_1 U_1 + \bar{M}_2 U_2 + \bar{V}_2 M_3 &amp;= 0 \\
