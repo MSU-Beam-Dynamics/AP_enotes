@@ -33,7 +33,7 @@ html:
   use_repository_button: true
   analytics:
     google_analytics_id: G-C1X40P1XVL
-
+  
 launch_buttons:
   notebook_interface: "classic"  # or "jupyterlab"
   binderhub_url: "https://mybinder.org"
