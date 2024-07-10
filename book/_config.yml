@@ -31,6 +31,8 @@ html:
   favicon: favicon.ico
   use_issues_button: true
   use_repository_button: true
+  analytics:
+    google_analytics_id: G-C1X40P1XVL
 
 launch_buttons:
   notebook_interface: "classic"  # or "jupyterlab"
