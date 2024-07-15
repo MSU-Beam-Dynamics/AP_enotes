@@ -292,6 +292,24 @@
 </a>
 </li>
       
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -501,7 +519,7 @@ document.write(`
 <!--img src=rf_cavity.png width=400-->
 <p>Usually TM010 mode of the cavity is used and the accelerating field is written as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-858351a0-3b47-4cc8-bc6f-93f66542fc7b">
-<span class="eqno">(299)<a class="headerlink" href="#equation-858351a0-3b47-4cc8-bc6f-93f66542fc7b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(300)<a class="headerlink" href="#equation-858351a0-3b47-4cc8-bc6f-93f66542fc7b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E(s,t)=E_0(s)\sin\left(\omega t +\phi_0\right)
 \end{equation}\]</div>
 <p><span class="math notranslate nohighlight">\(E_0(s)\)</span> is the field amplitude and <span class="math notranslate nohighlight">\(t\)</span> is the time and the <span class="math notranslate nohighlight">\(\phi_0\)</span> is the initial phase at <span class="math notranslate nohighlight">\(t=0\)</span>.  The choise of the initial phase will be clear later when the beam travels through the cavity.  The cavity is defined from the “potential of the field amplitude”:</p>
@@ -519,13 +537,13 @@ E(s,t)=E_0(s)\sin\left(\omega t +\phi_0\right)
 </ul>
 <p>Within the cavity, if the reference particle arrives <span class="math notranslate nohighlight">\(s=0\)</span> at <span class="math notranslate nohighlight">\(t_0\)</span>, the particle we consider is located at <span class="math notranslate nohighlight">\(s=\beta c (t-t_0)+z\)</span> The energy gain of the particle, traveling through the field <span class="math notranslate nohighlight">\(E(s,t)\)</span> is:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-a9dcb94e-faca-4974-b287-89fd50e5edb6">
-<span class="eqno">(300)<a class="headerlink" href="#equation-a9dcb94e-faca-4974-b287-89fd50e5edb6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(301)<a class="headerlink" href="#equation-a9dcb94e-faca-4974-b287-89fd50e5edb6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta U&amp;=q\int_{-\infty}^{\infty} E(s,t) ds \nonumber\\
 &amp;= q\int_{-\infty}^{\infty} E_0(s) \sin\left(\frac{\omega (s-z)}{\beta c}+\phi_s\right)ds
 \end{align}\]</div>
 <p>The <span class="math notranslate nohighlight">\(\phi_s\)</span> absorbs the <span class="math notranslate nohighlight">\(t_0\)</span> terms and becomes the <strong>synchronous phase</strong>.  In usual cases of symmetric cavities, the envelope is an even function <span class="math notranslate nohighlight">\(E_0(s)=E_0(-s)\)</span> Then the energy gain can be simplified as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-e382974d-4e82-451e-af24-e0c2cfaa01c5">
-<span class="eqno">(301)<a class="headerlink" href="#equation-e382974d-4e82-451e-af24-e0c2cfaa01c5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(302)<a class="headerlink" href="#equation-e382974d-4e82-451e-af24-e0c2cfaa01c5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta U
 &amp;=q \int_{-\infty}^{\infty} E_0(s) \sin\left(\frac{\omega (s-z)}{\beta c}+\phi_s\right)ds \nonumber \\
 &amp;=q\left(\int_{-\infty}^{\infty} E_0(s) \cos\frac{\omega s}{\beta c} ds\right) \sin \left(\phi+\phi_s\right)\nonumber\\
@@ -533,7 +551,7 @@ E(s,t)=E_0(s)\sin\left(\omega t +\phi_0\right)
 \end{align}\]</div>
 <p>Here we use <span class="math notranslate nohighlight">\(\phi=\phi_s-\omega z/\beta c=\phi_s+\omega t'\)</span> as the longitudinal coordinate for later convenience.  Here we use ‘cavity voltage’ <span class="math notranslate nohighlight">\(V\)</span>  and the <strong>time transient factor</strong> <span class="math notranslate nohighlight">\(T\)</span> of a RF cavity to replace the ‘real voltage’ seen by the beam. The <strong>time transient factor</strong> <span class="math notranslate nohighlight">\(T\)</span> is defined as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-8a967556-de2d-46a3-971f-b1d1478238dc">
-<span class="eqno">(302)<a class="headerlink" href="#equation-8a967556-de2d-46a3-971f-b1d1478238dc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(303)<a class="headerlink" href="#equation-8a967556-de2d-46a3-971f-b1d1478238dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 T=\frac
 {\int_{-\infty}^{\infty} E_0(s) \cos\frac{\omega s}{\beta c} ds}
 {\int_{-\infty}^{\infty} E_0(s)  ds}
@@ -541,12 +559,12 @@ T=\frac
 <p>From now on, we will redefine the voltage <span class="math notranslate nohighlight">\(V\)</span> as the real voltage seen by the beam, to avoid the appearance of the time transient factor in the below beam dynamics analysis.</p>
 <p>For reference particle, the energy gain is simply as</p>
 <div class="amsmath math notranslate nohighlight" id="equation-9b5d5825-370b-44f8-be0b-5c3c27b7eb96">
-<span class="eqno">(303)<a class="headerlink" href="#equation-9b5d5825-370b-44f8-be0b-5c3c27b7eb96" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(304)<a class="headerlink" href="#equation-9b5d5825-370b-44f8-be0b-5c3c27b7eb96" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta U_0 = qV\sin \phi_s 
 \end{align}\]</div>
 <p>So after passing the cavity, the change of the energy deviation from the reference particle <span class="math notranslate nohighlight">\(\Delta E=E-E_0\)</span> is simply:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-a1fbc112-4500-4862-b52f-86afbf284f64">
-<span class="eqno">(304)<a class="headerlink" href="#equation-a1fbc112-4500-4862-b52f-86afbf284f64" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(305)<a class="headerlink" href="#equation-a1fbc112-4500-4862-b52f-86afbf284f64" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta E|_1&amp;=\Delta E|_0+\Delta U-\Delta U_0 \nonumber\\
 &amp;=\Delta E|_0 + qV \left(\sin \phi-\sin \phi_s\right)
 \end{align}\]</div>
@@ -568,43 +586,43 @@ T=\frac
 <p><span class="math notranslate nohighlight">\(h\)</span> is called harmonic number.  For now let’s assume only one cavity present in the ring.</p>
 <!--img src=ring_harmonic.png width=300--><p>If we describe the dynamics turn-by-turn and use the subscript <span class="math notranslate nohighlight">\(n\)</span> to denote the the quantity before the entering the cavity for the <span class="math notranslate nohighlight">\((n+1)^{th}\)</span> time. Therefore we can write the energy change as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-e5c6e243-4c20-4407-aa63-32c51d940c58">
-<span class="eqno">(305)<a class="headerlink" href="#equation-e5c6e243-4c20-4407-aa63-32c51d940c58" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(306)<a class="headerlink" href="#equation-e5c6e243-4c20-4407-aa63-32c51d940c58" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta E_{n+1}=
 \Delta E_{n} + qV \left(\sin \phi_n-\sin \phi_s\right)
 \end{equation}\]</div>
 <p>Using the fact that:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-e362b7a2-16d8-4373-8907-cc70c7c9577f">
-<span class="eqno">(306)<a class="headerlink" href="#equation-e362b7a2-16d8-4373-8907-cc70c7c9577f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(307)<a class="headerlink" href="#equation-e362b7a2-16d8-4373-8907-cc70c7c9577f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \delta=\frac{\Delta p}{p_0}=\frac{1}{\beta^2}\frac{\Delta E}{E_0}
 \end{equation}\]</div>
 <p>We get:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-242eadf5-d25c-471e-9246-cf2708baef5d">
-<span class="eqno">(307)<a class="headerlink" href="#equation-242eadf5-d25c-471e-9246-cf2708baef5d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(308)<a class="headerlink" href="#equation-242eadf5-d25c-471e-9246-cf2708baef5d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \delta_{n+1}=
 \delta_{n} + \frac{qV}{\beta^2 E_0} \left(\sin \phi_n-\sin \phi_s\right)
 \end{equation}\]</div>
 <p>Now we need to establish the relation for the phase <span class="math notranslate nohighlight">\(\phi_n=\omega t\)</span></p>
 <div class="amsmath math notranslate nohighlight" id="equation-c4cfc5fc-dddd-4507-9fed-3a957804f9e7">
-<span class="eqno">(308)<a class="headerlink" href="#equation-c4cfc5fc-dddd-4507-9fed-3a957804f9e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(309)<a class="headerlink" href="#equation-c4cfc5fc-dddd-4507-9fed-3a957804f9e7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \phi_{n+1}
 &amp;=\phi_{n} + \omega T_0\eta\delta_{n+1} \nonumber\\
 &amp;=\phi_{n} + 2\pi h \eta  \delta_{n+1}
 \end{align}\]</div>
 <p>Alternatively, we may write</p>
 <div class="amsmath math notranslate nohighlight" id="equation-4dda0337-4025-4d5a-840a-a2f5b580cefb">
-<span class="eqno">(309)<a class="headerlink" href="#equation-4dda0337-4025-4d5a-840a-a2f5b580cefb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(310)<a class="headerlink" href="#equation-4dda0337-4025-4d5a-840a-a2f5b580cefb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \phi_{n+1} = \phi_{n} + \frac{2\pi h \eta}{\beta^2 E_0}  \Delta E_{n+1}
 \end{align}\]</div>
 <p>Therefore the longitudinal dynamics is described by a map from <span class="math notranslate nohighlight">\(n^{th}\)</span> to the <span class="math notranslate nohighlight">\({n+1}^{th}\)</span> using variable <span class="math notranslate nohighlight">\((\delta, \phi)\)</span>:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-6b61a67a-eda9-4d63-8b3c-556a32723bba">
-<span class="eqno">(310)<a class="headerlink" href="#equation-6b61a67a-eda9-4d63-8b3c-556a32723bba" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(311)<a class="headerlink" href="#equation-6b61a67a-eda9-4d63-8b3c-556a32723bba" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta_{n+1}&amp;=\delta_{n} + \frac{qV}{\beta^2 E_0} \left(\sin \phi_n-\sin \phi_s\right)\\
 \phi_{n+1}&amp;=\phi_{n} + 2\pi h \eta  \delta_{n+1}
 \end{align}\]</div>
 <p>For the non zero <span class="math notranslate nohighlight">\(\phi_s\)</span> indicates a net acceleration or deceleration in one turn to the reference particle. In electron storage rings the net acceleration is required to compensate the synchrotron radiation loss.  In this case the <span class="math notranslate nohighlight">\(E_0\)</span> and <span class="math notranslate nohighlight">\(p_0\)</span> in of one turn is still constant.</p>
 <p>In the case of synchrotron, the reference energy changes therefore using the variable <span class="math notranslate nohighlight">\((\Delta E, \phi)\)</span> is more convenient:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-2e679569-9cb0-4527-a9ee-20f0b3730412">
-<span class="eqno">(311)<a class="headerlink" href="#equation-2e679569-9cb0-4527-a9ee-20f0b3730412" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(312)<a class="headerlink" href="#equation-2e679569-9cb0-4527-a9ee-20f0b3730412" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta E_{n+1}
 &amp;=\Delta E_{n} + qV \left(\sin \phi_n-\sin \phi_s\right)\\
 \phi_{n+1} 
@@ -957,24 +975,24 @@ $<span class="math notranslate nohighlight">\(
 <h3>Hamiltonian of longitudinal motion<a class="headerlink" href="#hamiltonian-of-longitudinal-motion" title="Link to this heading">#</a></h3>
 <p>The energy change is discrete.  Over many turns, we approximate the change of the energy and phase is continuous.  From</p>
 <div class="amsmath math notranslate nohighlight" id="equation-d7605019-eaa9-4748-90c3-f07c53759b7f">
-<span class="eqno">(312)<a class="headerlink" href="#equation-d7605019-eaa9-4748-90c3-f07c53759b7f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(313)<a class="headerlink" href="#equation-d7605019-eaa9-4748-90c3-f07c53759b7f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta_{n+1}&amp;=\delta_{n} + \frac{eV}{\beta^2 E_0} \left(\sin \phi_n-\sin \phi_s\right)\\
 \phi_{n+1}&amp;=\phi_{n} + 2\pi h \eta  \delta_{n+1}
 \end{align}\]</div>
 <p>We convert them to differential equations as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-longitudinal-longi-h-eq">
-<span class="eqno">(313)<a class="headerlink" href="#equation-eq-longitudinal-longi-h-eq" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(314)<a class="headerlink" href="#equation-eq-longitudinal-longi-h-eq" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \dot\delta&amp;=\frac{eV\omega_0}{2\pi\beta^2E_0}\left(\sin\phi-\sin\phi_s\right)  \\
 \dot\phi&amp;=h\omega_0\eta\delta  %%\label{eq:longi_H_eq_2}
 \end{align}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\omega_0\)</span> is the revolution frequency.  Combine the two equations, we get the second order differential equation:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-6d943b27-e418-4b13-9b29-2dbfd8c35cd9">
-<span class="eqno">(314)<a class="headerlink" href="#equation-6d943b27-e418-4b13-9b29-2dbfd8c35cd9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(315)<a class="headerlink" href="#equation-6d943b27-e418-4b13-9b29-2dbfd8c35cd9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \ddot\phi=\frac{eVh\eta\omega_0^2}{2\pi\beta^2E_0}\left(\sin\phi-\sin\phi_s\right)
 \end{align}\]</div>
 <p>If we construct a longitudinal Hamiltonian as below, the above differential equation is the same form as the Hamiltonian equation:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-f26c2284-aa0a-4f18-84fa-a28bcaab2a87">
-<span class="eqno">(315)<a class="headerlink" href="#equation-f26c2284-aa0a-4f18-84fa-a28bcaab2a87" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(316)<a class="headerlink" href="#equation-f26c2284-aa0a-4f18-84fa-a28bcaab2a87" title="Permalink to this equation">#</a></span>\[\begin{equation}
 H(\phi,\delta)=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0}{2\pi\beta^2E_0}\left[\cos\phi-\cos\phi_s+\sin\phi_s\left(\phi-\phi_s\right)\right]
 \end{equation}\]</div>
 <p>The potential part of the Hamiltonian is shown below which illustrates the stable region for <span class="math notranslate nohighlight">\(\eta &lt; 0 \)</span> case:</p>
@@ -1010,12 +1028,12 @@ H(\phi,\delta)=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0}{2\pi\beta^2E_0
 <h3>Small amplitude approximation<a class="headerlink" href="#small-amplitude-approximation" title="Link to this heading">#</a></h3>
 <p>At small phase deviation from <span class="math notranslate nohighlight">\(\phi_s\)</span>, <span class="math notranslate nohighlight">\(\Delta\phi=\phi-\phi_s\)</span>, we have</p>
 <div class="amsmath math notranslate nohighlight" id="equation-50c0ca54-306e-402f-86ab-3332c9793d5a">
-<span class="eqno">(316)<a class="headerlink" href="#equation-50c0ca54-306e-402f-86ab-3332c9793d5a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(317)<a class="headerlink" href="#equation-50c0ca54-306e-402f-86ab-3332c9793d5a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \ddot{\Delta\phi}=\frac{eVh\eta\omega_0^2}{2\pi\beta^2E_0}\cos\phi_s \Delta\phi
 \end{equation}\]</div>
 <p>To have a stable motion, we require that:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-e822a8b3-eb50-42f8-87fc-0730496a33dc">
-<span class="eqno">(317)<a class="headerlink" href="#equation-e822a8b3-eb50-42f8-87fc-0730496a33dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(318)<a class="headerlink" href="#equation-e822a8b3-eb50-42f8-87fc-0730496a33dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \eta\cos\phi_s &lt;0
 \end{equation}\]</div>
 <figure class="align-center" id="id3">
@@ -1026,29 +1044,29 @@ H(\phi,\delta)=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0}{2\pi\beta^2E_0
 </figure>
 <p>Under the stable condition, the small amplitude synchrotron tune is defined as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-243c2ebd-6b5c-4d3e-a416-88551fa1f584">
-<span class="eqno">(318)<a class="headerlink" href="#equation-243c2ebd-6b5c-4d3e-a416-88551fa1f584" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(319)<a class="headerlink" href="#equation-243c2ebd-6b5c-4d3e-a416-88551fa1f584" title="Permalink to this equation">#</a></span>\[\begin{equation}
 Q_s=\sqrt{\frac{-eVh\eta\cos\phi_s}{2\pi\beta^2E_0}}\equiv\nu_s\sqrt{\left|\cos\phi_s\right|}
 \end{equation}\]</div>
 <p>Often, the <span class="math notranslate nohighlight">\(\nu_s\)</span> is referred as synchrotron tune with <span class="math notranslate nohighlight">\(\phi_s=n\pi\)</span>.</p>
 <p>And we can write the small amplitude Hamiltonian as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-2bfa3d89-9cc3-4f22-8a3d-c3fb582f6753">
-<span class="eqno">(319)<a class="headerlink" href="#equation-2bfa3d89-9cc3-4f22-8a3d-c3fb582f6753" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(320)<a class="headerlink" href="#equation-2bfa3d89-9cc3-4f22-8a3d-c3fb582f6753" title="Permalink to this equation">#</a></span>\[\begin{equation}
 H=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0\left(-\cos\phi_s\right)}{4\pi\beta^2E_0}\Delta\phi^2
 \end{equation}\]</div>
 <p>For fixed energy of the Hamiltonian, we can get the phase space shape, which is sets of ellipse.</p>
 <div class="amsmath math notranslate nohighlight" id="equation-53a8b0db-75f3-4bb6-a792-f5880d0a157d">
-<span class="eqno">(320)<a class="headerlink" href="#equation-53a8b0db-75f3-4bb6-a792-f5880d0a157d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(321)<a class="headerlink" href="#equation-53a8b0db-75f3-4bb6-a792-f5880d0a157d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{\delta}{\left&lt;\delta\right&gt;}\right)^2+\left(\frac{\Delta\phi}{\left&lt;\Delta\phi\right&gt;}\right)^2=1
 \end{equation}\]</div>
 <p>with:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-15ec1aa8-9db7-45d8-a5e7-6838bff03cb6">
-<span class="eqno">(321)<a class="headerlink" href="#equation-15ec1aa8-9db7-45d8-a5e7-6838bff03cb6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(322)<a class="headerlink" href="#equation-15ec1aa8-9db7-45d8-a5e7-6838bff03cb6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left&lt;\delta\right&gt;&amp;=\mathcal{A}\sqrt{\frac{2}{h\omega_0\eta}}\\
 \left&lt;\Delta\phi\right&gt;&amp;=\mathcal{A}\sqrt{\frac{4\pi\beta^2E_0}{eV\omega_0\left(-\cos\phi_s\right)}}\\
 \end{align}\]</div>
 <p>The ratio gives:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-c8cfeb57-cbaf-475a-80c5-c9a7dc2f666b">
-<span class="eqno">(322)<a class="headerlink" href="#equation-c8cfeb57-cbaf-475a-80c5-c9a7dc2f666b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(323)<a class="headerlink" href="#equation-c8cfeb57-cbaf-475a-80c5-c9a7dc2f666b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\left&lt;\delta\right&gt;}{\left&lt;\Delta\phi\right&gt;}=\sqrt\frac{eV\left(-\cos\phi_s\right)}{2\pi h\eta\beta^2E_0}=\frac{Q_s}{h\left|\eta\right|}
 \end{equation}\]</div>
 <p>It is interesting to check the flow of the phase space trajectory.  For <span class="math notranslate nohighlight">\(\eta &gt; 0\)</span>, we have a positive ‘mass’ system, the phase space flow is clockwise, while for the <span class="math notranslate nohighlight">\(\eta &lt; 0\)</span>, the Hamiltonian become negative, and the phase space flow is counter-clockwise.</p>
@@ -1057,43 +1075,43 @@ H=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0\left(-\cos\phi_s\right)}{4\p
 <h3>Unstable fix point and bucket<a class="headerlink" href="#unstable-fix-point-and-bucket" title="Link to this heading">#</a></h3>
 <p>Through the behavior of the unstable fix point, we can define a separatrix that separate the stable and non-stable region. Suppose we have pair of <span class="math notranslate nohighlight">\(\eta\)</span> and <span class="math notranslate nohighlight">\(\phi_s\)</span> to have a stable motion. the phase space point <span class="math notranslate nohighlight">\((\pi-\phi_s, 0)\)</span> will be the unstable point with the ‘energy’:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-86fc7ea8-0dc6-446f-8ff3-3b32493fb912">
-<span class="eqno">(323)<a class="headerlink" href="#equation-86fc7ea8-0dc6-446f-8ff3-3b32493fb912" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(324)<a class="headerlink" href="#equation-86fc7ea8-0dc6-446f-8ff3-3b32493fb912" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E_{sep}=H(\pi-\phi_s,0)=\frac{eV\omega_0}{2\pi\beta^2E_0}\left[-2\cos\phi_s+\sin\phi_s\left(\pi-2\phi_s\right)\right]
 \end{equation}\]</div>
 <p>Then the separatrix is defined by:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-a1137a5f-e812-4f01-bcd6-d509c0360573">
-<span class="eqno">(324)<a class="headerlink" href="#equation-a1137a5f-e812-4f01-bcd6-d509c0360573" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(325)<a class="headerlink" href="#equation-a1137a5f-e812-4f01-bcd6-d509c0360573" title="Permalink to this equation">#</a></span>\[\begin{equation}
 H(\phi,\delta)=E_{sep}
 \end{equation}\]</div>
 <div class="amsmath math notranslate nohighlight" id="equation-8ba84984-d6b0-4bb2-a3d8-aee8836a6fcb">
-<span class="eqno">(325)<a class="headerlink" href="#equation-8ba84984-d6b0-4bb2-a3d8-aee8836a6fcb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(326)<a class="headerlink" href="#equation-8ba84984-d6b0-4bb2-a3d8-aee8836a6fcb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{1}{2}h\omega_0\eta\delta_{sp}^2+\frac{eV\omega_0}{2\pi\beta^2E_0}\left[\cos\phi+\cos\phi_s-\sin\phi_s\left(\pi-\phi-\phi_s\right)\right]=0
 \end{equation}\]</div>
 <p>The separatrix explicitly expressed as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-7e14436d-7ede-4f3e-99d2-c1c43058011b">
-<span class="eqno">(326)<a class="headerlink" href="#equation-7e14436d-7ede-4f3e-99d2-c1c43058011b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(327)<a class="headerlink" href="#equation-7e14436d-7ede-4f3e-99d2-c1c43058011b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \delta_{sp}=\sqrt{\frac{eV}{\pi\beta^2 E_0 h\eta}\left[-\cos\phi-\cos\phi_s+\sin\phi_s\left(\pi-\phi-\phi_s\right)\right]}
 \end{equation}\]</div>
 <p>The turning point <span class="math notranslate nohighlight">\(\phi_u\)</span> is the point where <span class="math notranslate nohighlight">\(\delta=0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-4037cec0-8cdb-4d0c-b8e6-572574c2516d">
-<span class="eqno">(327)<a class="headerlink" href="#equation-4037cec0-8cdb-4d0c-b8e6-572574c2516d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(328)<a class="headerlink" href="#equation-4037cec0-8cdb-4d0c-b8e6-572574c2516d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 -\cos\phi_u-\cos\phi_s+\sin\phi_s\left(\pi-\phi_u-\phi_s\right)=0
 \end{equation}\]</div>
 <p>or</p>
 <div class="amsmath math notranslate nohighlight" id="equation-4dad5c28-1cf5-4ac6-b699-432c16b5ab77">
-<span class="eqno">(328)<a class="headerlink" href="#equation-4dad5c28-1cf5-4ac6-b699-432c16b5ab77" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(329)<a class="headerlink" href="#equation-4dad5c28-1cf5-4ac6-b699-432c16b5ab77" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \cos\phi_u+\phi_u\sin\phi_s=-\cos\phi_s+\sin\phi_s\left(\pi-\phi_s\right)
 \end{equation}\]</div>
 <p>The maximum height is</p>
 <div class="amsmath math notranslate nohighlight" id="equation-fcda7331-7a3c-4fed-bc8c-44e2ba6ad0dc">
-<span class="eqno">(329)<a class="headerlink" href="#equation-fcda7331-7a3c-4fed-bc8c-44e2ba6ad0dc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(330)<a class="headerlink" href="#equation-fcda7331-7a3c-4fed-bc8c-44e2ba6ad0dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \delta_{max}(\phi_s)&amp;=\delta_{sp}(\phi_s) \nonumber\\
 &amp;=\sqrt{\frac{eV}{\pi\beta^2 E_0 h\eta}\left[-2\cos\phi_s+\sin\phi_s\left(\pi-2\phi_s\right)\right]} \\
 &amp;=\delta_{max}(\phi_s=0)\sqrt{\left|-\cos\phi_s+\sin\phi_s\left(\pi-2\phi_s\right)/2\right|}
 \end{align}\]</div>
 <p>The bucket area reads:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-c111ad16-d091-45fa-b4da-8e9b2f86e313">
-<span class="eqno">(330)<a class="headerlink" href="#equation-c111ad16-d091-45fa-b4da-8e9b2f86e313" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(331)<a class="headerlink" href="#equation-c111ad16-d091-45fa-b4da-8e9b2f86e313" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{A_b} &amp;= 2\int_{\phi_u}^{\pi-\phi_s}\delta_{sp}(\phi)d\phi \nonumber\\
 &amp;=2\sqrt{\frac{2eV}{\pi\beta^2 E_0 h\left|\eta\right|}}
 \int_{\phi_u}^{\pi-\phi_s}\frac{1}{\sqrt{2}}\left|\cos\phi+\cos\phi_s-\sin\phi_s\left(\pi-\phi-\phi_s\right)\right|^{1/2} d\phi\\
@@ -1177,18 +1195,18 @@ H(\phi,\delta)=E_{sep}
 </div>
 <p>The <em><strong>action</strong></em> of the synchrotron motion is defined from the Hamiltonian with fixed ‘energy’:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-8543a410-c49c-4431-ae2b-646eb2ba54eb">
-<span class="eqno">(331)<a class="headerlink" href="#equation-8543a410-c49c-4431-ae2b-646eb2ba54eb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(332)<a class="headerlink" href="#equation-8543a410-c49c-4431-ae2b-646eb2ba54eb" title="Permalink to this equation">#</a></span>\[\begin{align}
 H(\phi,\delta)=\frac{1}{2}h\omega_0\eta\delta^2+\frac{eV\omega_0}{2\pi\beta^2E_0}\left[\cos\phi-\cos\phi_s+\sin\phi_s\left(\phi-\phi_s\right)\right]=H_0
 \end{align}\]</div>
 <p>The action <span class="math notranslate nohighlight">\(J\)</span> is calculated by:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-bba5d8d6-8a6d-478b-bd25-05e834a275b7">
-<span class="eqno">(332)<a class="headerlink" href="#equation-bba5d8d6-8a6d-478b-bd25-05e834a275b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(333)<a class="headerlink" href="#equation-bba5d8d6-8a6d-478b-bd25-05e834a275b7" title="Permalink to this equation">#</a></span>\[\begin{align}
 J&amp;=\frac{1}{2\pi}\oint \delta d\phi\\
 &amp;=\frac{1}{2\pi} \sqrt{\frac{2}{h\omega_0\eta}}\oint \left(H_0-\frac{eV\omega_0}{2\pi\beta^2E_0}\left(\cos\phi-\cos\phi_s+\sin\phi_s\left(\phi-\phi_s\right)\right)\right)^{\frac{1}{2}}d\phi
 \end{align}\]</div>
 <p>Therefore the period of the motion can be calculated as</p>
 <div class="amsmath math notranslate nohighlight" id="equation-79bb47ec-4dfe-48ff-95a5-51589ef85797">
-<span class="eqno">(333)<a class="headerlink" href="#equation-79bb47ec-4dfe-48ff-95a5-51589ef85797" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(334)<a class="headerlink" href="#equation-79bb47ec-4dfe-48ff-95a5-51589ef85797" title="Permalink to this equation">#</a></span>\[\begin{align}
 T&amp;=\frac{2\pi}{\omega}=2\pi\left(\frac{dJ}{dH_0}\right) \\
 &amp;=\sqrt{\frac{1}{2h\omega_0\eta}}\oint \left(H_0-\frac{eV\omega_0}{2\pi\beta^2E_0}\left(\cos\phi-\cos\phi_s+\sin\phi_s\left(\phi-\phi_s\right)\right)\right)^{-\frac{1}{2}}d\phi
 \end{align}\]</div>
@@ -1229,12 +1247,12 @@ T&amp;=\frac{2\pi}{\omega}=2\pi\left(\frac{dJ}{dH_0}\right) \\
 <h3>Longitudinal phase space area<a class="headerlink" href="#longitudinal-phase-space-area" title="Link to this heading">#</a></h3>
 <p>The longitudinal phase space area can be defined have similar definition as the transverse one. The most common variable pair is <span class="math notranslate nohighlight">\((\Delta t, \Delta E)\)</span>.  The advantage of such choice is that the phase space area does not change when cavities with multiple frequencies presents or acceleration is involved.</p>
 <div class="amsmath math notranslate nohighlight" id="equation-d3a6bd7c-6c9b-49c6-ac6b-3b45c9a2c44e">
-<span class="eqno">(334)<a class="headerlink" href="#equation-d3a6bd7c-6c9b-49c6-ac6b-3b45c9a2c44e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(335)<a class="headerlink" href="#equation-d3a6bd7c-6c9b-49c6-ac6b-3b45c9a2c44e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{A}_{rms}=\pi\sqrt{\left&lt;\Delta E\right&gt;^2\left&lt;\Delta t\right&gt;^2-\left(\overline{\Delta E \Delta t}\right)^2}
 \end{align}\]</div>
 <p>We will see that the decoherence of due to the mismatch and de-coherence will quickly remove the correlation of the phase space therefore</p>
 <div class="amsmath math notranslate nohighlight" id="equation-5fad2fcf-b0f0-45ab-b813-892447db4537">
-<span class="eqno">(335)<a class="headerlink" href="#equation-5fad2fcf-b0f0-45ab-b813-892447db4537" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(336)<a class="headerlink" href="#equation-5fad2fcf-b0f0-45ab-b813-892447db4537" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{A}_{rms}&amp;\approx\pi\left&lt;\Delta E\right&gt;\left&lt;\Delta t\right&gt;\\
 \mathcal{A}_{95\%}&amp;\sim 6\mathcal{A}_{rms}
 \end{align}\]</div>
@@ -1277,7 +1295,7 @@ T&amp;=\frac{2\pi}{\omega}=2\pi\left(\frac{dJ}{dH_0}\right) \\
 <h3>Near Transition Energy<a class="headerlink" href="#near-transition-energy" title="Link to this heading">#</a></h3>
 <p>If the transition energy is reached during the acceleration process of synchrotron, the dynamics at the vicinity of transition energy can be detailed.  Suppose the acceleration rate is <span class="math notranslate nohighlight">\(\dot{\gamma}\)</span> and passing the transition energy <span class="math notranslate nohighlight">\(\gamma_T\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span>, so that <span class="math notranslate nohighlight">\(\gamma(t)=\gamma_T+\dot{\gamma}t\)</span>.  So the phase slip factor is</p>
 <div class="amsmath math notranslate nohighlight" id="equation-7dee36fa-1c06-43f3-bea1-3440e841c2ab">
-<span class="eqno">(336)<a class="headerlink" href="#equation-7dee36fa-1c06-43f3-bea1-3440e841c2ab" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(337)<a class="headerlink" href="#equation-7dee36fa-1c06-43f3-bea1-3440e841c2ab" title="Permalink to this equation">#</a></span>\[\begin{align}
 \eta(t)&amp;=\alpha_c-\frac{1}{\gamma^2(t)}\\
 &amp;=\alpha_c-\frac{1}{\gamma_T^2}\left(1-\frac{2\dot\gamma t}{\gamma_T}+\mathcal{O}\left(\left(\frac{\dot\gamma t}{\gamma_T}\right)^2\right)\right)\\
 &amp;\approx \frac{2\dot\gamma t}{\gamma_T^3}
@@ -1285,12 +1303,12 @@ T&amp;=\frac{2\pi}{\omega}=2\pi\left(\frac{dJ}{dH_0}\right) \\
 <p>Here the time range is required to have <span class="math notranslate nohighlight">\(t \ll \gamma_T/\dot{\dot{\gamma}}\)</span>.</p>
 <p>Recall that the synchrotron tune for small amplitude oscillation is:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-11d4c141-a456-4ea4-92de-afc92d036a7a">
-<span class="eqno">(337)<a class="headerlink" href="#equation-11d4c141-a456-4ea4-92de-afc92d036a7a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<span class="eqno">(338)<a class="headerlink" href="#equation-11d4c141-a456-4ea4-92de-afc92d036a7a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 Q_s=\frac{\omega_s}{\omega_0}=\sqrt{\frac{-eVh\eta\cos\phi_s}{2\pi\beta^2E_0}}
 \end{equation}\]</div>
 <p>Near transision, the relation beomes:</p>
 <div class="math notranslate nohighlight" id="equation-eq-longitudinal-transition-freq">
-<span class="eqno">(338)<a class="headerlink" href="#equation-eq-longitudinal-transition-freq" title="Link to this equation">#</a></span>\[\begin{equation}  %%\label{eq:transition_freq}
+<span class="eqno">(339)<a class="headerlink" href="#equation-eq-longitudinal-transition-freq" title="Link to this equation">#</a></span>\[\begin{equation}  %%\label{eq:transition_freq}
 Q_s^2=\frac{\omega_s^2}{\omega_0^2}=\frac{-eVh \dot\gamma t \cos\phi_s}{\pi\gamma_T^4\beta^2 m c^2}\equiv \frac{1}{\omega_0^2 \tau_{ad}^3} t
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau_{ad}\)</span> is parameter defined to charecterize the time that the tune change due to acceleration.  We can check if the synchrotron tune <span class="math notranslate nohighlight">\(Q_s\)</span> or frequency <span class="math notranslate nohighlight">\(\omega_s\)</span> is change adiabatically, i.e. <span class="math notranslate nohighlight">\(\frac{1}{2\pi}\left|dT_s/dt\right| \ll 1\)</span> where <span class="math notranslate nohighlight">\(T_s=2\pi/\omega_s\)</span>.  Therefore the adabatic condition reads:</p>
@@ -1298,7 +1316,7 @@ Q_s^2=\frac{\omega_s^2}{\omega_0^2}=\frac{-eVh \dot\gamma t \cos\phi_s}{\pi\gamm
 \[
 \frac{1}{\omega_s^2}\left|\frac{d\omega_s}{dt}\right| \ll 1
 \]</div>
-<p>with Eq.<a class="reference internal" href="#equation-eq-longitudinal-transition-freq">(338)</a>, it becomes</p>
+<p>with Eq.<a class="reference internal" href="#equation-eq-longitudinal-transition-freq">(339)</a>, it becomes</p>
 <div class="math notranslate nohighlight">
 \[
 4 \frac{\left|t\right|^3}{\tau_{ad}^3} \gg 1
@@ -1311,13 +1329,13 @@ Q_s^2=\frac{\omega_s^2}{\omega_0^2}=\frac{-eVh \dot\gamma t \cos\phi_s}{\pi\gamm
 <p>we can consider the system is adiabatic. The typical <span class="math notranslate nohighlight">\(\tau_{ad}\)</span> value is milliseconds.</p>
 <p>Under the small angle approximation, The Hamiltonian equation near transition energy become:</p>
 <div class="math notranslate nohighlight" id="equation-eq-longitudinal-h-eq-tran-eng">
-<span class="eqno">(339)<a class="headerlink" href="#equation-eq-longitudinal-h-eq-tran-eng" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(340)<a class="headerlink" href="#equation-eq-longitudinal-h-eq-tran-eng" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 \dot\delta&amp;=\frac{eV\omega_0}{2\pi\beta^2E_0}\cos\phi_s \Delta \phi  \\
 \dot{\Delta\phi}&amp;=\frac{2h\omega_0\dot\gamma t}{\gamma_T^3}\delta  %%\label{eq:longi_H_eq_tran_eng_2}
 \end{align}\end{split}\]</div>
 <p>Then, the second order ODE for <span class="math notranslate nohighlight">\(\delta\)</span> and <span class="math notranslate nohighlight">\(\Delta\phi\)</span> can be written as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-9848f00a-4533-4b56-88ad-dae293b29282">
-<span class="eqno">(340)<a class="headerlink" href="#equation-9848f00a-4533-4b56-88ad-dae293b29282" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(341)<a class="headerlink" href="#equation-9848f00a-4533-4b56-88ad-dae293b29282" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;\ddot\delta+\frac{t}{\tau_{ad}^3}\delta =0\\
 &amp;\frac{d}{dt}\left(\frac{\tau_{ad}^3}{t}\frac{d\Delta\phi}{dt}\right)+\Delta\phi=0
 \end{align}\]</div>
@@ -1375,13 +1393,13 @@ Q_s^2=\frac{\omega_s^2}{\omega_0^2}=\frac{-eVh \dot\gamma t \cos\phi_s}{\pi\gamm
 <p>Let’s assume a standing-wave linac, which consists of a series of short accelerating gaps. Between the gap <span class="math notranslate nohighlight">\(n-1\)</span> and <span class="math notranslate nohighlight">\(n\)</span>, the drift space has length <span class="math notranslate nohighlight">\(l_{n-1}\)</span>. The velocity of the ideal velocity in the drift space is <span class="math notranslate nohighlight">\(\beta_{n-1}\)</span> and energy is <span class="math notranslate nohighlight">\(E_{n-1}\)</span>.  The arriving time of ideal particle at gap <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(t_{n}\)</span> and phase is <span class="math notranslate nohighlight">\(\phi_{n}\)</span>.  We use subscript <span class="math notranslate nohighlight">\(s\)</span> to denote the reference particle.</p>
 <p>The energy change is simply:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-df7f28d8-3165-4057-9853-b7a49d3e795e">
-<span class="eqno">(341)<a class="headerlink" href="#equation-df7f28d8-3165-4057-9853-b7a49d3e795e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(342)<a class="headerlink" href="#equation-df7f28d8-3165-4057-9853-b7a49d3e795e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta E_n=E_{n}-E_{s,n}&amp;=\Delta E_{n-1}+eV\left(\sin\left(\phi_{s,n}+\Delta\phi_n\right)-\sin\phi_{s,n}\right) \\
 &amp;\approx \Delta E_{n-1}+eV \cos(\phi_{s,n})\Delta\phi_n
 \end{align}\]</div>
 <p>And the change of phase is simply:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-786aa21e-89f6-40ac-9850-fb574b17a852">
-<span class="eqno">(342)<a class="headerlink" href="#equation-786aa21e-89f6-40ac-9850-fb574b17a852" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(343)<a class="headerlink" href="#equation-786aa21e-89f6-40ac-9850-fb574b17a852" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \phi_n=\omega_0\left(t_{n}-t_{s,n}\right)&amp;=\Delta \phi_{n-1}+\frac{\omega}{c}\left(\frac{l_{n-1}}{\beta_{n-1}}-\frac{l_{n-1}}{\beta_{s,n-1}}\right) \\
 &amp;\approx \Delta \phi_{n-1}-\frac{\omega}{c} \frac{l_{n-1}}{\beta_{s,n-1}^2}\Delta \beta_{n-1} \\
 &amp;=\Delta \phi_{n-1}-\frac{\omega}{mc^3} \frac{l_{n-1}}{\beta_{s,n-1}^3 \gamma_{s,n-1}^3}\Delta E_{n-1}
@@ -1389,19 +1407,19 @@ Q_s^2=\frac{\omega_s^2}{\omega_0^2}=\frac{-eVh \dot\gamma t \cos\phi_s}{\pi\gamm
 <p>This map can be used to track the dynamics of linac.  It is worthwhile to note that, since the <em><strong>momentum compaction factor</strong></em> of a linac is always zero (<span class="math notranslate nohighlight">\(\alpha_c=0\)</span>), the <em><strong>slip factor</strong></em> is always below zero (<span class="math notranslate nohighlight">\(\eta&lt;0\)</span>), viz below transition.</p>
 <p>If the acceleration rate is low and the gap between the acceleration gap is short, we may approximate the map using differential equation:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-2bf6dc81-0fe8-4706-9ba2-170d6fbb8cb8">
-<span class="eqno">(343)<a class="headerlink" href="#equation-2bf6dc81-0fe8-4706-9ba2-170d6fbb8cb8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(344)<a class="headerlink" href="#equation-2bf6dc81-0fe8-4706-9ba2-170d6fbb8cb8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d\Delta E}{ds}&amp;=e\mathcal{E}\left(\sin\left(\phi_{s}+\Delta\phi\right)-\sin\phi_{s}\right) \\
 \frac{d\Delta \phi}{ds}&amp;=-\frac{\omega}{mc^3\beta_{s}^3 \gamma_{s}^3}\Delta E
 \end{align}\]</div>
 <p>Here, <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is the gradient of acceleration. Therefore the dynamics of linac and ring are very similar in this assumption, by just replacing the slip factor <span class="math notranslate nohighlight">\(\eta\)</span> to <span class="math notranslate nohighlight">\(\frac{-1}{\gamma_s^2}\)</span>.</p>
 <p>For small amplitude approximation, we have:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-9ca25fca-f55f-40b5-b841-c02a43fff8aa">
-<span class="eqno">(344)<a class="headerlink" href="#equation-9ca25fca-f55f-40b5-b841-c02a43fff8aa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(345)<a class="headerlink" href="#equation-9ca25fca-f55f-40b5-b841-c02a43fff8aa" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d^2\Delta E}{ds^2}&amp;= -\frac{ e\mathcal{E}\omega\cos\phi_{s}}{mc^3\beta_{s}^3 \gamma_{s}^3}\Delta E
 \end{align}\]</div>
 <p>with the synchrotron oscillation wave number as:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-fe5634a9-78ff-4746-851f-55dd83e4b528">
-<span class="eqno">(345)<a class="headerlink" href="#equation-fe5634a9-78ff-4746-851f-55dd83e4b528" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(346)<a class="headerlink" href="#equation-fe5634a9-78ff-4746-851f-55dd83e4b528" title="Permalink to this equation">#</a></span>\[\begin{align}
 k_s^{2}= \frac{ e\mathcal{E}\omega\cos\phi_{s}}{mc^3\beta_{s}^3 \gamma_{s}^3}
 \end{align}\]</div>
 </section>
@@ -1411,7 +1429,7 @@ k_s^{2}= \frac{ e\mathcal{E}\omega\cos\phi_{s}}{mc^3\beta_{s}^3 \gamma_{s}^3}
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "MSU-Beam-Dynamics/AP_enotes",
             ref: "master",
         },
         codeMirrorConfig: {
