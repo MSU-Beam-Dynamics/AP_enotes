@@ -35,6 +35,7 @@ html:
     google_analytics_id: G-C1X40P1XVL
   
 launch_buttons:
+  thebe: true
   notebook_interface: "classic"  # or "jupyterlab"
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
