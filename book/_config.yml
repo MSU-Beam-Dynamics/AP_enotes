@@ -36,7 +36,7 @@ html:
   
 launch_buttons:
   thebe: true
-  notebook_interface: "classic"  # or "jupyterlab"
+  notebook_interface: "jupyterlab"  # or "classic" 
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
 
