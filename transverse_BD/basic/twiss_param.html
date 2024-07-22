@@ -189,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../coupling/linear_transverse_coupling.html">Linear Coupling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dispersion/dispersion.html">Off Momentum Orbit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chrom/chromaticity.html">Chromatic Effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nonlinearity/nonlinearity.html">Intro to Nonlinearity</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II: Longitudinal Dynamics</span></p>
 <ul class="nav bd-sidenav">
@@ -485,8 +486,8 @@ document.write(`
 <section id="hills-equation">
 <h2>Hill’s Equation<a class="headerlink" href="#hills-equation" title="Link to this heading">#</a></h2>
 <p>We start with the Hill’s equation of both transverse plane.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9dc134ba-557c-4c9a-968d-641c7eb7e9df">
-<span class="eqno">(129)<a class="headerlink" href="#equation-9dc134ba-557c-4c9a-968d-641c7eb7e9df" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f5f828ec-4867-4e4e-961c-75072de28991">
+<span class="eqno">(129)<a class="headerlink" href="#equation-f5f828ec-4867-4e4e-961c-75072de28991" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;x''\left(s\right) +\left(\frac{1}{\rho^2} + k_x\left(s\right) \right) x\left(s\right)=0\\
 &amp;y''\left(s\right) + k_y\left(s\right)y\left(s\right)=0
 \end{align}\]</div>
@@ -496,8 +497,8 @@ document.write(`
 &amp;x''\left(s\right) + K\left(s\right)x\left(s\right)=0 
 \end{align}\]</div>
 <p>For a ring accelerator or a linac with periodical structure, we have <span class="math notranslate nohighlight">\(K(s)=K(s+C)\)</span>. To have a stable motion, we try to express the solution of the Hill’s equation as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-efb5d191-e821-4f08-8854-a8ef6389e5eb">
-<span class="eqno">(131)<a class="headerlink" href="#equation-efb5d191-e821-4f08-8854-a8ef6389e5eb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-531d2ebe-b470-4fb1-b71c-f851a2bf028c">
+<span class="eqno">(131)<a class="headerlink" href="#equation-531d2ebe-b470-4fb1-b71c-f851a2bf028c" title="Permalink to this equation">#</a></span>\[\begin{align}
 x\left(s\right)=aw\left(s\right)e^{i\psi\left(s\right)}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is a constant, <span class="math notranslate nohighlight">\(w(s)\)</span> is the envelope function and <span class="math notranslate nohighlight">\(\psi(s)\)</span> is the phase function. Then the derivatives are:</p>
@@ -513,13 +514,13 @@ x''\left(s\right)&amp;=aw''e^{i\psi}+2iaw'e^{i\psi}\psi'-awe^{i\psi}\psi'^2+iawe
 &amp;aw''+Kw-w\psi'^2=0
 \end{align}\end{split}\]</div>
 <p>Obviously, we are seeking for non-trivial solution (<span class="math notranslate nohighlight">\(w\ne 0\)</span>). The equation <a class="reference internal" href="#equation-eq-twiss-wpsi1">(133)</a> gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-981c581e-00e7-4d51-99f2-f5848e54182b">
-<span class="eqno">(134)<a class="headerlink" href="#equation-981c581e-00e7-4d51-99f2-f5848e54182b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f7270706-0e34-42c1-8c2e-c1fbf827e1c7">
+<span class="eqno">(134)<a class="headerlink" href="#equation-f7270706-0e34-42c1-8c2e-c1fbf827e1c7" title="Permalink to this equation">#</a></span>\[\begin{align}
 w^2\psi'=1
 \end{align}\]</div>
 <p>Then by choose the constant a as 1, the equations for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> become</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fe7dc387-e12a-4b02-88d7-13fc717381de">
-<span class="eqno">(135)<a class="headerlink" href="#equation-fe7dc387-e12a-4b02-88d7-13fc717381de" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a65ad1ae-33a6-480e-8fe2-677f151e5d1a">
+<span class="eqno">(135)<a class="headerlink" href="#equation-a65ad1ae-33a6-480e-8fe2-677f151e5d1a" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;w''+Kw-1/w^3=0\\
 &amp;\psi'-1/w^2=0
 \end{align}\]</div>
@@ -528,19 +529,19 @@ w^2\psi'=1
 <section id="twiss-parameter">
 <h2>Twiss Parameter<a class="headerlink" href="#twiss-parameter" title="Link to this heading">#</a></h2>
 <p>We define the beta function (represent the envelope of the oscillation) <span class="math notranslate nohighlight">\(\beta(s)=w^2(s)\)</span> and alpha function (the slope of the envelope) <span class="math notranslate nohighlight">\(\alpha(s)=-\beta'(s)/2=-w(s)w'(s)\)</span>.  The phase advance from location <span class="math notranslate nohighlight">\(s_0\)</span> to <span class="math notranslate nohighlight">\(s\)</span> becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-315babd2-c40b-4022-b756-96db04ffdde3">
-<span class="eqno">(136)<a class="headerlink" href="#equation-315babd2-c40b-4022-b756-96db04ffdde3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d48365f-8b95-4f77-9b2e-b4982f76579d">
+<span class="eqno">(136)<a class="headerlink" href="#equation-8d48365f-8b95-4f77-9b2e-b4982f76579d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \psi(s,s_0)=\int_{s_0}^s\frac{1}{\beta(s')}ds'
 \end{align}\]</div>
 <p>The derivatives of beta function are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0dea3866-2035-4803-912e-aa5bdcda77d9">
-<span class="eqno">(137)<a class="headerlink" href="#equation-0dea3866-2035-4803-912e-aa5bdcda77d9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b6e50884-6f84-417d-bc6e-e0e772fc76af">
+<span class="eqno">(137)<a class="headerlink" href="#equation-b6e50884-6f84-417d-bc6e-e0e772fc76af" title="Permalink to this equation">#</a></span>\[\begin{align}
 \beta'&amp;=2ww'\\
 \beta''&amp;=2w'^2+2ww''
 \end{align}\]</div>
 <p>which satisfy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9ea31ca7-f624-4216-b713-b77071b778b2">
-<span class="eqno">(138)<a class="headerlink" href="#equation-9ea31ca7-f624-4216-b713-b77071b778b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f2087ea7-a92b-4f3c-bf6e-b79ac68d5bb1">
+<span class="eqno">(138)<a class="headerlink" href="#equation-f2087ea7-a92b-4f3c-bf6e-b79ac68d5bb1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}\beta''+K\beta-\frac{1}{\beta}\left[1+\frac{\beta'^2}{4}\right]=0
 \end{align}\]</div>
 <p>Using the beta function, we can write the transverse motion as:</p>
@@ -549,8 +550,8 @@ w^2\psi'=1
 x(s)=a\sqrt{\beta(s)}\cos\left(\psi\left(s\right)\right)
 \end{align}\]</div>
 <p>Its derivative becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a1d2b2a-f0bc-4a26-a88c-a497248e6cc7">
-<span class="eqno">(140)<a class="headerlink" href="#equation-9a1d2b2a-f0bc-4a26-a88c-a497248e6cc7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e7aaea35-16e6-40a9-873a-f79e55e3d389">
+<span class="eqno">(140)<a class="headerlink" href="#equation-e7aaea35-16e6-40a9-873a-f79e55e3d389" title="Permalink to this equation">#</a></span>\[\begin{align}
 x'(s)&amp;=-a\sqrt{\beta}\psi'\sin\psi+a\frac{\beta'}{2\sqrt{\beta}}\cos\psi\\
 &amp;=-\frac{x}{\beta}\left(\tan\psi-\frac{\beta'}{2}\right)\\
 &amp;=-\frac{x}{\beta}\left(\tan\psi+\alpha\right)
@@ -561,8 +562,8 @@ x'(s)&amp;=-a\sqrt{\beta}\psi'\sin\psi+a\frac{\beta'}{2\sqrt{\beta}}\cos\psi\\
 \tan\psi(s)=-\frac{\beta(s)x'(s)+\alpha(s)x(s)}{x(s)}
 \end{align}\]</div>
 <p>Using the triganular relations <span class="math notranslate nohighlight">\(\cos^{-2}\alpha=1+\tan^2\alpha\)</span> for any angle <span class="math notranslate nohighlight">\(\alpha\)</span>, we can combine equation <a class="reference internal" href="#equation-eq-twiss-x-s-with-cos">(139)</a> and <a class="reference internal" href="#equation-eq-twiss-x-xp-with-tan">(141)</a> and get:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-30a50bd0-52f2-4445-bdcf-e4795a01e9d0">
-<span class="eqno">(142)<a class="headerlink" href="#equation-30a50bd0-52f2-4445-bdcf-e4795a01e9d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2760dc3c-582d-45d4-a56d-8f026b0a8a6c">
+<span class="eqno">(142)<a class="headerlink" href="#equation-2760dc3c-582d-45d4-a56d-8f026b0a8a6c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\frac{\beta(s)x'(s)+\alpha(s)x(s)}{x(s)}\right)^2+1&amp;=\left(\frac{a\sqrt{\beta(s)}}{x(s)}\right)^2\\
 \frac{\left(\beta(s)x'(s)+\alpha(s)x(s)\right)^2+x^2(s)}{\beta (s)}&amp;=a^2
 \end{align}\]</div>
@@ -570,13 +571,13 @@ x'(s)&amp;=-a\sqrt{\beta}\psi'\sin\psi+a\frac{\beta'}{2\sqrt{\beta}}\cos\psi\\
 <section id="action-angle-variable">
 <h2>Action-Angle Variable<a class="headerlink" href="#action-angle-variable" title="Link to this heading">#</a></h2>
 <p>Since the transverse Hamiltonian</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1d253dd9-694b-48a0-b6d4-a1cb5fccf98d">
-<span class="eqno">(143)<a class="headerlink" href="#equation-1d253dd9-694b-48a0-b6d4-a1cb5fccf98d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2c9bfb1a-f0df-4ee4-b50b-58510603e0af">
+<span class="eqno">(143)<a class="headerlink" href="#equation-2c9bfb1a-f0df-4ee4-b50b-58510603e0af" title="Permalink to this equation">#</a></span>\[\begin{align}
 H(x,p_x,y,p_y,s)=\frac{p_x^2}{2}+\frac{p_y^2}{2}+\frac{x^2}{2\rho(s)^2}+k(s)\left(x^2-y^2\right)/2
 \end{align}\]</div>
 <p>is not a constant of motion,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5df49ea5-3927-4724-b93e-c893986dacc9">
-<span class="eqno">(144)<a class="headerlink" href="#equation-5df49ea5-3927-4724-b93e-c893986dacc9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b13e6270-ee94-43ee-9f6e-070fa9de3f92">
+<span class="eqno">(144)<a class="headerlink" href="#equation-b13e6270-ee94-43ee-9f6e-070fa9de3f92" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dH}{ds}&amp;=\frac{\partial H}{\partial x}\frac{\partial x}{\partial s}+
 \frac{\partial H}{\partial p_x}\frac{\partial p_x}{\partial s} + \frac{\partial H}{\partial s}\\
 &amp;=\frac{\partial H}{\partial s}\ne 0
@@ -587,29 +588,29 @@ H(x,p_x,y,p_y,s)=\frac{p_x^2}{2}+\frac{p_y^2}{2}+\frac{x^2}{2\rho(s)^2}+k(s)\lef
 H(x,x',s)=\frac{x'^2}{2}+\frac{K(s)}{2}{x^2}
 \end{align}\]</div>
 <p>the transverse motion formula, by changing the coordinate from <span class="math notranslate nohighlight">\((x,p_x)\)</span> to <span class="math notranslate nohighlight">\((J,\psi)\)</span>.  We will use the generating function of the first kind</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a6dad7cf-7eab-4e8f-978c-47400ef656f7">
-<span class="eqno">(146)<a class="headerlink" href="#equation-a6dad7cf-7eab-4e8f-978c-47400ef656f7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a8278315-065e-40ff-913d-4b519e6f514c">
+<span class="eqno">(146)<a class="headerlink" href="#equation-a8278315-065e-40ff-913d-4b519e6f514c" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_1(x,\psi)&amp;=\int_0^x x'(\tilde x,\psi)d\tilde x \\
 &amp;= -\frac{x^2}{2\beta}\left(\tan\psi-\frac{\beta'}{2}\right)
 \end{align}\]</div>
 <p>The action is calculated by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7ef7fe1-1941-47bc-94ab-e34b7727ae01">
-<span class="eqno">(147)<a class="headerlink" href="#equation-e7ef7fe1-1941-47bc-94ab-e34b7727ae01" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c856fb36-830e-4a85-9cc4-f346eb0ed88d">
+<span class="eqno">(147)<a class="headerlink" href="#equation-c856fb36-830e-4a85-9cc4-f346eb0ed88d" title="Permalink to this equation">#</a></span>\[\begin{align}
 J&amp;=-\frac{\partial F_1}{\partial\psi}=\frac{x^2}{2\beta}\sec^2\psi\\
 &amp;=\frac{x^2}{2\beta}\left(1+\left(\frac{\beta x'}{x}+\alpha\right)^2\right)\\
 &amp;=\frac{1}{2\beta}\left(x^2+\left(\beta x'+\alpha x\right)^2\right)
 \end{align}\]</div>
 <p>The new Hamiltonian is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62832c67-d47d-45ae-a9a8-ee9392e555f1">
-<span class="eqno">(148)<a class="headerlink" href="#equation-62832c67-d47d-45ae-a9a8-ee9392e555f1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9fa82eeb-7ad8-42c4-b65d-5a67e1f08542">
+<span class="eqno">(148)<a class="headerlink" href="#equation-9fa82eeb-7ad8-42c4-b65d-5a67e1f08542" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tilde{H}&amp;=H+\frac{\partial F_1}{\partial s}  \\
 &amp;=\frac{1}{2}\frac{x^2}{\beta^2}\left(\tan\psi+\alpha\right)^2+\frac{1}{2}Kx^2 +\\
 &amp;\quad\frac{x^2}{2\beta^2}\beta'\left(\tan\psi-\frac{\beta'}{2}\right)-\frac{x^2}{2\beta}\left(\psi'\sec^2\psi-\frac{\beta''}{2}\right) \nonumber\\
 &amp;=\frac{J}{\beta}
 \end{align}\]</div>
 <p>Obviously, <span class="math notranslate nohighlight">\(J\)</span> is constant since:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dc71792-c89f-484f-bdee-74c117adb9fb">
-<span class="eqno">(149)<a class="headerlink" href="#equation-4dc71792-c89f-484f-bdee-74c117adb9fb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-96f7d2fe-9513-46fa-b84f-1547b2254884">
+<span class="eqno">(149)<a class="headerlink" href="#equation-96f7d2fe-9513-46fa-b84f-1547b2254884" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dJ}{ds}=-\frac{\partial \tilde{H}}{\partial \psi}=0
 \end{align}\]</div>
 <p>Now, we can revisit the coordinate transformation <span class="math notranslate nohighlight">\((x,x')\)</span> to <span class="math notranslate nohighlight">\((\psi, J)\)</span></p>
@@ -619,40 +620,39 @@ J&amp;=\frac{1}{2}\left(\left(\frac{x}{\sqrt{\beta}}\right)^2+\left(\sqrt\beta x
 \psi&amp;=-\arctan\frac{\sqrt\beta x'+\alpha x/\sqrt{\beta}}{x/\sqrt{\beta}}
 \end{align}\end{split}\]</div>
 <p>However, the Hamiltonian is still not a constant since the beta function is not a constant in the lattice.  In a ring, We can ‘force’ to eliminate the variation by defining the canonical transformation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c1b4c7a-e213-4dfb-99b4-6d0bd2831590">
-<span class="eqno">(151)<a class="headerlink" href="#equation-0c1b4c7a-e213-4dfb-99b4-6d0bd2831590" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7bc96850-a3ba-4d0e-92ee-0d1fea113e40">
+<span class="eqno">(151)<a class="headerlink" href="#equation-7bc96850-a3ba-4d0e-92ee-0d1fea113e40" title="Permalink to this equation">#</a></span>\[\begin{align}
 \bar{\psi}&amp;=\psi - \int_0^s\frac{1}{\beta(s')}ds' + 2\pi\nu\frac{s}{C}  \\
 \bar{J}&amp;=J
 \end{align}\]</div>
 <p>derived from the generation of second type:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e6c9f0f-467d-4a90-a526-895d85282e94">
-<span class="eqno">(152)<a class="headerlink" href="#equation-1e6c9f0f-467d-4a90-a526-895d85282e94" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-36a72725-e9a9-48b8-9259-72bb54d35cab">
+<span class="eqno">(152)<a class="headerlink" href="#equation-36a72725-e9a9-48b8-9259-72bb54d35cab" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_2(\psi, \bar{J}, s) = \left(\psi - \int_0^s\frac{1}{\beta(s')}ds' + 2\pi\nu\frac{s}{C}\right) \bar{J}
 \end{equation}\]</div>
 <p>The factor <span class="math notranslate nohighlight">\(2\pi/C\)</span> is introduced to make the last term be unitless and approximately an angle (<span class="math notranslate nohighlight">\(\theta = 2\pi s/C\)</span>) that advances <span class="math notranslate nohighlight">\(2\pi\)</span> per revolution. Then the new Hamiltonian <span class="math notranslate nohighlight">\(\bar{H}\)</span> is simply:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8ac2402-768f-4a1d-9411-6b964e06e8f2">
-<span class="eqno">(153)<a class="headerlink" href="#equation-d8ac2402-768f-4a1d-9411-6b964e06e8f2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3e5020f2-702d-465f-867c-203e0f4ee046">
+<span class="eqno">(153)<a class="headerlink" href="#equation-3e5020f2-702d-465f-867c-203e0f4ee046" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{H} = \tilde{H} + \frac{\partial F_2(\psi, \bar{J})}{\partial s} = \frac{2\pi}{C} \nu \bar{J}
 \end{equation}\]</div>
-<p>The factor can be removed by scale the new Hamiltonian by the same factor.  Therefore the original Hamiltonian <a class="reference internal" href="#equation-eq-twiss-hamitonian-xxp">(145)</a> will be <code class="docutils literal notranslate"><span class="pre">simplified</span></code> to <span class="math notranslate nohighlight">\(\nu \bar{J}\)</span>, by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab967a6e-b15b-4920-8f8a-0fccc9cacab1">
-<span class="eqno">(154)<a class="headerlink" href="#equation-ab967a6e-b15b-4920-8f8a-0fccc9cacab1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>The factor can be removed by scale the new Hamiltonian by the same factor.  Therefore the original Hamiltonian <a class="reference internal" href="#equation-eq-twiss-hamitonian-xxp">(145)</a> will be simplified to <span class="math notranslate nohighlight">\(H(\bar\psi, \bar J) = \nu \bar{J}\)</span>, by</p>
+<div class="math notranslate nohighlight" id="equation-eq-twiss-jpsibar-to-xxp">
+<span class="eqno">(154)<a class="headerlink" href="#equation-eq-twiss-jpsibar-to-xxp" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
 x&amp;=\sqrt{2\beta \bar{J}} \cos(\bar\psi+ \int_0^s\frac{1}{\beta(s')}ds'-\nu \theta)\\
 \alpha x+\beta x'&amp;=-\sqrt{2\beta \bar{J}} \sin(\bar\psi+ \int_0^s\frac{1}{\beta(s')}ds'-\nu \theta)
-
-\end{align}\]</div>
+\end{align}\end{split}\]</div>
 </section>
 <section id="normalized-coordinates">
 <h2>Normalized Coordinates<a class="headerlink" href="#normalized-coordinates" title="Link to this heading">#</a></h2>
 <p>Therefore we can define the normalized coordinate:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-729a4da9-1aef-400f-8ba8-4d1652dccc4b">
-<span class="eqno">(155)<a class="headerlink" href="#equation-729a4da9-1aef-400f-8ba8-4d1652dccc4b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ff78468-57d5-46ce-9b7a-8b76aebdcfed">
+<span class="eqno">(155)<a class="headerlink" href="#equation-4ff78468-57d5-46ce-9b7a-8b76aebdcfed" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{X}&amp;=\frac{x}{\sqrt{\beta}} \\
 \mathcal{P_x}&amp;=\sqrt\beta x'+\frac{\alpha}{\sqrt{\beta}}x
 \end{align}\]</div>
 <p>In matrix form, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a31c2a7f-3d4d-4921-8ded-fbd93c39ed01">
-<span class="eqno">(156)<a class="headerlink" href="#equation-a31c2a7f-3d4d-4921-8ded-fbd93c39ed01" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-584919a3-7b54-4aac-9e5b-8be450bd710d">
+<span class="eqno">(156)<a class="headerlink" href="#equation-584919a3-7b54-4aac-9e5b-8be450bd710d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \mathcal{X}\\
 \mathcal{P}_{x}
@@ -665,8 +665,8 @@ x'
 \end{array}\right)
 \end{align}\]</div>
 <p>or reversely:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-549d9525-2a3c-499f-8a69-1fa1212966b2">
-<span class="eqno">(157)<a class="headerlink" href="#equation-549d9525-2a3c-499f-8a69-1fa1212966b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9eb1b01c-a664-4d22-838b-d64ff9df16aa">
+<span class="eqno">(157)<a class="headerlink" href="#equation-9eb1b01c-a664-4d22-838b-d64ff9df16aa" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 x\\
 x'
@@ -680,8 +680,8 @@ x'
 \end{array}\right)
 \end{align}\]</div>
 <p>For location 1 to location 2, the normalized coordinate follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bb72ffa1-5a41-44f1-82e5-56319a9cc1e0">
-<span class="eqno">(158)<a class="headerlink" href="#equation-bb72ffa1-5a41-44f1-82e5-56319a9cc1e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1fc28dd4-8968-4c50-a003-5261dbf1dade">
+<span class="eqno">(158)<a class="headerlink" href="#equation-1fc28dd4-8968-4c50-a003-5261dbf1dade" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \mathcal{X}\\
 \mathcal{P}_{x}
@@ -694,8 +694,8 @@ x'
 \end{array}\right)_1
 \end{align}\]</div>
 <p>The original coordintate has the map:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22d85f31-17b5-420b-9559-9bc02c425bc2">
-<span class="eqno">(159)<a class="headerlink" href="#equation-22d85f31-17b5-420b-9559-9bc02c425bc2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1d642cda-14ee-418d-9c52-a5fe255f8d07">
+<span class="eqno">(159)<a class="headerlink" href="#equation-1d642cda-14ee-418d-9c52-a5fe255f8d07" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \mathcal{x}\\
 x'
@@ -725,8 +725,8 @@ M\left(s_{2}\mid s_{1}\right)
 \end{array}\right) 
 \end{equation}\end{split}\]</div>
 <p>When the two locations have same optical functions, the one turn map is rederived:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-94ae2ea3-95b1-46ab-9783-4b0826c22975">
-<span class="eqno">(161)<a class="headerlink" href="#equation-94ae2ea3-95b1-46ab-9783-4b0826c22975" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-339001bc-4f31-4fcd-ba0f-a6de7207acd4">
+<span class="eqno">(161)<a class="headerlink" href="#equation-339001bc-4f31-4fcd-ba0f-a6de7207acd4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \mathcal{x}\\
 x'
@@ -761,8 +761,8 @@ x'
 <p>Apparently, the solution of the Hills equation is unique except two initial conditions, one scales the envelope function <span class="math notranslate nohighlight">\(w(s)\)</span> and the other one defines the initial phase of <span class="math notranslate nohighlight">\(\psi(s)\)</span> when <span class="math notranslate nohighlight">\(s=0\)</span>.</p>
 <p>However, is the parametrization a unique answer?</p>
 <p>From the action’s formula <a class="reference internal" href="#equation-eq-twiss-action">(150)</a>, it is easy to see that the definition of the Parametrization can have infinite sets. In general, we can define the the normalized coordinate as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1983b50c-6505-4b69-abec-a03350e453a3">
-<span class="eqno">(162)<a class="headerlink" href="#equation-1983b50c-6505-4b69-abec-a03350e453a3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-beef37be-28a3-41a1-b8b6-509e97e0e7bf">
+<span class="eqno">(162)<a class="headerlink" href="#equation-beef37be-28a3-41a1-b8b6-509e97e0e7bf" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \mathcal{X}\\
 \mathcal{P}_{x}
@@ -775,15 +775,15 @@ x'
 \end{array}\right)
 \end{align}\]</div>
 <p>The four independent parameter only need to satisfy three conditions:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d9fe8cf7-7bb4-48fe-a103-26e4af9a5067">
-<span class="eqno">(163)<a class="headerlink" href="#equation-d9fe8cf7-7bb4-48fe-a103-26e4af9a5067" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d1b625d-cf70-4da8-a275-f5cbc7b09caa">
+<span class="eqno">(163)<a class="headerlink" href="#equation-8d1b625d-cf70-4da8-a275-f5cbc7b09caa" title="Permalink to this equation">#</a></span>\[\begin{align}
 a^2+c^2&amp;=\gamma=\frac{1+\alpha^2}{\beta}\\
 b^2+d^2&amp;=\beta\\
 ab+cd&amp;=\alpha
 \end{align}\]</div>
 <p>The widely used parametrization version, takes the special case <span class="math notranslate nohighlight">\(b=0\)</span>.  An ‘equally good’ choice can be found by forcing <span class="math notranslate nohighlight">\(c=0\)</span>. Then the normalized coordinate becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-859848d5-7862-4ead-9644-f7e853ab1eda">
-<span class="eqno">(164)<a class="headerlink" href="#equation-859848d5-7862-4ead-9644-f7e853ab1eda" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-321c91b9-2aad-42fb-84f0-8aefed1d5a81">
+<span class="eqno">(164)<a class="headerlink" href="#equation-321c91b9-2aad-42fb-84f0-8aefed1d5a81" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 \tilde{\mathcal{X}}\\
 \tilde{\mathcal{P}_{x}}
@@ -796,8 +796,8 @@ x'
 \end{array}\right)
 \end{align}\]</div>
 <p>The corresponding phase advance becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68e847e4-1d71-41c9-aa86-f51d0ebfda8e">
-<span class="eqno">(165)<a class="headerlink" href="#equation-68e847e4-1d71-41c9-aa86-f51d0ebfda8e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f216c2f5-0733-4aac-ac40-09c071e8716a">
+<span class="eqno">(165)<a class="headerlink" href="#equation-f216c2f5-0733-4aac-ac40-09c071e8716a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \psi&amp;=-\arctan\frac{x'/\sqrt\gamma }{\sqrt{\gamma}x+\alpha x'/\sqrt{\gamma}}
 \end{align}\]</div>
 </section>
