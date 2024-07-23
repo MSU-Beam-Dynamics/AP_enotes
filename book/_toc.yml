@@ -13,6 +13,7 @@ parts:
       - file: transverse_BD/coupling/linear_transverse_coupling
       - file: transverse_BD/dispersion/dispersion
       - file: transverse_BD/chrom/chromaticity
+      - file: transverse_BD/nonlinearity/nonlinearity
   - caption: "Part II: Longitudinal Dynamics"
     chapters:
       - file: longitudinal_BD/longitudinal_dynamics
