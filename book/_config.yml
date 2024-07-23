@@ -28,14 +28,14 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  analytics:
+    google_analytics_id: G-C1X40P1XVL
   favicon: favicon.ico
   use_issues_button: true
   use_repository_button: true
-  analytics:
-    google_analytics_id: G-C1X40P1XVL
+  
   
 launch_buttons:
-  thebe: true
   notebook_interface: "jupyterlab"  # or "classic" 
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
