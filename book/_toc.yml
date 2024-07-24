@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 parts:
   - caption: "Part I: Transverse Dynamics"
+    numbered: true
     chapters:
       - file: transverse_BD/magnet/magnets
       - file: transverse_BD/basic/Hamiltonian_Hills
@@ -15,9 +16,11 @@ parts:
       - file: transverse_BD/chrom/chromaticity
       - file: transverse_BD/nonlinearity/nonlinearity
   - caption: "Part II: Longitudinal Dynamics"
+    numbered: true
     chapters:
       - file: longitudinal_BD/longitudinal_dynamics
   - caption: "Part III: Electron Storage Ring"
+    numbered: true
     chapters:
       - file: ESR/SR/synchrotron_radiation
       - file: ESR/ESR_Dynamics/ESR_dynamics
