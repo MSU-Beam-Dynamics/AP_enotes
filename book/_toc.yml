@@ -15,6 +15,7 @@ parts:
       - file: transverse_BD/dispersion/dispersion
       - file: transverse_BD/chrom/chromaticity
       - file: transverse_BD/nonlinearity/nonlinearity
+      - file: transverse_BD/examples/FODO_cell
   - caption: "Part II: Longitudinal Dynamics"
     numbered: true
     chapters:
