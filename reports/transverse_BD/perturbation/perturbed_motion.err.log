@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 686, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from map2D import map2D
+import numpy as np
+import matplotlib.pyplot as plt
+#from matplotlib import animation
+#from IPython.display import HTML
+%matplotlib widget
+plt.rcParams.update({'font.size': 12})
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mmap2D[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m map2D
+[1;32m      2[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mplt[39;00m
+
+File [0;32m~/Teaching/Lecture_notes/AP_enotes/book/transverse_BD/perturbation/map2D.py:1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mclass[39;00m[38;5;250m [39m[38;5;21;01mmap2D[39;00m([38;5;28mobject[39m):
+[1;32m      4[0m     [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21m__init__[39m([38;5;28mself[39m, twiss[38;5;241m=[39m[[38;5;241m1.0[39m,[38;5;241m0.0[39m], tune[38;5;241m=[39m[38;5;241m0.0[39m, chrom[38;5;241m=[39m[38;5;241m0.0[39m,
+[1;32m      5[0m                  npart[38;5;241m=[39m[38;5;241m1[39m, emit[38;5;241m=[39m[38;5;241m1e-6[39m, twiss_beam[38;5;241m=[39m[38;5;28;01mNone[39;00m, espr[38;5;241m=[39m[38;5;241m0.0[39m, particles[38;5;241m=[39m[38;5;28;01mNone[39;00m):
+
+[0;31mModuleNotFoundError[0m: No module named 'numpy'
+

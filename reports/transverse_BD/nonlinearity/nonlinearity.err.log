@@ -1,0 +1,161 @@
+Traceback (most recent call last):
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.8/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 686, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/yuehao/opt/pyvenv/teaching/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from map2D import map2D
+import numpy as np
+import matplotlib.pyplot as plt
+#from matplotlib import animation
+#from IPython.display import HTML
+%matplotlib widget
+
+
+#resonance 1/3
+
+dvx=0.0003591
+tunex=1.0/3.0+dvx
+dvy=0.05
+tuney=1.0/3.0+dvy
+size_scale=0.001
+
+#resonance 1/4
+dvx=0.00005
+tunex=1.0/4.0+dvx
+dvy=0.005
+tuney=1.0/4.0 + dvy
+size_scale=0.03
+
+
+#resonance 1/5
+dvx=0.0001
+tunex=1.0/5.0 + dvx
+dvy=0.01
+tuney=1.0/5.0 +dvy
+size_scale=0.0205
+
+
+#resonance nux + 2nuy = l
+dvy=0.0002
+tunex = 0.23
+tuney = (1 - tunex) / 2 + dvy
+size_scale = 0.001
+
+
+# resonance nux = 2nuy 
+dvy=0.000
+tunex = 0.23
+tuney = tunex / 2 + dvy
+
+# resonance 2nux + nuy =l
+dvy=0.000
+tunex = 0.102
+tuney = 1- tunex * 2 + dvy
+
+
+pxs=np.concatenate([size_scale*np.arange(10), np.array([])])
+pxps=np.zeros_like(pxs) 
+particles=np.vstack([pxs,pxps])
+xpx=map2D(npart=10, twiss=[1,0], twiss_beam=[1,0],tune=tunex, chrom=0.0, espr=0.0,
+                  particles=particles)
+
+pys=np.zeros_like(pxs) + size_scale * 3
+pyps=np.zeros_like(pys) 
+particles=np.vstack([pys,pyps])
+ypy=map2D(npart=len(pxs), twiss=[1,0], twiss_beam=[1,0],tune=tuney, chrom=0.0, espr=0.0,
+          particles=particles)
+
+avex,avep,sizex,sizep,emit=xpx.statistics()
+emitlist=[]
+sizelist=[]
+avelist=[]
+N_turn=30000
+
+
+def evolve_func(turns, kick_turn_start=0, B2=1,
+               ):
+    for i in range(turns):
+        if i>=kick_turn_start:
+            xpx.coor2D[1,:]-=B2*(xpx.coor2D[0,:]*xpx.coor2D[0,:]-ypy.coor2D[0,:]*ypy.coor2D[0,:])/2.0
+            ypy.coor2D[1,:]+=B2*ypy.coor2D[0,:]*xpx.coor2D[0,:]
+        
+        xpx.propagate()
+        ypy.propagate()
+        
+        #avex,avep,sizex,sizep,emit=xpx.statistics()
+        #avelist.append(avex)
+        #sizelist.append(sizex)
+        #emitlist.append(emit)
+        yield xpx.coor2D, ypy.coor2D
+        
+evolve=evolve_func(N_turn+2)
+    
+fig,(ax_x, ax_y)=plt.subplots(1,2, figsize=(6,4))
+display_ratio=20
+ax_x.set_aspect('equal')
+ax_y.set_aspect('equal')
+ax_x.set_xlim([-display_ratio*size_scale,display_ratio*size_scale])
+ax_x.set_ylim([-display_ratio*size_scale,display_ratio*size_scale])
+ax_y.set_xlim([-display_ratio*size_scale,display_ratio*size_scale])
+ax_y.set_ylim([-display_ratio*size_scale,display_ratio*size_scale])
+ax_x.set_xticks([])
+ax_x.set_yticks([])
+ax_y.set_xticks([])
+ax_y.set_yticks([])
+xlist=[]
+xplist=[]
+ylist=[]
+yplist=[]
+
+
+for i in range(N_turn):
+    arrx, arry=next(evolve)
+    #if np.max(arr)>1: break
+    xlist.append(arrx[0])
+    xplist.append(arrx[1])
+    ylist.append(arry[0])
+    yplist.append(arry[1])
+xarr=np.vstack(xlist)
+xparr=np.vstack(xplist)
+yarr=np.vstack(ylist)
+yparr=np.vstack(yplist)
+ax_x.plot(xarr,xparr,linestyle='None', marker='.', markersize=2)
+ax_y.plot(yarr,yparr,linestyle='None', marker='.', markersize=2, alpha=0.5)
+fig.set_label('Linear Tunex='+str(tunex)+', Linear Tuney='+str(tuney))
+fig.tight_layout()
+
+Jx=xarr*xarr+xparr*xparr
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mmap2D[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m map2D
+[1;32m      2[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mplt[39;00m
+
+File [0;32m~/Teaching/Lecture_notes/AP_enotes/book/transverse_BD/nonlinearity/map2D.py:1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m      3[0m [38;5;28;01mclass[39;00m[38;5;250m [39m[38;5;21;01mmap2D[39;00m([38;5;28mobject[39m):
+[1;32m      4[0m     [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21m__init__[39m([38;5;28mself[39m, twiss[38;5;241m=[39m[[38;5;241m1.0[39m,[38;5;241m0.0[39m], tune[38;5;241m=[39m[38;5;241m0.0[39m, chrom[38;5;241m=[39m[38;5;241m0.0[39m,
+[1;32m      5[0m                  npart[38;5;241m=[39m[38;5;241m1[39m, emit[38;5;241m=[39m[38;5;241m1e-6[39m, twiss_beam[38;5;241m=[39m[38;5;28;01mNone[39;00m, espr[38;5;241m=[39m[38;5;241m0.0[39m, particles[38;5;241m=[39m[38;5;28;01mNone[39;00m):
+
+[0;31mModuleNotFoundError[0m: No module named 'numpy'
+
