@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -501,8 +501,8 @@
 -e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)
 \]</div>
 <p>With the paraxial approximation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa87d963-2e37-4bb3-b4fb-7493f061a7ae">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-aa87d963-2e37-4bb3-b4fb-7493f061a7ae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d0b11fbd-6afe-44b7-a02e-31589eb2a9bc">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-d0b11fbd-6afe-44b7-a02e-31589eb2a9bc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 K\left(x, p_x, y, p_y, z, \delta,s\right)=
 -\left(1+\frac{x}{\rho}\right)\left(1+\delta-\frac{p_x^2}{2(1+\delta)}-\frac{p_y^2}{2(1+\delta)}\right)
 -e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)
@@ -514,8 +514,8 @@ K\left(x, p_x, y, p_y, z, \delta,s\right)=
 <div class="math notranslate nohighlight">
 \[A_{s,q}=-B_0 b_1(s) \left(x^2-y^2\right)/2=-G(s)\left(x^2-y^2\right)/2\]</div>
 <p>we get:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f373f0f-098a-4ad1-b658-85c2bcf7e53f">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-8f373f0f-098a-4ad1-b658-85c2bcf7e53f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f6596ed-4ca9-4130-af05-11a856d6a05a">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-6f6596ed-4ca9-4130-af05-11a856d6a05a" title="Permalink to this equation">#</a></span>\[\begin{align}
 K\left(x, p_x, y, p_y, z, \delta,s\right)&amp;=
 -\left(1+\frac{x}{\rho}\right)\left(1+\delta-\frac{p_x^2}{2(1+\delta)}-\frac{p_y^2}{2(1+\delta)}\right)
 -e\frac{A_s}{p_0}\left(1+\frac{x}{\rho}\right)\\
@@ -536,8 +536,8 @@ K\left(x, p_x\right)=\frac{p_x^2}{2}+\frac{x^2}{2\rho^2}+\frac{k(s)x^2}{2}-\delt
 </figcaption>
 </figure>
 <p>The equation of motion then becomes a non-homogeneous one:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dee71be-2d84-48f2-a315-4aca60e1df44">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-4dee71be-2d84-48f2-a315-4aca60e1df44" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0f35cc2b-df7a-4dee-80f0-7f9236b75a1b">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-0f35cc2b-df7a-4dee-80f0-7f9236b75a1b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x''+\left(\frac{1}{\rho^2}+k(s)\right)x=\frac{\delta}{\rho} 
 \end{equation}\]</div>
 <!--img src="dispersive_orbit_in_dipole.png" alt="Drawing" style="width: 200px;"/-->
@@ -548,18 +548,18 @@ If we write the solution as:</p>
 x(s)=x_\beta(s)+D(s)\delta + \mathcal{O}\left(\delta^2\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(x_\beta(s)\)</span> satisfies the homogeneous Hill’s equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa9f7707-72ee-489d-a633-1dea422383ba">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-aa9f7707-72ee-489d-a633-1dea422383ba" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3b8e0873-bbaf-4f3d-9d40-6e13a8fb047e">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-3b8e0873-bbaf-4f3d-9d40-6e13a8fb047e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x''+\left(\frac{1}{\rho^2}+k(s)\right)x=0
 \end{equation}\]</div>
 <p>The coefficient <span class="math notranslate nohighlight">\(D(s)=\frac{\partial x(s)}{\partial \delta}|_{\delta=0}\)</span> is the linear dispersion function, which is also depend on the design lattice.  It is the solution of the inhomogeneous ODE:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48774769-dda8-4783-9731-5711a34743a7">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-48774769-dda8-4783-9731-5711a34743a7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-58d0b614-8134-4967-8753-5e7e440a7198">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-58d0b614-8134-4967-8753-5e7e440a7198" title="Permalink to this equation">#</a></span>\[\begin{equation}
 D''+\left(\frac{1}{\rho^2}+k(s)\right)D=\frac{1}{\rho}
 \end{equation}\]</div>
 <p>The solution of the dispersion function is the sum of the general solution of the homoneneous ODE and the special solution:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-29ede363-876b-4ebf-b019-37825d4ef6ca">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-29ede363-876b-4ebf-b019-37825d4ef6ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba31d533-ce5b-4c2e-bff7-9ebf6eb312ce">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-ba31d533-ce5b-4c2e-bff7-9ebf6eb312ce" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'
@@ -572,8 +572,8 @@ d'
 \end{array}\right)
 \end{equation}\]</div>
 <p>For constant dipole with fixed gradient, let’s write <span class="math notranslate nohighlight">\(K=k+1/\rho^2\)</span>, the transver matrix <span class="math notranslate nohighlight">\(M\)</span> has been calculated before:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-582102b1-f9a5-43e1-b066-9d46e23e8d1e">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-582102b1-f9a5-43e1-b066-9d46e23e8d1e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ffc5da6f-b041-4ec3-8fe4-d19dc683fc47">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-ffc5da6f-b041-4ec3-8fe4-d19dc683fc47" title="Permalink to this equation">#</a></span>\[\begin{equation}
 M\left(s_0+s,s_0\right)=
 \begin{cases}
 \left(\begin{array}{cc}
@@ -588,8 +588,8 @@ M\left(s_0+s,s_0\right)=
 \end{cases}
 \end{equation}\]</div>
 <p>The spectial solution in this case, should satisfy <span class="math notranslate nohighlight">\(d(s=s_0)=d'(s=s_0)=0\)</span>, one can easily prove that the following expression satisfy the inhomogeous equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fbdd1eab-2354-4803-afa7-a417ef420475">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-fbdd1eab-2354-4803-afa7-a417ef420475" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e5d1eed4-ad1b-49f1-95ef-3d0424e8e424">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-e5d1eed4-ad1b-49f1-95ef-3d0424e8e424" title="Permalink to this equation">#</a></span>\[\begin{equation}
 d(s)=
 \begin{cases}
 \frac{1}{\rho K}\left(
@@ -601,8 +601,8 @@ d(s)=
 \end{cases}
 \end{equation}\]</div>
 <p>and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ef55521-61d3-4f55-9188-bb1a00755ee6">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-1ef55521-61d3-4f55-9188-bb1a00755ee6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6c3a7535-7b00-42a4-bbb3-ea7438c62b72">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-6c3a7535-7b00-42a4-bbb3-ea7438c62b72" title="Permalink to this equation">#</a></span>\[\begin{equation}
 d'(s)=
 \begin{cases}
 \frac{1}{\rho \sqrt{K}}
@@ -612,15 +612,15 @@ d'(s)=
 \end{cases}
 \end{equation}\]</div>
 <p>For pure dipole <span class="math notranslate nohighlight">\(K=1/\rho^2\)</span>, the special solution simply becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eb8a858c-b518-471d-973e-62b6cb7d3d61">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-eb8a858c-b518-471d-973e-62b6cb7d3d61" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-81eabb60-0ee6-41e4-9874-64cc951e18ae">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-81eabb60-0ee6-41e4-9874-64cc951e18ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 d(s)&amp;= \rho \left(1-\cos\theta\right) \approx\rho\theta^2\\
 d'(s)&amp;= \sin\theta \approx\theta
 \end{align}\]</div>
 <p>Here <span class="math notranslate nohighlight">\(\theta=s/\rho\)</span> is the bending angle.  The approximation is taken when the bending angle for the dipole is small.</p>
 <p>We can rewrite the matrix form in to a 3 by 3 matrix <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> and 3- vector form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b732000-cfe6-4ecc-96a1-82261be83022">
-<span class="eqno">(6.11)<a class="headerlink" href="#equation-5b732000-cfe6-4ecc-96a1-82261be83022" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3ad9a906-4090-4232-895f-f3248c971997">
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-3ad9a906-4090-4232-895f-f3248c971997" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'\\
@@ -638,8 +638,8 @@ D'\\
 \end{array}\right)_{s=s_{0}}
 \end{equation}\]</div>
 <p>For pure dipole, we have the form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fcfb7a5e-e19b-47a0-9761-fecc867e3622">
-<span class="eqno">(6.12)<a class="headerlink" href="#equation-fcfb7a5e-e19b-47a0-9761-fecc867e3622" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7974dedc-fd8c-4d52-9b81-9435afbb0c55">
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-7974dedc-fd8c-4d52-9b81-9435afbb0c55" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{M}_{dipole}&amp;=
 \left(\begin{array}{ccc}
 \cos(\theta) &amp; \rho\sin(\theta) &amp; \rho\left(1-\cos\theta\right)\\
@@ -664,8 +664,8 @@ D\left(s_0\right)=D\left(s_0+L\right)
 D'\left(s_0\right)=D'\left(s_0+L\right)
 \)</span>$</p>
 <p>And the expanded <span class="math notranslate nohighlight">\(3\times3\)</span> oneturn matrix has:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-07b81079-2d5a-4717-8780-fb87ca7d191d">
-<span class="eqno">(6.13)<a class="headerlink" href="#equation-07b81079-2d5a-4717-8780-fb87ca7d191d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f20c78be-3955-4426-93e2-167b79d63474">
+<span class="eqno">(6.13)<a class="headerlink" href="#equation-f20c78be-3955-4426-93e2-167b79d63474" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'\\
@@ -683,8 +683,8 @@ D'\\
 \end{array}\right)_{s=s_{0}}
 \end{equation}\]</div>
 <p>Here the matrix <span class="math notranslate nohighlight">\(M\left(s_0\right)\)</span> is the oneturn betatron matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-99a4d86a-3d1b-43e4-b04b-1c4e376d7158">
-<span class="eqno">(6.14)<a class="headerlink" href="#equation-99a4d86a-3d1b-43e4-b04b-1c4e376d7158" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0b3c3872-da9b-4dff-a74c-5602f07579b7">
+<span class="eqno">(6.14)<a class="headerlink" href="#equation-0b3c3872-da9b-4dff-a74c-5602f07579b7" title="Permalink to this equation">#</a></span>\[\begin{align}
 M\left(s_0\right)&amp;=
 \left(\begin{array}{cc}
 M_{11} &amp; M_{12}\\
@@ -732,14 +732,14 @@ M_{23}
 <section id="mathcal-h-function">
 <h3><span class="section-number">6.1.4. </span><span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function<a class="headerlink" href="#mathcal-h-function" title="Link to this heading">#</a></h3>
 <p>Since the dispersion function follows the inhomogeneous Hill’s function, we can follow the action-angle treatment of the particle motion and define the normalized dispersion as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d5647a2d-2e0d-48cf-b57c-b1d65bfd5b05">
-<span class="eqno">(6.17)<a class="headerlink" href="#equation-d5647a2d-2e0d-48cf-b57c-b1d65bfd5b05" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f32be656-5b51-41aa-ae2f-2182ed1901ea">
+<span class="eqno">(6.17)<a class="headerlink" href="#equation-f32be656-5b51-41aa-ae2f-2182ed1901ea" title="Permalink to this equation">#</a></span>\[\begin{align}
 X_d&amp;=\frac{D}{\sqrt{\beta}}\\
 P_d&amp;=\frac{\beta D'+\alpha D }{\sqrt{\beta}}
 \end{align}\]</div>
 <p>We define <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> function as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7554866f-0bea-4483-a7a2-cb926bd6cbd5">
-<span class="eqno">(6.18)<a class="headerlink" href="#equation-7554866f-0bea-4483-a7a2-cb926bd6cbd5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5cbca922-a78c-4f3e-92ae-c358725ad189">
+<span class="eqno">(6.18)<a class="headerlink" href="#equation-5cbca922-a78c-4f3e-92ae-c358725ad189" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{H}&amp;\equiv X_d^2+P_d^2\\
 &amp;=\beta D'^2+2\alpha D D' + \gamma D^2
 \end{align}\]</div>
@@ -748,13 +748,13 @@ P_d&amp;=\frac{\beta D'+\alpha D }{\sqrt{\beta}}
 <section id="dispersion-measurement">
 <h3><span class="section-number">6.1.5. </span>Dispersion measurement<a class="headerlink" href="#dispersion-measurement" title="Link to this heading">#</a></h3>
 <p>The measurement of the dispersion in accelerator follows it definition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-45944753-afd8-43ce-8b88-8709f8742133">
-<span class="eqno">(6.19)<a class="headerlink" href="#equation-45944753-afd8-43ce-8b88-8709f8742133" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1e67056b-66d9-46dd-aff8-cd3b8e77044e">
+<span class="eqno">(6.19)<a class="headerlink" href="#equation-1e67056b-66d9-46dd-aff8-cd3b8e77044e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 D=\frac{\partial x}{\partial \delta}
 \end{equation}\]</div>
 <p>In a linac, this is straight forward to realize in real machine.  One can easily change the energy of the beam by tweaking the accelerating cavity, then the dispersion is calculated from the beam centroid change at each Beam position monitor:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc1d2ab1-9811-4f3d-b2c6-e81585828bcd">
-<span class="eqno">(6.20)<a class="headerlink" href="#equation-bc1d2ab1-9811-4f3d-b2c6-e81585828bcd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ec892eb5-fc2e-44c6-89be-d406a8f7cf27">
+<span class="eqno">(6.20)<a class="headerlink" href="#equation-ec892eb5-fc2e-44c6-89be-d406a8f7cf27" title="Permalink to this equation">#</a></span>\[\begin{equation}
 D=\frac{\Delta x}{\Delta p/p_0}
 \end{equation}\]</div>
 <p>The measurement in a ring will be not as trivial, since the change of the accelerating voltage will not affect the energy of the particle linearly.  The dispersion measurement in a ring will be  introduce in the later part of this note.</p>
@@ -762,18 +762,18 @@ D=\frac{\Delta x}{\Delta p/p_0}
 <section id="integration-representation">
 <h3><span class="section-number">6.1.6. </span>Integration Representation<a class="headerlink" href="#integration-representation" title="Link to this heading">#</a></h3>
 <p>From the similarity of the Hill’s equation with dipole error and the dispersion equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44bebed3-44c6-44ca-aca1-1bb90fd9c317">
-<span class="eqno">(6.21)<a class="headerlink" href="#equation-44bebed3-44c6-44ca-aca1-1bb90fd9c317" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9b76e8f7-a4f1-4bec-827f-b386465ecb64">
+<span class="eqno">(6.21)<a class="headerlink" href="#equation-9b76e8f7-a4f1-4bec-827f-b386465ecb64" title="Permalink to this equation">#</a></span>\[\begin{equation}
 D''+\left(\frac{1}{\rho^2}+k(s)\right)D=\frac{1}{\rho}
 \end{equation}\]</div>
 <p>and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b5e11c3-d15c-48b3-8688-bb4c40153dc6">
-<span class="eqno">(6.22)<a class="headerlink" href="#equation-5b5e11c3-d15c-48b3-8688-bb4c40153dc6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-90a76b55-c2d0-46ee-b8e4-7827a89fc6ee">
+<span class="eqno">(6.22)<a class="headerlink" href="#equation-90a76b55-c2d0-46ee-b8e4-7827a89fc6ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
 x''\left(s\right)+\left(\frac{1}{\rho^2}+k(s)\right)x\left(s\right)=\frac{\Delta B(s)}{B_0\rho} 
 \end{equation}\]</div>
 <p>The integrated form of dispersion function can be achieved from the closed orbit integrals by substituting <span class="math notranslate nohighlight">\(\frac{\Delta B(s)}{B_0\rho} \)</span> with <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab9872fe-0526-44ea-992a-bf2f3007acbd">
-<span class="eqno">(6.23)<a class="headerlink" href="#equation-ab9872fe-0526-44ea-992a-bf2f3007acbd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9b40d0fb-a4d2-4e03-922f-4fa3b8b49fca">
+<span class="eqno">(6.23)<a class="headerlink" href="#equation-9b40d0fb-a4d2-4e03-922f-4fa3b8b49fca" title="Permalink to this equation">#</a></span>\[\begin{align}
 D(s)&amp;=\int_{s}^{s+C}\frac{1}{\rho(s_0)}G\left(s,s_{0}\right) ds_0 \nonumber\\
 &amp;=\frac{\sqrt{\beta\left(s\right)}}{{2\sin\pi\nu}}
 \int_{s}^{s+C}\frac{\sqrt{\beta\left(s_{0}\right)}}{\rho(s_0)}\cos\left(\psi\left(s\right)-\psi\left(s_{0}\right)-\pi\nu\right)ds_0
@@ -785,8 +785,8 @@ D(s)&amp;=\int_{s}^{s+C}\frac{1}{\rho(s_0)}G\left(s,s_{0}\right) ds_0 \nonumber\
 <section id="achromatic-condition">
 <h3><span class="section-number">6.2.1. </span>Achromatic Condition<a class="headerlink" href="#achromatic-condition" title="Link to this heading">#</a></h3>
 <p>For a lattice cell represented by <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, the acromatic condition guarantees that the if the zero dispersion is given at the entrance, zero dispersion is achieved at the exit.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee9a5ea9-d1f2-4e81-aa25-e7ba4f7a3400">
-<span class="eqno">(6.24)<a class="headerlink" href="#equation-ee9a5ea9-d1f2-4e81-aa25-e7ba4f7a3400" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-610b8d2e-6e8f-4dad-8d8a-ea2b56faf7b5">
+<span class="eqno">(6.24)<a class="headerlink" href="#equation-610b8d2e-6e8f-4dad-8d8a-ea2b56faf7b5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 0\\
 0\\
@@ -804,8 +804,8 @@ M_{23}
 \end{array}\right)
 \end{equation}\]</div>
 <p>Therefore the acromatic condition requires:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f9f6126-9cc4-4f94-9aa8-d98e1c82486a">
-<span class="eqno">(6.25)<a class="headerlink" href="#equation-6f9f6126-9cc4-4f94-9aa8-d98e1c82486a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f0cff3cd-025c-4d11-a754-7f4dc986d8f6">
+<span class="eqno">(6.25)<a class="headerlink" href="#equation-f0cff3cd-025c-4d11-a754-7f4dc986d8f6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{d}=\left(\begin{array}{c}
 M_{13}\\
 M_{23}
@@ -822,8 +822,8 @@ M_{23}
 <section id="repeating-cells">
 <h3><span class="section-number">6.2.3. </span>Repeating cells<a class="headerlink" href="#repeating-cells" title="Link to this heading">#</a></h3>
 <p>If we repeat a non-achromatic cell for N times, the <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d776605-9553-46fa-ad98-6c0cc2f25aae">
-<span class="eqno">(6.26)<a class="headerlink" href="#equation-9d776605-9553-46fa-ad98-6c0cc2f25aae" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5e9d7af0-625a-4e40-bf38-f1fc999f9983">
+<span class="eqno">(6.26)<a class="headerlink" href="#equation-5e9d7af0-625a-4e40-bf38-f1fc999f9983" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{M}^N&amp;=\left(\begin{array}{cc}
 {M} &amp; \bar{d}\\
 0 &amp; 1
@@ -846,24 +846,24 @@ D'
 \end{align}\]</div>
 <p>Therefore, to achieve a achromatic condition by repeating a non-achromatic cell <span class="math notranslate nohighlight">\(N\)</span> times, it is required to have $<span class="math notranslate nohighlight">\(M^N=I\)</span>$</p>
 <p>The betatron transfer matrix <span class="math notranslate nohighlight">\(M\)</span> can be expressed by the twiss parameter:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9a9f23e-aa16-4e73-85c3-ab9f00033f91">
-<span class="eqno">(6.27)<a class="headerlink" href="#equation-b9a9f23e-aa16-4e73-85c3-ab9f00033f91" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8ec1507c-a2da-45f2-bc23-e752b128a75b">
+<span class="eqno">(6.27)<a class="headerlink" href="#equation-8ec1507c-a2da-45f2-bc23-e752b128a75b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 M=\left(\begin{array}{cc}
 \cos\Phi+\alpha\sin\Phi &amp; \beta\sin\Phi\\
 -\gamma\sin\Phi &amp; \cos\Phi-\alpha\sin\Phi
 \end{array}\right)
 \end{equation}\]</div>
 <p>Therefore the requirement becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e93bc8d8-01cc-4cfe-891e-fad9a591c426">
-<span class="eqno">(6.28)<a class="headerlink" href="#equation-e93bc8d8-01cc-4cfe-891e-fad9a591c426" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f04e9abf-efff-4fc2-b3a5-01b7f395bf00">
+<span class="eqno">(6.28)<a class="headerlink" href="#equation-f04e9abf-efff-4fc2-b3a5-01b7f395bf00" title="Permalink to this equation">#</a></span>\[\begin{equation}
 N\Phi=2n\pi \;,\; n\in \text{Integer}
 \end{equation}\]</div>
 </section>
 <section id="dispersion-suppression">
 <h3><span class="section-number">6.2.4. </span>Dispersion suppression<a class="headerlink" href="#dispersion-suppression" title="Link to this heading">#</a></h3>
 <p>For a non-achromatic lattice in a periodical structure, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-364c223f-b0ea-401e-a8eb-390f0931b63c">
-<span class="eqno">(6.29)<a class="headerlink" href="#equation-364c223f-b0ea-401e-a8eb-390f0931b63c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-08607a1a-5c54-4d34-82df-c5e298188c85">
+<span class="eqno">(6.29)<a class="headerlink" href="#equation-08607a1a-5c54-4d34-82df-c5e298188c85" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'\\
@@ -886,8 +886,8 @@ D'\\
 \end{array}\right)
 \end{equation}\]</div>
 <p>A dispersion suppression section, represented by matrix <span class="math notranslate nohighlight">\(\tilde{\mathcal{M}}^{-1}\)</span> can match a non-zero dispersion <span class="math notranslate nohighlight">\((D,D')\)</span> at the end of a curved lattice to zero dispersion, which reads</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35121d78-3d40-406d-bec3-7bd5c1bd4d98">
-<span class="eqno">(6.30)<a class="headerlink" href="#equation-35121d78-3d40-406d-bec3-7bd5c1bd4d98" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-846021cc-cd49-4af7-ac59-2bce939becb5">
+<span class="eqno">(6.30)<a class="headerlink" href="#equation-846021cc-cd49-4af7-ac59-2bce939becb5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'\\
@@ -912,8 +912,8 @@ D'\\
 \end{array}\right)
 \end{equation}\]</div>
 <p>Then the required terms in the suppressor is simply:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8be0edcc-b706-490a-a9d0-6d15d00ef5ca">
-<span class="eqno">(6.31)<a class="headerlink" href="#equation-8be0edcc-b706-490a-a9d0-6d15d00ef5ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6d3bfc0c-2173-4a3a-bd0c-cb334a883669">
+<span class="eqno">(6.31)<a class="headerlink" href="#equation-6d3bfc0c-2173-4a3a-bd0c-cb334a883669" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 \tilde{M}_{13}\\
 \tilde{M}_{23}
@@ -932,8 +932,8 @@ M_{23}
 <section id="reduced-bending-field-suppressor">
 <h3><span class="section-number">6.2.5. </span>‘Reduced-bending-field’ suppressor<a class="headerlink" href="#reduced-bending-field-suppressor" title="Link to this heading">#</a></h3>
 <p>Generally, dispersion matching will change the optical functions as well.  However, there are some special elegant case, which suppresses the dispersion while maintaining the optics. Suppose we have a lattice cell described by the transfer matrix <span class="math notranslate nohighlight">\(M\)</span>. It is non-achromatic and have:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2277585-7622-487a-a92d-1a124b00e487">
-<span class="eqno">(6.32)<a class="headerlink" href="#equation-d2277585-7622-487a-a92d-1a124b00e487" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-436306dd-8ab4-4057-98af-2ba699b430e6">
+<span class="eqno">(6.32)<a class="headerlink" href="#equation-436306dd-8ab4-4057-98af-2ba699b430e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 D\\
 D'\\
@@ -957,8 +957,8 @@ D'\\
 \end{equation}\]</div>
 <p>and it satisfy <span class="math notranslate nohighlight">\(M^{2N}=I\)</span>.  Therefore half of the <span class="math notranslate nohighlight">\(2N\)</span> cell satisfy <span class="math notranslate nohighlight">\(M^N=-I\)</span>.</p>
 <p>The <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix of the <span class="math notranslate nohighlight">\(N\)</span> repeating cells is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e475be29-99bd-405c-a4c4-5da07ccdd638">
-<span class="eqno">(6.33)<a class="headerlink" href="#equation-e475be29-99bd-405c-a4c4-5da07ccdd638" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6ca5960b-59fa-49bd-bdef-24bf7c7a3813">
+<span class="eqno">(6.33)<a class="headerlink" href="#equation-6ca5960b-59fa-49bd-bdef-24bf7c7a3813" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{M}^N
 &amp;=\left(\begin{array}{cc}
 M^N &amp; \left(I-M^{N} \right)\left(I-M \right)^{-1}\left(\begin{array}{c}
@@ -988,43 +988,43 @@ D'
 <h2><span class="section-number">6.3. </span>Momentum Compaction Factor<a class="headerlink" href="#momentum-compaction-factor" title="Link to this heading">#</a></h2>
 <p>In a ring or an arc, it is important to knew the pass length of the particle.  The ideal particle must have the desire trajectory length to synchronize with the RF cavity for acceleration. We also need to calculate the pass length difference for an off-momentum particle.</p>
 <p>Generally, we can calculate the circumference as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ada58ef3-2fae-452f-825b-6165903cca15">
-<span class="eqno">(6.34)<a class="headerlink" href="#equation-ada58ef3-2fae-452f-825b-6165903cca15" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cddad48a-32c2-4f29-831b-2f11908ba01b">
+<span class="eqno">(6.34)<a class="headerlink" href="#equation-cddad48a-32c2-4f29-831b-2f11908ba01b" title="Permalink to this equation">#</a></span>\[\begin{align}
 C&amp;=\oint\left|\frac{d\mathbf{r}(s)}{ds}\right|ds\nonumber\\
 &amp;=\oint\left|\frac{d\left(\mathbf{r_{0}}(s)+x\hat{x}+y\hat{y}\right)}{ds}\right|ds\nonumber\\
 &amp;=\oint\left|(1+x/\rho)\hat{s}+x'\hat{x}+y'\hat{y}\right|ds\nonumber\\
 &amp;=\oint\sqrt{\left(1+x/\rho\right)^{2}+x'^{2}+y'^{2}}ds
 \end{align}\]</div>
 <p>If we keep only the linear term, then plug in the off-momentum term, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b8352e86-2e2f-4cd6-ab92-59ea0afcc51e">
-<span class="eqno">(6.35)<a class="headerlink" href="#equation-b8352e86-2e2f-4cd6-ab92-59ea0afcc51e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9d292a37-bbf9-4fd4-ab00-8a61b04a84c9">
+<span class="eqno">(6.35)<a class="headerlink" href="#equation-9d292a37-bbf9-4fd4-ab00-8a61b04a84c9" title="Permalink to this equation">#</a></span>\[\begin{align}
 C&amp;=\oint\left(1+\frac{x}{\rho}\right) ds \nonumber\\
 &amp;=C_0+\oint\left(\frac{x_\beta+D\delta}{\rho}\right) ds \nonumber\\
 &amp;=C_\beta+\left(\oint\frac{D}{\rho} ds \right)\delta
 \end{align}\]</div>
 <p>This indicates that the extra circumference of the off-momentum is proportional to the momentum deviation. We define the <strong>Momentum Compaction Factor</strong> as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c70492c0-e9d7-4575-a5dd-cdca4ae7e0a3">
-<span class="eqno">(6.36)<a class="headerlink" href="#equation-c70492c0-e9d7-4575-a5dd-cdca4ae7e0a3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6fa7a882-c814-407d-a0c1-09d9474be625">
+<span class="eqno">(6.36)<a class="headerlink" href="#equation-6fa7a882-c814-407d-a0c1-09d9474be625" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \alpha_c=\frac{1}{C_0}\frac{dC}{d\delta}=\frac{1}{C_0}\oint\frac{D}{\rho}ds
 \end{equation}\]</div>
 <p>Since the dispersion function is usually positive, the momentum compaction factor is also positive.  This means the higher energy particles usually travels longer.  However there are special lattice which is designed to have zero or even negative compaction factor.</p>
 <p>We can also calculate the travel time <span class="math notranslate nohighlight">\(t=C/v\)</span> difference of the off-momentum particles:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33fc0536-0699-4029-a044-0ec0889b2727">
-<span class="eqno">(6.37)<a class="headerlink" href="#equation-33fc0536-0699-4029-a044-0ec0889b2727" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ea632e2c-a245-4702-b937-a8f737e5a901">
+<span class="eqno">(6.37)<a class="headerlink" href="#equation-ea632e2c-a245-4702-b937-a8f737e5a901" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\Delta T}{T}&amp;=\frac{\Delta C}{C}-\frac{\Delta v}{v}\\
 &amp;=\alpha_c \delta-\frac{1}{\gamma^2}\delta\\
 &amp;\equiv\eta \delta
 \end{align}\]</div>
 <p>The new quantity <span class="math notranslate nohighlight">\(\eta=dT/d\delta\)</span> is named <strong>phase-slip factor</strong>, which is very useful in the latter longitudinal dynamics.  In suggests that, for a positive momentum compaction factor <span class="math notranslate nohighlight">\(\alpha_c\)</span>, viz. that higher energy particles travels longer, may spend less time if the reference energy is low enough.  At specific energy, a small momentum deviation does not change the time-of-flight, which is called <strong>isochronous</strong>.  This energy is called <strong>transition energy</strong> <span class="math notranslate nohighlight">\(\gamma_T\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4adcebbf-145d-49ed-9603-b720ae764519">
-<span class="eqno">(6.38)<a class="headerlink" href="#equation-4adcebbf-145d-49ed-9603-b720ae764519" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-56a06294-f9c6-4dd6-994b-bd42da4d7e25">
+<span class="eqno">(6.38)<a class="headerlink" href="#equation-56a06294-f9c6-4dd6-994b-bd42da4d7e25" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma_T\equiv\frac{1}{\sqrt{\alpha_c}}
 \end{equation}\]</div>
 <section id="dispersion-measurement-in-ring">
 <h3><span class="section-number">6.3.1. </span>Dispersion Measurement in Ring<a class="headerlink" href="#dispersion-measurement-in-ring" title="Link to this heading">#</a></h3>
 <p>In a ring, changing the RF cavity produce more complicate behavior than in a linac.  We will introduce that in the longitudinal dynamics section.  However, the change of the beam energy is linked with the time-of-flight and the revolution frequency by phase-slip factor.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f58e652-8182-4a34-a062-8a745c061caa">
-<span class="eqno">(6.39)<a class="headerlink" href="#equation-9f58e652-8182-4a34-a062-8a745c061caa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4db3e2e8-d638-452d-9223-d70cb4d4288c">
+<span class="eqno">(6.39)<a class="headerlink" href="#equation-4db3e2e8-d638-452d-9223-d70cb4d4288c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\Delta f}{f_0}=-\frac{\Delta T}{T_0}=-\eta \delta
 \end{equation}\]</div>
 <p>Therefore, the dispersion can be found from the slope of the closed orbit as function of the revolution frequency:</p>
@@ -1048,14 +1048,14 @@ D=\frac{\Delta x_{co}}{\delta}=-\eta f_0\frac{\Delta x_{co}}{\Delta f}
 <h3><span class="section-number">6.3.3. </span><span class="math notranslate nohighlight">\(\gamma_T\)</span> jump<a class="headerlink" href="#gamma-t-jump" title="Link to this heading">#</a></h3>
 <p>One idea of avoiding the harmful effect of crossing transition energy is to cross the transition energy fast, using a set of pulsed power quadrupoles (named <span class="math notranslate nohighlight">\(\gamma_T\)</span> quad). These quads, after turned on, can change the momentum compaction factor quick enough the decrease the <span class="math notranslate nohighlight">\(\gamma_T\)</span> almost ‘suddenly’.</p>
 <p>These quads has to be placed in dispersive area, where the kick to the off-momentum particle by the ith quad is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ad608b22-d44b-48f6-bfba-2e8bb2249206">
-<span class="eqno">(6.41)<a class="headerlink" href="#equation-ad608b22-d44b-48f6-bfba-2e8bb2249206" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c30295a9-845e-4968-8120-74906dc6111b">
+<span class="eqno">(6.41)<a class="headerlink" href="#equation-c30295a9-845e-4968-8120-74906dc6111b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta \theta_i= K_i \tilde{D}_i\delta
 \end{equation}\]</div>
 <p>The quad will change the dispersion function over the ring and disturb the dispersion at the location from <span class="math notranslate nohighlight">\(D_i\)</span> to <span class="math notranslate nohighlight">\(\tilde{D}_i\)</span></p>
 <p>Then the momentum compaction change will be:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df41c6e4-a6c8-4da3-9d9a-c9a7c24bc3d7">
-<span class="eqno">(6.42)<a class="headerlink" href="#equation-df41c6e4-a6c8-4da3-9d9a-c9a7c24bc3d7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-89b28769-5b58-4127-8f17-cb743840091c">
+<span class="eqno">(6.42)<a class="headerlink" href="#equation-89b28769-5b58-4127-8f17-cb743840091c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta \alpha_c= \frac{\sum_i D_i \Delta \theta_i }{C_0\delta}
 =\frac{1}{C_0}\sum_i K_i \tilde{D}_i D_i
 \end{equation}\]</div>
@@ -1075,8 +1075,8 @@ D=\frac{\Delta x_{co}}{\delta}=-\eta f_0\frac{\Delta x_{co}}{\Delta f}
 <h2><span class="section-number">6.4. </span>6-D phase space<a class="headerlink" href="#d-phase-space" title="Link to this heading">#</a></h2>
 <p>The 3-by-3 matrix <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> describes the horizontal phase space as function of the energy.  That is not a full description.  The symplectic condition requires that if the horizontal phase space is affected by the longitudinal coordinate (<span class="math notranslate nohighlight">\(\delta\)</span>), the longitudinal phase space coordinate must be affected by the horizontal coordinates.</p>
 <p>Therefore, the full dynamics has to be described by 6-by-6 matrix.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ddcbbc4-30f9-4560-93b2-9bab864aef31">
-<span class="eqno">(6.43)<a class="headerlink" href="#equation-4ddcbbc4-30f9-4560-93b2-9bab864aef31" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd4c938b-ab86-47f4-85d1-937ffd7112b9">
+<span class="eqno">(6.43)<a class="headerlink" href="#equation-fd4c938b-ab86-47f4-85d1-937ffd7112b9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{c}
 x\\
 p_{x}\\
@@ -1102,20 +1102,20 @@ z\\
 \end{align}\]</div>
 <p>The <span class="math notranslate nohighlight">\(R\)</span> matrix represents the linear map for the 6-D phase space.<br />
 For lattice that only contains DC magnets and pure accelerating cavities, the arriving time does not affect the transverse phase space.  As a consequence of symplecticity, the energy will not affected by the initial transverse phase phase space.   Therefore:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a048f52d-bce7-4320-b66c-e3c6aba4b63a">
-<span class="eqno">(6.44)<a class="headerlink" href="#equation-a048f52d-bce7-4320-b66c-e3c6aba4b63a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7e9c90c8-dee6-4fd1-9014-5185b73bd402">
+<span class="eqno">(6.44)<a class="headerlink" href="#equation-7e9c90c8-dee6-4fd1-9014-5185b73bd402" title="Permalink to this equation">#</a></span>\[\begin{align}
 R_{15}=R_{25}=R_{35}=R_{45}&amp;=0\\
 R_{61}=R_{62}=R_{63}=R_{64}&amp;=0
 \end{align}\]</div>
 <p>When there is no accelerating components, <span class="math notranslate nohighlight">\(R_{65}\)</span> is also zero. Also in the special case when there is no transverse coupling, the <span class="math notranslate nohighlight">\(R_{51}\)</span> and <span class="math notranslate nohighlight">\(R_{52}\)</span> is only related to <span class="math notranslate nohighlight">\(R_{16}\)</span> and <span class="math notranslate nohighlight">\(R_{26}\)</span> by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1420db4d-66d3-4bee-8482-3fee3f23c41f">
-<span class="eqno">(6.45)<a class="headerlink" href="#equation-1420db4d-66d3-4bee-8482-3fee3f23c41f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-adadc3d1-d03e-4808-97b6-5d5ec2f7512a">
+<span class="eqno">(6.45)<a class="headerlink" href="#equation-adadc3d1-d03e-4808-97b6-5d5ec2f7512a" title="Permalink to this equation">#</a></span>\[\begin{align}
 R_{51}=(-R_{26})R_{11}+(R_{16})R_{21}\\
 R_{52}=(-R_{26})R_{12}+(R_{16})R_{22}\\
 \end{align}\]</div>
 <p>or vector form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-532ce63e-8473-4697-a37c-9c1067c67770">
-<span class="eqno">(6.46)<a class="headerlink" href="#equation-532ce63e-8473-4697-a37c-9c1067c67770" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-60f5a789-aa02-4ac8-becd-b6b571059373">
+<span class="eqno">(6.46)<a class="headerlink" href="#equation-60f5a789-aa02-4ac8-becd-b6b571059373" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{cc}
 R_{51} &amp; R_{52}\end{array}\right)=\left(\begin{array}{cc}
 -R_{26} &amp; R_{16}\end{array}\right)\left(\begin{array}{cc}
@@ -1124,8 +1124,8 @@ R_{21} &amp; R_{22}
 \end{array}\right)
 \end{align}\]</div>
 <p>Similarly we have for vertical direction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-747a9e23-a273-43f4-990e-6a807ceac951">
-<span class="eqno">(6.47)<a class="headerlink" href="#equation-747a9e23-a273-43f4-990e-6a807ceac951" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e5260958-a6ce-4473-9921-f4740be1fd84">
+<span class="eqno">(6.47)<a class="headerlink" href="#equation-e5260958-a6ce-4473-9921-f4740be1fd84" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(\begin{array}{cc}
 R_{53} &amp; R_{54}\end{array}\right)=\left(\begin{array}{cc}
 -R_{36} &amp; R_{46}\end{array}\right)\left(\begin{array}{cc}
