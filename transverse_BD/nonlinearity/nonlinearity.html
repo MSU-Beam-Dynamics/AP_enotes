@@ -467,36 +467,36 @@
 <section id="single-sextrupole-in-a-ring">
 <h2><span class="section-number">8.1. </span>Single Sextrupole in a Ring<a class="headerlink" href="#single-sextrupole-in-a-ring" title="Link to this heading">#</a></h2>
 <p>Consider a thin sextrupole was added to an otherwise linear ring at <span class="math notranslate nohighlight">\(s_0\)</span>.  The Hill’s equation will looks like:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-614e4bfb-b1ba-4ab3-b454-c22cc2192044">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-614e4bfb-b1ba-4ab3-b454-c22cc2192044" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e52fcdfa-1432-443d-808d-e963cc677f0d">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-e52fcdfa-1432-443d-808d-e963cc677f0d" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;x''+ k_x(s) x = \frac{S}{2} (y^2 - x^2) \delta(s-s_0)  \\
 &amp;y''+ k_y(s) x =  S x y  \delta(s-s_0) 
 \end{align}\]</div>
 <p>which can be derived from the Hamiltonian:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc37ec3b-41a7-49ba-aa45-034d92f8c635">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-fc37ec3b-41a7-49ba-aa45-034d92f8c635" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f900d116-2a91-4ccf-9126-c70496337100">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-f900d116-2a91-4ccf-9126-c70496337100" title="Permalink to this equation">#</a></span>\[\begin{equation}
 H= \frac{1}{2}x'^2+ \frac{1}{2}y'^2 + \frac{1}{2}k_x(s)x^2+\frac{1}{2}k_y(s)y^2+\delta(s-s_0)\frac{S}{6}(x^3-3xy^2)
 \end{equation}\]</div>
 <p>Using the action angle variable pairs (<a class="reference internal" href="../basic/twiss_param.html#equation-eq-twiss-jpsibar-to-xxp">(3.27)</a>) for <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f7acbe0-39b3-43c3-ae5c-a9440f63ec00">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-2f7acbe0-39b3-43c3-ae5c-a9440f63ec00" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4d783d72-54df-4fdd-a6bf-8b8ea654e737">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-4d783d72-54df-4fdd-a6bf-8b8ea654e737" title="Permalink to this equation">#</a></span>\[\begin{align}
 x&amp;=\sqrt{2\beta_x J_x} \cos(\psi_x+ \chi_x(s) -\nu_x \theta) = \sqrt{2\beta_x J_x} \cos(\Phi_x)\\
 y&amp;=\sqrt{2\beta_y J_y} \cos(\psi_y+ \chi_y(s) -\nu_y \theta) = \sqrt{2\beta_y J_y} \cos(\Phi_y)\\
 \end{align}\]</div>
 <p>with</p>
-<div class="amsmath math notranslate nohighlight" id="equation-277ec5f0-4065-4cd8-95db-afebc171319a">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-277ec5f0-4065-4cd8-95db-afebc171319a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9fe9b0b2-fe4c-4942-84a5-abaefc143882">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-9fe9b0b2-fe4c-4942-84a5-abaefc143882" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \chi_x(s) = \int_0^s\frac{1}{\beta_x(s')}ds' \qquad \chi_y(s)=\int_0^s\frac{1}{\beta_y(s')}ds'
 \end{equation}\]</div>
 <p>Using the trigonometry identity <span class="math notranslate nohighlight">\(\cos^3\alpha = (\cos3x + 3\cos x)/4\)</span>, the potential part beomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44b81230-d08c-487e-9f50-eeec7b5b912e">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-44b81230-d08c-487e-9f50-eeec7b5b912e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3475e941-afdf-4e15-82c9-0b934732615f">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-3475e941-afdf-4e15-82c9-0b934732615f" title="Permalink to this equation">#</a></span>\[\begin{align}
 x^3-3xy^2 =&amp; \frac{\sqrt{2}}{12}(\beta_x J_x)^{3/2} \cos3\Phi_x + \frac{\sqrt{2}}{4}(\beta_x J_x)^{1/2}(\beta_x J_x - \beta_y J_y) \cos\Phi_x  \nonumber\\
 &amp;-\frac{\sqrt{2}}{8}(\beta_x J_x)^{1/2}(\beta_y J_y) \cos(2\Phi_x+\Phi_y) -\frac{\sqrt{2}}{8}(\beta_x J_x)^{1/2}(\beta_y J_y) \cos(2\Phi_x-\Phi_y) \nonumber
 \end{align}\]</div>
 <p>The Hamiltonian becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3336ad8-a502-4837-8c07-7d26e3db2844">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-d3336ad8-a502-4837-8c07-7d26e3db2844" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-42614ee0-38a6-4331-8a2d-5738b32599ec">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-42614ee0-38a6-4331-8a2d-5738b32599ec" title="Permalink to this equation">#</a></span>\[\begin{align}
 H = \nu_x J_x + \nu_y J_y &amp;+ \sum_l G_{3,0,l} J_x^{3/2} \cos(3\psi_x - l\theta + \xi_{3,0,l}) \\
 &amp; + \sum_l G_{1,2,l} J_x^{1/2} J_y \cos(\psi_x + 2 \psi_y - l\theta + \xi_{1,2,l})  \\
 &amp; + \sum_l G_{1,-2,l} J_x^{1/2} J_y \cos(\psi_x - 2 \psi_y - l\theta + \xi_{1,-2,l}) + \cdots
@@ -510,8 +510,8 @@ G_{3,0,l}e^{i\xi_{3,0,l}} = \frac{\sqrt{2}}{24\pi}\int_0^{2\pi}S\delta(s-s_0)\be
 <div class="tip admonition">
 <p class="admonition-title">Example: Sextrupole in a linear ring (4-D Henon map).</p>
 <p>This examples illustrates different resonances excited by a sextrupole using the following map:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-522a62b7-cb7d-4f8a-ba12-7d1fdbceb8c2">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-522a62b7-cb7d-4f8a-ba12-7d1fdbceb8c2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0b9a2cce-03f1-4664-9342-228c9370c438">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-0b9a2cce-03f1-4664-9342-228c9370c438" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\begin{array}{c}
 x\\
 x'\\
